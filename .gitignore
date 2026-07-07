@@ -1,0 +1,13 @@
+# Environment variables (API Keys, etc.)
+.env
+
+# Python build/cache
+__pycache__/
+*.pyc
+
+# Local log files and data
+borehole_stratigraphy.csv
+temp_splits/
+split_pdfs/
+*.tmp
+*.log

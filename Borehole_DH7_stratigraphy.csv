@@ -1,0 +1,4 @@
+Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
+DH7,1,0.00,0.20,Concrete Slab.,Concrete,High
+DH7,1,0.20,2.00,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH7,1,2.00,10.00,Wash boring. (No recovery),No recovery,High
