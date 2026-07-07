@@ -1,75 +1,52 @@
-# Implementation Plan - Robust Borehole Log Splitter & Verification
+# Implementation Plan - Geological Verification & Extraction Skill
 
-This plan outlines the enhancements to the Borehole Log Splitter script to address wrong splitting results, add a sequence verification mechanism that ensures all sheets of a borehole log are present, automatically trace missing sheets from the report, and audit the existing split logs in `individual borehole logs`.
+This plan details how we will incorporate 3 verification steps into the data extraction workflow, implement a self-correction loop with Gemini to resolve verification failures, and package this workflow as a project-specific skill.
 
 ## User Review Required
 
 > [!IMPORTANT]
-> **New Splitting Heuristic**
-> We are changing the splitting algorithm from a single-pass contiguous loop to a two-pass **Block-Based OCR Extraction and Sequence Verification** algorithm. This logic will:
-> 1. Normalize borehole names to handle OCR errors (e.g. `DHa2` -> `DH42`, `DHSS` -> `DH55`, `OHI` -> `DH19`).
-> 2. Skip the trash filter for any page containing `DRILLHOLE RECORD` or `BOREHOLE RECORD` to prevent column headers like `PLASTICITY INDEX` from discarding valid sheets.
-> 3. Group consecutive log sheets into blocks.
-> 4. Verify that each block contains exactly the number of sheets `Y` indicated by the "Sheet X of Y" page header.
-> 5. If any sheets are missing, search the other pages of the document to trace and insert the missing sheets.
-> 6. Only output/save the split PDF when verification is fully satisfied.
+> **API Verification and Token Usage**
+> The verification steps (termination depth extraction and title block consistency check) require making additional queries to the Gemini API. We will use the cost-effective `gemini-3.5-flash` model by default to keep token usage low while maintaining high extraction accuracy.
 
 ## Proposed Changes
 
-### 1. Skill Script & Root Script Updates
+### 1. Verification & Correction Logic
 
 #### [MODIFY] [borehole_splitter.py](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/borehole_splitter.py)
-#### [MODIFY] [scripts/borehole_splitter.py](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/.agents/skills/borehole-log-splitter/scripts/borehole_splitter.py)
-
-We will modify both scripts to:
-- Relax the whitespace boundary in `HOLE_PATTERNS` to use `[ \t]*` instead of `\s*` to prevent matching across newlines.
-- Modify `classify_page` to check if a page is a log sheet (`is_log_sheet`) by searching for keywords: `DRILLHOLE RECORD`, `BOREHOLE RECORD`, `BOREHOLE LOG`, `DRILLHOLE LOG`.
-- If `is_log_sheet` is True, bypass the `TRASH_KEYWORDS` check (such as `INDEX`).
-- Parse the page for "Sheet X of Y" or "Page X of Y" using regex patterns and extract the values `X` and `Y`.
-- Normalize borehole numbers:
-  - Match characters case-insensitively.
-  - Correct known OCR substitutions: `DHa` -> `DH4`, `DHSS` -> `DH55`, `DHS5` -> `DH55`, `OHI` -> `DH19`.
-- Implement block grouping:
-  - Identify blocks of consecutive log sheets.
-  - Determine block hole number by majority vote of normalized names.
-  - Determine total sheets `Y` from the block's pages.
-- Implement sequence verification:
-  - If block length matches `Y`, write the split PDF.
-  - If block length is less than `Y`, identify which sheet numbers `X` are missing.
-  - Scan the remaining document pages (including those classified as trash or not initially in the block) for any page that has:
-    - Borehole name matching this block's borehole.
-    - Sheet number matching the missing `X`.
-  - Add the traced pages to the block in correct sheet order.
-  - Re-verify. Only write the output PDF when verification is satisfied.
+We will introduce a robust verification and self-correction block in the extraction loop:
+1. **Verification Helpers:**
+   - `check_depth_continuity(rows)`: Sorts rows by start depth and ensures `End Depth[i] == Start Depth[i+1]` for all rows, flagging any gaps or overlaps.
+   - `check_termination_depth(model, images, last_end_depth)`: Queries Gemini to find the termination depth (bottom left corner of log sheet) and compares it to the final layer's end depth.
+   - `check_title_block_consistency(model, images)`: Queries Gemini to extract title block details ('Hole No', 'Project Name', 'Project Number', 'Date') for each page and ensures they match across all pages of a borehole log.
+2. **Self-Correction Retry Loop:**
+   - If any validation check fails, the script will bundle the validation errors and the current CSV, send them back to Gemini, and request a corrected extraction.
+   - The correction loop will run up to 3 times per borehole. If issues persist after 3 attempts, it logs the failures in a final verification summary.
 
 ---
 
-### 2. Batch Split Auditing & Re-extraction Script
+### 2. Customizations & Skills
 
-#### [NEW] [audit_and_reextract.py](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/scratch/audit_and_reextract.py)
-We will create a Python script to audit the `individual borehole logs` directory:
-- Scan all existing split PDF files.
-- OCR the pages of each split PDF.
-- Identify the borehole number and verify if the page count matches the total sheet count `Y` in "Sheet X of Y".
-- If pages are missing, find the correct report in the `Borehole Reports` folder, trace the missing pages, re-extract them, and recreate the split PDF.
+#### [NEW] [SKILL.md (borehole-data-extractor)](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/.agents/skills/borehole-data-extractor/SKILL.md)
+We will define a new dedicated skill for the extraction workflow:
+- **YAML Frontmatter**: Exposes name (`borehole-data-extractor`) and description.
+- **Workflow Instructions**: Documents the direct extraction command, parameters, and the details of the three verification steps.
+
+#### [MODIFY] [borehole_splitter.py (Wrapper)](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/.agents/skills/borehole-log-splitter/scripts/borehole_splitter.py)
+- Fix the wrapper import to point to the actual `borehole_splitter.py` in the project root instead of the non-existent `jobs.run_pipeline`.
 
 ---
 
 ## Verification Plan
 
-### Automated Tests
-1. Verify script syntax:
-   ```powershell
-   python -m py_compile borehole_splitter.py
-   ```
-2. Run the newly modified splitter on the Sep 1996 report:
-   ```powershell
-   python borehole_splitter.py --input "Borehole Reports\SI for D-Wall and Barrettes By Bachy dated Sep1996 1.pdf" --splits-dir "individual borehole logs" --keep-splits
-   ```
-3. Run the audit script to verify that all split logs in `individual borehole logs` are complete and correct:
-   ```powershell
-   python scratch/audit_and_reextract.py
-   ```
+### Automated Checks
+Ensure code compiles successfully:
+```powershell
+python -m py_compile borehole_splitter.py
+```
 
 ### Manual Verification
-- Verify that the resulting PDFs in `individual borehole logs` contain the correct number of sheets matching their header definitions.
+1. Run the direct extraction on `individual borehole logs/Borehole_DH7.pdf`.
+2. Inspect the terminal log output to verify that:
+   - Verification checks are run for depth continuity, termination depth, and title blocks.
+   - The validation outcomes (PASSED/FAILED) are printed.
+   - The self-correction loop is triggered if errors are encountered.

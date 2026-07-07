@@ -1,0 +1,9 @@
+Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
+DH47,1,0.00,0.20,Concrete Slab.,Concrete,High
+DH47,1,0.20,2.50,Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND and red bricks. (FILL),Fill,High
+DH47,1,2.50,2.90,Wash boring. (No recovery),No Recovery,High
+DH47,1,2.90,5.00,Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL),Fill,High
+DH47,1,5.00,18.72,Wash boring. (No recovery),No Recovery,High
+DH47,2,18.72,23.60,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints, dipping 10°-20° & 40°-50°. 19.71m-19.91m & 23.14m-23.35m: weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE. 19.91m-20.55m & 21.45m-23.14m: no recovery.",Granite,High
+DH47,3,23.60,25.88,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10°-20°, 40°-60° & 70°-80°.",Granite,High
+DH47,3,25.88,28.85,"Moderately strong to strong, brownish pink, moderately to slightly decomposed, medium grained GRANITE with medium spaced rough planar joints.",Granite,High

@@ -1,8 +1,12 @@
-# Task List - Robust Splitter & Verification
+# Tasks - Verification Checks & Data Extractor Skill
 
-- [ ] Implement robust block-based splitting and sequence verification in root script `borehole_splitter.py`
-- [ ] Implement robust block-based splitting and sequence verification in skill script `.agents/skills/borehole-log-splitter/scripts/borehole_splitter.py`
-- [ ] Create audit and re-extraction script `scratch/audit_and_reextract.py`
-- [ ] Execute new splitter on Sep 1996 report and verify correctness
-- [ ] Run audit and re-extraction script to fix any missing sheets in `individual borehole logs`
-- [ ] Verify final output files
+- [x] Fix the `borehole_splitter.py` redirection wrapper in the skill folder
+- [x] Create the `borehole-data-extractor` skill directory and `SKILL.md`
+- [x] Refactor `borehole_splitter.py` (orchestrated via jobs/run_pipeline.py) in the project root to add verification steps:
+  - [x] Implement `check_depth_continuity`
+  - [x] Implement `check_termination_depth` (using Gemini check)
+  - [x] Implement `check_title_block_consistency` (using Gemini check)
+  - [x] Implement the self-correction retry loop and summary report
+- [x] Verify script compilation
+- [x] Verify execution on `Borehole_DH7.pdf`
+- [x] Create final walkthrough documentation

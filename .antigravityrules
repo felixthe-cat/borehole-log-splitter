@@ -1,0 +1,12 @@
+# Antigravity Rules for this Workspace
+
+> **Standing instructions for this repo live in [`AGENTS.md`](AGENTS.md) — the single source
+> of truth for all coding agents.** Read it before doing anything else.
+
+Quick protocol (full detail in `AGENTS.md`):
+1. READ `cheatsheet.md` before starting any task; do NOT read `learnings.md` at start.
+2. WRITE new bugs/fixes to `error-book.md` on exit.
+3. Use native PyMuPDF (`fitz`) for all PDF-to-image conversions. Do not rely on external `pdf2image` Poppler installation on Windows.
+4. Process page-by-page and explicitly call `gc.collect()` to manage memory on large PDFs.
+5. Standardize borehole names and verify sheet sequences (e.g. Sheet X of Y) before outputting splits.
+6. Place reusable functions in `borehole_extractor_lib/`, job scripts in `jobs/`, raw outputs in `outputs/`, and master CSVs in `results/`.
