@@ -45,18 +45,3 @@ Result:
   - `Sequence Alignment via Dynamic Programming`: Align raw voted block names (including `None` for missing names) with the sorted expected list using a skip-capable Needleman-Wunsch DP alignment.
   - `Save & Output`: Correct OCR errors using aligned names (e.g. `BI` -> `B1`, `CE` -> `C6`, `GA` -> `C3A`, `None` -> `C4`) and split/save individual PDFs.
 
-### 11.2.2 What bugs were encountered during implementation and how were they resolved?
-
-1. **Greedy OCR Suffix Letter Parsing**:
-   * *Problem*: Digit-like letters (like `A` and `B` which map in `OCR_MAP` to 4 and 8) were parsed as core numbers (e.g. `"B2A"` -> `("B", 24, "")` and `"B2B"` -> `("B", 28, "")`) instead of suffix letters.
-   * *Solution*: Conditioned suffix letter parsing to match any alphabetic character if preceded by a digit (since suffix letters are always at the very end of the string), without excluding digit-like characters. Added suffix fallback for single-character remains (e.g. `"GA"` parses as prefix `"G"`, core `0`, suffix `"A"` representing `C3a`), preventing it from wrongly matching `"C4"`.
-2. **Strict 1-to-1 Sequence Alignment Failure**:
-   * *Problem*: Strict 1-to-1 matching DP alignment failed when there were more split page blocks than expected entries (`m > n`), which commonly occurs due to photo/discard pages or OCR splits.
-   * *Solution*: Refactored the DP alignment algorithm to allow skips (gaps in block sequence) and match empty blocks to gap slots by introducing a skip transition `score_skip = dp[i-1][j]`.
-3. **Loose Block Splitting Conditions**:
-   * *Problem*: Splitting page blocks every time `sheet_x == 1` was encountered separated summary sheets (which lack sheet numbers) from log sheets (which start at sheet 1).
-   * *Solution*: Removed the raw `sheet_x == 1` split rule. Implemented a name-change split rule that only splits when the name changes to a valid expected name, with an exception that consecutive sheet increments (e.g. sheet 1 -> 2 -> 3) never trigger splits.
-4. **Outlier Total Sheet Counts**:
-   * *Problem*: OCR misread `Sheet 2 of 3` as `Sheet 2 of 863`, setting the expected sheet count to `863` and causing verification checks to fail.
-   * *Solution*: Filtered out outlier expected sheet counts `> 20` and defaulted to `max(max_detected_x, len(bpages))`.
-

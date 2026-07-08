@@ -107,5 +107,20 @@ This file logs technical bugs, API quirks, library wrapper issues, compiler/inte
 * **API/Library:** Gemini classification / verification
 * **Verified Solution:** Add a programmatic validation check that scans descriptions for keywords like "wash boring", "no recovery", or "core loss" and verifies that the `Soil/Rock Type` is classified as `"No Recovery"` or `"Wash Boring"` (or `"Fill"` if it says fill washed out), raising an error to trigger correction retries on failure.
 
+## 17. Prefix Parser Failures on Digit-like Letters (BH1, OH1)
+* **Bug / Error:** `parse_name_to_tuple` returned `None` for two-letter prefixes starting with digit-like letters (e.g. `B`, `O`) because they were matched as numeric characters, preventing them from being parsed as part of the prefix.
+* **API/Library:** Custom parser logic in `config.py`
+* **Verified Solution:** Require that the second character of a two-letter prefix must not be in `OCR_MAP`, allowing prefix groupings like `BH` and `OH` to parse correctly while still maintaining single-letter OCR correction (e.g., `BI` -> `B1`, `ASA` -> `A5A`).
+
+## 18. Spaced Range Expansion Failure in Cover-Page List
+* **Bug / Error:** `expand_cover_list` failed to expand ranges containing whitespace around the hyphen (e.g., `"B2a - B2c"` or `"DH53 - DH60"`) because the matching regexes strictly expected no spaces.
+* **API/Library:** Custom cover-page parser in `config.py`
+* **Verified Solution:** Clean all whitespace from the range string (`p_clean = p.replace(" ", "")`) before running regex matching and expansion.
+
+## 19. Adjacent Borehole Grouping Splitting Safety Failure
+* **Bug / Error:** If two boreholes are directly adjacent in the PDF with no photo page separating them, and the second borehole's name is read as `UNKNOWN`, the block-splitting logic failed to split them, outputting them as a single file.
+* **API/Library:** Custom page grouping in `triage.py`
+* **Verified Solution:** Add a transition split check: if we transition from a page with `sheet_x > 1` to a page with `sheet_x == 1`, it immediately splits the block.
+
 
 
