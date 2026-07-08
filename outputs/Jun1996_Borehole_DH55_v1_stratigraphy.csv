@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH55_v1;1;0.0;0.2;Concrete Slab;Concrete;High
+DH55_v1;1;0.2;2.0;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
+DH55_v1;1;2.0;16.31;Wash boring. (No recovery);No Recovery;High
+DH55_v1;2;16.31;16.91;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE. (CORESTONE);Granite;High
+DH55_v1;2;16.91;19.01;Wash boring. (No recovery);No Recovery;High
+DH55_v1;3;19.01;24.15;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 75 degrees-85 degrees.;Granite;High

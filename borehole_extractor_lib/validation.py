@@ -1,3 +1,4 @@
+import os
 import re
 import json
 import csv
@@ -286,3 +287,25 @@ def normalize_degree_symbols(rows: list[list[str]]) -> list[list[str]]:
         if len(r) >= 5:
             r[4] = r[4].replace("°", " degrees").replace("º", " degrees")
     return rows
+
+
+def verify_pdf_filename(filename: str) -> bool:
+    """
+    Verifies if the split PDF filename matches [Prefix]_Borehole_[Hole_No].pdf or Borehole_[Hole_No].pdf.
+    [Prefix] and [Hole_No] can contain letters, digits, and hyphens.
+    """
+    basename = os.path.basename(filename)
+    pattern1 = r"^([a-zA-Z0-9\-]+)_Borehole_([a-zA-Z0-9\-\_]+)\.pdf$"
+    pattern2 = r"^Borehole_([a-zA-Z0-9\-\_]+)\.pdf$"
+    return bool(re.match(pattern1, basename) or re.match(pattern2, basename))
+
+
+def verify_excel_filename(filename: str) -> bool:
+    """
+    Verifies if the CSV log filename matches [Prefix]_Borehole_[Hole_No]_stratigraphy.csv or Borehole_[Hole_No]_stratigraphy.csv.
+    """
+    basename = os.path.basename(filename)
+    pattern1 = r"^([a-zA-Z0-9\-]+)_Borehole_([a-zA-Z0-9\-\_]+)_stratigraphy\.csv$"
+    pattern2 = r"^Borehole_([a-zA-Z0-9\-\_]+)_stratigraphy\.csv$"
+    return bool(re.match(pattern1, basename) or re.match(pattern2, basename))
+

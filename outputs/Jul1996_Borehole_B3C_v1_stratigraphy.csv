@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B3C_v1;1;0.0;0.5;Concrete Slab with steel bars;Concrete;High
+B3C_v1;1;0.5;18.1;Wash boring;No recovery;High
+B3C_v1;2;18.1;19.34;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 60 degrees-70 degrees, 80 degrees-85 degrees.;Granite;High
+B3C_v1;3;19.34;19.57;No recovery;No recovery;High
+B3C_v1;3;19.57;28.13;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 60 degrees-70 degrees, 80 degrees-85 degrees.;Granite;High

@@ -1,0 +1,10 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH45_v1;1;0.0;0.2;Concrete slab;Concrete;High
+DH45_v1;1;0.2;1.2;Brown, gravelly silty medium to coarse SAND (FILL);Fill;High
+DH45_v1;1;1.2;2.3;Concrete with Cobbles and Gravels of moderately decomposed granite (FILL);Fill;High
+DH45_v1;1;2.3;25.5;No recovery;No recovery;High
+DH45_v1;3;25.5;26.03;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH45_v1;3;26.03;26.24;No recovery;No recovery;High
+DH45_v1;3;26.24;26.52;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH45_v1;3;26.52;31.6;Moderately strong to strong, brownish pink spotted black and white, moderately decomposed to slightly medium to coarse grained GRANITE;Granite;High

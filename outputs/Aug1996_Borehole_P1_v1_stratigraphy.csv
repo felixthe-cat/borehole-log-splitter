@@ -1,0 +1,6 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+P1_v1;1;0.00;3.00;wash boring;Fill;High
+P1_v1;1;3.00;17.00;Rounded and subrounded COBBLES, fine to coarse GRAVEL and SAND with clay binder;Fill;High
+P1_v1;2;17.00;24.98;wash boring;Fill;High
+P1_v1;3;24.98;30.91;Moderately strong to moderately weak, weathered dark greyish black and yellow, moderately highly decomposed fine grained GRANITE with closely spaced, narrow to very narrow, fresh and sub-fresh to stained joints, dipping 15 degrees to 35 degrees.;Granite;High

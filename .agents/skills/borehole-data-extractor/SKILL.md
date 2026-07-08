@@ -84,6 +84,20 @@ After normalisation, the pipeline runs the following six checks. Failures trigge
 
 ---
 
+## Output Naming & Confidence Configurations
+
+### 1. Run Isolation and Clean Hole Naming
+- **Single-Run Scope**: The output master CSV must only contain borehole data extracted during the current run. Accumulating or retaining records from past runs in the final output is prohibited.
+- **Base Borehole Identifiers**: Do not append auto-increment version suffixes (like `_v1`, `_v2`, etc.) to the borehole names. The `Hole No` column in the final output must strictly contain the clean, base borehole identifier (e.g., `DH7`, `B6A`).
+
+### 2. OCR-Driven Confidence Levels
+- **Tesseract OCR Confidence Mapping**: The `Confidence Level` column in the output CSV must be derived programmatically from the average pytesseract OCR word confidence score across the log sheet pages:
+  - **High**: Average word confidence $\ge 85\%$
+  - **Medium**: $70\% \le$ Average word confidence $< 85\%$
+  - **Low**: Average word confidence $< 70\%$
+
+---
+
 ## Self-Correction Retry Workflow
 
 If any verification check fails, the pipeline:

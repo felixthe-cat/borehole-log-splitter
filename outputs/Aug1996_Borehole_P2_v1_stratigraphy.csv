@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+P2_v1;1;0.00;1.42;Wash boring.;No Recovery;High
+P2_v1;1;1.42;1.42;Rounded and sub-rounded COBBLES, GRAVEL and CONCRETE. No recovery, assumed finer material washed out. (FILL);Fill;High
+P2_v1;1;1.42;18.00;Wash boring.;No Recovery;High
+P2_v1;2;18.00;18.00;Rounded and sub-rounded COBBLES and fine to medium GRAVEL. Some fine material, possible residual soil in lower part. Recovery, assumed finer material washed out. (FILL);Fill;High
+P2_v1;2;18.00;24.65;Wash boring.;No Recovery;High
+P2_v1;3;24.65;30.79;Moderately weak, brownish grey spotted yellow, highly decomposed, weathered, dark GRAY GRANITE, extremely closely spaced, interlocking, narrow, very narrow undulating, limonite and manganese veining, dipping 50-60 degrees. Moderately strong, brownish grey spotted yellow, highly decomposed, medium grained Granodiorite, extremely closely spaced, narrow to very narrow undulating joints, and manganese stained joints, dipping 5-10 degrees and 15-35 degrees.;Granite;High

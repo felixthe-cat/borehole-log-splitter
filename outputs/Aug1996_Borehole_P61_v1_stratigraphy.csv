@@ -1,0 +1,9 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+P61_v1;1;0.0;1.6;Wash boring;Soil;High
+P61_v1;1;1.6;1.7;Concrete;Concrete;High
+P61_v1;1;1.7;2.2;Wash boring;Soil;High
+P61_v1;1;2.2;2.36;Concrete;Concrete;High
+P61_v1;1;2.36;17.57;Wash boring;Soil;High
+P61_v1;2;17.57;24.7;Strong, pinkish grey, spotted black and white, slightly decomposed, medium grained GRANITE, with closely to medium spaced, very narrow to extremely narrow, rough undulating, limonite and stained joints, dipping 5-10 degrees;Granite;High
+P61_v1;3;24.7;25.8;Strong to moderately strong, slightly to moderately decomposed zone;Granite;High

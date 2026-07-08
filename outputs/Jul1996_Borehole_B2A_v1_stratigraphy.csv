@@ -1,0 +1,12 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2A_v1;1;0.0;0.2;Concrete Slab;Concrete;High
+B2A_v1;1;0.2;1.4;Wash boring;No recovery;High
+B2A_v1;1;1.4;2.8;Concrete with cobbles and gravels of moderately decomposed granite and occasionally some steel fragment;Fill;High
+B2A_v1;1;2.8;18.0;Wash boring;No recovery;High
+B2A_v1;2;18.0;18.5;Sub-rounded cobbles and gravels of moderately decomposed granite and tuff with some brown, silty SAND;Alluvium;High
+B2A_v1;2;18.5;22.8;Wash boring;No recovery;High
+B2A_v1;3;22.8;23.08;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints;Granite;High
+B2A_v1;3;23.08;23.4;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
+B2A_v1;3;23.4;23.8;No recovery;No recovery;High
+B2A_v1;3;23.8;31.56;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints;Granite;High

@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B3_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+B3_v1;1;0.20;0.85;Wash boring;No recovery;High
+B3_v1;1;0.85;3.32;Concrete with cobbles and gravels of moderately decomposed granite and occasionally some red bricks;Fill;High
+B3_v1;1;3.32;19.20;Wash boring;No recovery;High
+B3_v1;2;19.20;20.63;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND;Alluvium;High
+B3_v1;3;20.63;27.77;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High

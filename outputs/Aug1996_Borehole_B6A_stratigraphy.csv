@@ -1,0 +1,11 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B6A;1;0.00;2.50;Wash boring;Wash boring;73.6%
+B6A;1;2.50;2.90;Rounded to subrounded, COBBLES and fine to coarse GRAVEL. No recovery assumed, finer material washed out. (FILL);Fill;73.6%
+B6A;1;2.90;14.90;Wash boring;Wash boring;73.6%
+B6A;2;14.90;15.90;Moderately strong to moderately weak, brownish grey, spotted black and white, moderately to highly decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 to 35.;Granite;73.6%
+B6A;2;15.90;20.55;Wash boring;Wash boring;73.6%
+B6A;3;20.55;21.58;Moderately strong to strong, pinkish grey, spotted black and white, moderately to slightly decomposed medium grained GRANITE with closely to extremely closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 to 35.;Granite;73.6%
+B6A;3;21.58;21.76;No recovery assumed highly decomposed zone.;No recovery;73.6%
+B6A;3;21.76;22.72;Moderately strong to weak, moderately to highly decomposed zone.;Granite;73.6%
+B6A;3;22.72;28.50;Moderately strong to strong, pinkish grey, spotted black and white, moderately to slightly decomposed medium grained GRANITE with closely spaced, very narrow to extremely narrow, rough undulating, limonite and manganese stained joints, dipping 5 to 10.;Granite;73.6%

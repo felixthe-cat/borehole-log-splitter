@@ -1,0 +1,11 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH12_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+DH12_v1;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
+DH12_v1;1;2.00;6.50;Wash boring. (No recovery);No Recovery;High
+DH12_v1;1;6.50;7.00;Angular GRAVEL and COBBLES of moderately decomposed granite with some brown silty SAND. (FILL);Fill;High
+DH12_v1;1;7.00;18.00;Wash boring. (No recovery);No Recovery;High
+DH12_v1;2;18.00;18.70;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;High
+DH12_v1;2;18.70;19.94;Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 60 degrees-70 degrees and occasionally vertical joints.;Granite;High
+DH12_v1;3;19.94;20.50;No recovery;No Recovery;High
+DH12_v1;3;20.50;25.96;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.;Granite;High

@@ -1,0 +1,9 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH19_v1;1;0.00;2.00;Angular red brick and concrete fragments with some grey, silty SAND.(FILL);Fill;High
+DH19_v1;1;2.00;18.50;Wash Boring.(No Recovery);No Recovery;High
+DH19_v1;2;18.50;19.30;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM);Alluvium;High
+DH19_v1;2;19.30;24.30;Wash Boring.(No Recovery);No Recovery;High
+DH19_v1;3;24.30;24.60;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH19_v1;3;24.60;24.64;No Recovery;No Recovery;High
+DH19_v1;3;24.64;30.37;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High

@@ -2,8 +2,92 @@ import os
 import sys
 import csv
 import io
+import re
 import fitz  # PyMuPDF
 from .config import sanitize_filename
+
+
+def get_next_master_csv_path(base_path: str = "results/borehole_stratigraphy.csv") -> str:
+    """
+    Checks if the base master CSV path already exists. If it does,
+    finds the next available versioned filename: base_path_v[N].csv.
+    """
+    if not os.path.exists(base_path):
+        return base_path
+        
+    dirname = os.path.dirname(base_path)
+    basename = os.path.basename(base_path)
+    name, ext = os.path.splitext(basename)
+    
+    match = re.search(r"_v\d+$", name)
+    if match:
+        name = name[:match.start()]
+        
+    version = 1
+    while True:
+        candidate = os.path.join(dirname, f"{name}_v{version}{ext}")
+        if not os.path.exists(candidate):
+            return candidate
+        version += 1
+
+
+def get_next_borehole_version(hole_name: str, master_csv_path: str) -> str:
+    """
+    Scans the master CSV file's 'Hole No' column.
+    Extracts the base name from hole_name (e.g. DH7 from DH7 or DH7_v1).
+    If no records exist for that borehole in the master CSV, returns hole_name_v1.
+    If records exist, returns hole_name_v[max_version + 1].
+    """
+    base_name = re.sub(r"_v\d+$", "", hole_name).strip()
+    
+    if not os.path.exists(master_csv_path) or os.path.getsize(master_csv_path) == 0:
+        return f"{base_name}_v1"
+        
+    versions = []
+    try:
+        with open(master_csv_path, mode="r", encoding="utf-8") as f:
+            reader = csv.reader(f, delimiter=';')
+            for row in reader:
+                if not row or row[0].lower().startswith("sep=") or row[0].lower() == "hole no":
+                    continue
+                row_hole = row[0].strip()
+                if row_hole == base_name:
+                    versions.append(0)
+                elif row_hole.startswith(f"{base_name}_v"):
+                    suffix = row_hole[len(base_name) + 2:]
+                    if suffix.isdigit():
+                        versions.append(int(suffix))
+    except Exception as e:
+        print(f"[Warning] Failed to scan master CSV for borehole versioning: {e}", file=sys.stderr)
+        
+    if not versions:
+        return f"{base_name}_v1"
+        
+    next_version = max(versions) + 1
+    return f"{base_name}_v{next_version}"
+
+
+def get_standard_pdf_name(hole_no: str, prefix: str = None) -> str:
+    """
+    Generates a standardised PDF filename: [Prefix]_Borehole_[Hole_No].pdf or Borehole_[Hole_No].pdf
+    """
+    sanitized = sanitize_filename(hole_no)
+    if prefix:
+        sanitized_prefix = sanitize_filename(prefix)
+        return f"{sanitized_prefix}_Borehole_{sanitized}.pdf"
+    return f"Borehole_{sanitized}.pdf"
+
+
+def get_standard_excel_name(hole_name: str, prefix: str = None) -> str:
+    """
+    Generates a standardised Excel/CSV filename: [Prefix]_Borehole_[Hole_No]_stratigraphy.csv or Borehole_[Hole_No]_stratigraphy.csv
+    """
+    sanitized = sanitize_filename(hole_name)
+    if prefix:
+        sanitized_prefix = sanitize_filename(prefix)
+        return f"{sanitized_prefix}_Borehole_{sanitized}_stratigraphy.csv"
+    return f"Borehole_{sanitized}_stratigraphy.csv"
+
 
 
 def save_borehole_pdf(
@@ -21,11 +105,7 @@ def save_borehole_pdf(
     if not page_indices:
         return None
         
-    sanitized = sanitize_filename(hole_no)
-    if prefix:
-        filename = f"{prefix}_Borehole_{sanitized}.pdf"
-    else:
-        filename = f"Borehole_{sanitized}.pdf"
+    filename = get_standard_pdf_name(hole_no, prefix)
     
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)

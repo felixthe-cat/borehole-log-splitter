@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH48_v1;1;0.0;0.2;Concrete Slab;Concrete;High
+DH48_v1;1;0.2;25.04;Wash boring;Wash boring;High
+DH48_v1;3;25.04;25.39;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH48_v1;3;25.39;25.44;No recovery;No recovery;High
+DH48_v1;3;25.44;30.54;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 65 degrees-80 degrees;Granite;High

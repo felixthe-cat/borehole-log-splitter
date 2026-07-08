@@ -1,0 +1,5 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C4_v1;1;0.00;1.72;Concrete with steel bars;Concrete;High
+C4_v1;1;1.72;17.88;Concrete with steel bars and steel fragments;Concrete;High
+C4_v1;2;17.88;28.06;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained, kaolin coated and clean joints, dipping 10 degrees-20 degrees, 75 degrees-85 degrees and occasionally vertical joints.;Granite;High

@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH14_v1;1;0.00;2.00;Angular red bricks and concrete fragments with some grey, silty sand and domestic rubbish.;Fill;High
+DH14_v1;1;2.00;19.00;Wash boring.;No recovery;High
+DH14_v1;2;19.00;20.00;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand.;Alluvium;High
+DH14_v1;3;20.00;20.86;Wash boring.;No recovery;High
+DH14_v1;3;20.86;26.16;Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE, with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 40-50 & 70-80.;Granite;High

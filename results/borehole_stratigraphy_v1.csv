@@ -1,0 +1,579 @@
+Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
+B6A_v1,1,0,2.5,0.00-2.50m: wash boring,No Recovery,High
+B6A_v1,1,2.5,2.9,"Rounded to subrounded, COBBLES and fine to coarse GRAVEL. No recovery assumed, finer material washed out. (FILL)",Fill,High
+B6A_v1,1,2.9,14.9,2.90-14.90m: wash boring.,No Recovery,High
+B6A_v1,2,14.9,15.9,"Moderately strong to moderately weak, brownish grey, spotted black and white, moderately to highly decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees to 35 degrees.",Granite,High
+B6A_v1,2,15.9,20.55,15.90-20.55m: wash boring,No Recovery,High
+B6A_v1,3,20.55,21.58,"Moderately strong to strong, pinkish grey, spotted black and white, moderately to slightly decomposed medium grained GRANITE with closely to extremely closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees to 35 degrees.",Granite,High
+B6A_v1,3,21.58,21.76,21.58-21.76m: no recovery assumed highly decomposed zone.,No Recovery,High
+B6A_v1,3,21.76,22.72,"21.76-22.72m: moderately strong to weak, moderately to highly decomposed zone.",Granite,High
+B6A_v1,3,22.72,28.5,"Moderately strong to strong, pinkish grey, spotted black and white, moderately to slightly decomposed medium grained GRANITE with closely spaced, very narrow to extremely narrow, rough undulating, limonite and manganese stained joints, dipping 5 degrees to 10 degrees.",Granite,High
+B6B_v1,1,0,2,Inspection pit,Fill,High
+B6B_v1,1,2,24.32,Wash boring,Soil,High
+B6B_v1,3,24.32,27.9,"Moderately strong, brownish grey spotted yellow, moderately decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees-35 degrees.",Granite,High
+B6B_v1,3,27.9,30.41,"Strong, pinkish grey spotted black, slightly decomposed, medium grained GRANITE, with closely to medium spaced, rough undulating, extremely narrow, clean, joints, dipping 5 degrees-10 degrees.",Granite,High
+C6A_v1,1,0,1.1,Wash boring.,No Recovery,High
+C6A_v1,1,1.1,2.4,"Rounded and sub-rounded COBBLES, fine to coarse GRAVEL and CONCRETE. No recovery, assumed finer material washed out. (FILL)",Fill,High
+C6A_v1,1,2.4,18.95,Wash boring.,No Recovery,High
+C6A_v1,2,18.95,19.8,"Moderately strong, brownish grey spotted yellow, moderately decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees-35 degrees.",Granite,High
+C6A_v1,2,19.8,25.29,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed, medium grained GRANITE with closely to medium spaced, very narrow to extremely narrow, rough undulating, clean joints, dipping 5 degrees-10 degrees.",Granite,High
+C6A_v1,3,25.29,26.57,"Strong to moderately strong, spotted black and white, slightly to moderately decomposed, medium grained GRANITE with closely to medium spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 5 degrees-10 degrees and 25 degrees-35 degrees.",Granite,High
+P1_v1,1,0,3,wash boring,Fill,High
+P1_v1,1,3,17,"Rounded and subrounded COBBLES, fine to coarse GRAVEL and SAND with clay binder",Fill,High
+P1_v1,2,17,24.98,wash boring,Fill,High
+P1_v1,3,24.98,30.91,"Moderately strong to moderately weak, weathered dark greyish black and yellow, moderately highly decomposed fine grained GRANITE with closely spaced, narrow to very narrow, fresh and sub-fresh to stained joints, dipping 15 degrees to 35 degrees.",Granite,High
+P2_v1,1,0,1.42,Wash boring.,No Recovery,High
+P2_v1,1,1.42,1.42,"Rounded and sub-rounded COBBLES, GRAVEL and CONCRETE. No recovery, assumed finer material washed out. (FILL)",Fill,High
+P2_v1,1,1.42,18,Wash boring.,No Recovery,High
+P2_v1,2,18,18,"Rounded and sub-rounded COBBLES and fine to medium GRAVEL. Some fine material, possible residual soil in lower part. Recovery, assumed finer material washed out. (FILL)",Fill,High
+P2_v1,2,18,24.65,Wash boring.,No Recovery,High
+P2_v1,3,24.65,30.79,"Moderately weak, brownish grey spotted yellow, highly decomposed, weathered, dark GRAY GRANITE, extremely closely spaced, interlocking, narrow, very narrow undulating, limonite and manganese veining, dipping 50-60 degrees. Moderately strong, brownish grey spotted yellow, highly decomposed, medium grained Granodiorite, extremely closely spaced, narrow to very narrow undulating joints, and manganese stained joints, dipping 5-10 degrees and 15-35 degrees.",Granite,High
+P3_v1,1,0,3,wash boring,Fill,High
+P3_v1,1,3,24.3,Rounded and subrounded COBBLES and fine to coarse GRAVEL and CONCRETE. No recovery assumed finer material washed out. (FILL),Fill,High
+P3_v1,3,24.3,28.74,"Moderately strong, brownish grey grey, spotted yellow, moderately decomposed, medium grained GRANITE with closely to extremely closely spaced, rough, undulating, narrow to very narrow, limonite and manganese stained joints, dipping 5 degrees to 15 degrees and 15 degrees to 35 degrees",Granite,High
+P3_v1,3,28.74,30.95,"Moderately strong to strong, brownish grey, spotted yellow, moderately to slightly decomposed, medium grained GRANITE with closely spaced, rough, undulating, narrow, limonite and manganese stained, dipping 5 degrees to 10 degrees",Granite,High
+P4_v1,1,0,2.8,wash boring,Wash Boring,High
+P4_v1,1,2.8,3.3,"Rounded and subrounded COBBLES and fine to coarse GRAVEL, CONCRETE. No recovery assumed finer material washed out.",No Recovery,High
+P4_v1,1,3.3,19.17,wash boring,Wash Boring,High
+P4_v1,2,19.17,19.3,Rounded and subrounded COBBLES and fine to coarse GRAVEL. No recovery assumed finer material washed out.,No Recovery,High
+P4_v1,3,19.3,23.4,wash boring,Wash Boring,High
+P4_v1,3,23.4,23.6,Rounded and subrounded COBBLES and fine to coarse GRAVEL. No recovery assumed finer material washed out.,No Recovery,High
+P4_v1,3,23.6,26.17,"Moderately weak, brownish grey, spotted black and yellow, moderately to highly decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 to 35.",Granite,High
+P4_v1,3,26.17,27.05,"Moderately weak, brownish grey, spotted black, moderately to highly decomposed, medium grained GRANITE with extremely closely to closely spaced, moderately narrow to narrow, rough stepped, limonite and manganese stained joints, dipping 15 to 35.",Granite,High
+P4_v1,3,27.05,28.15,"Moderately strong to strong, brownish and pinkish grey, spotted black and white, moderately to slightly decomposed, medium grained GRANITE with closely to extremely narrow, limonite stained joints, dipping 5 to 15.",Granite,High
+P4_v1,3,28.15,28.92,"Strong, pinkish grey, spotted black and white, slightly decomposed, medium grained GRANITE with medium spaced, extremely narrow, clean joints, dipping 5 to 10.",Granite,High
+P61_v1,1,0,1.6,Wash boring,Soil,High
+P61_v1,1,1.6,1.7,Concrete,Concrete,High
+P61_v1,1,1.7,2.2,Wash boring,Soil,High
+P61_v1,1,2.2,2.36,Concrete,Concrete,High
+P61_v1,1,2.36,17.57,Wash boring,Soil,High
+P61_v1,2,17.57,24.7,"Strong, pinkish grey, spotted black and white, slightly decomposed, medium grained GRANITE, with closely to medium spaced, very narrow to extremely narrow, rough undulating, limonite and stained joints, dipping 5-10 degrees",Granite,High
+P61_v1,3,24.7,25.8,"Strong to moderately strong, slightly to moderately decomposed zone",Granite,High
+P62_v1,1,0,3,wash boring,Wash Boring,High
+P62_v1,1,3,3.5,Rounded and subrounded COBBLES and fine to coarse GRAVEL and CONCRETE. No recovery assumed finer material was out.,Fill,High
+P62_v1,1,3.5,17.37,wash boring,Wash Boring,High
+P62_v1,2,17.37,24.91,"Strong, pinkish grey, spotted black and white, slightly decomposed, medium grained GRANITE with closely to medium spaced, very narrow to extremely narrow, rough, undulating, clean joints, dipping 5 degrees to 10 degrees.",Granite,High
+P63_v1,1,0,2,0.00-2.00m: wash boring,Wash Boring,High
+P63_v1,1,2,3.5,"Rounded to subrounded COBBLES and fine to coarse GRAVEL and CONCRETE. No recovery assumed, finer material washed out. (FILL)",Fill,High
+P63_v1,1,3.5,17.55,3.50-17.55m: wash boring,Wash Boring,High
+P63_v1,2,17.55,20.3,"Moderately strong, brownish grey, spotted yellow, moderately decomposed, medium grained GRANITE with closely to extremely closely spaced, moderately narrow to narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees to 35 degrees and occasional subvertical.",Granite,High
+P63_v1,3,20.3,25.25,"Strong to moderately strong, pinkish grey, spotted black and white, slightly to moderately decomposed, medium grained GRANITE with closely to medium spaced, very narrow to extremely narrow, rough undulating, limonite stained joints, dipping 5 degrees to 10 degrees.",Granite,High
+P64_v1,1,0,2,wash boring,Fill,High
+P64_v1,1,2,3,"Rounded to subrounded COBBLES and fine to coarse GRAVEL. No recovery assumed, finer material washed out. (FILL)",Fill,High
+P64_v1,1,3,11.7,wash boring,Fill,High
+P64_v1,2,11.7,12.2,"Moderately strong to moderately weak, brownish grey, spotted yellow, moderately to highly decomposed medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and stained joints, dipping 15 to 35.",Granite,High
+P64_v1,2,12.2,16,wash boring,No recovery,High
+P64_v1,2,16,17.53,"Moderately strong, pinkish grey, spotted black and white, moderately decomposed medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 5 to 25.",Granite,High
+P64_v1,2,17.53,17.87,wash boring,No recovery,High
+P64_v1,2,17.87,19.2,"Strong to moderately strong, pinkish grey, spotted black and white, slightly to moderately decomposed medium grained GRANITE with closely spaced to medium spaced, very narrow, rough undulating, limonite and manganese stained joints, dipping 5 to 15.",Granite,High
+P64_v1,3,19.2,22,"Strong, pinkish grey, spotted black and white, slightly decomposed medium grained GRANITE with closely to medium spaced, extremely narrow, rough undulating, clean joints, dipping 5 to 10.",Granite,High
+P64_v1,3,22,23.53,"moderately strong to strong, moderately to slightly decomposed zone.",Granite,High
+P64_v1,3,23.53,24.98,"Strong, pinkish grey, spotted black and white, slightly decomposed medium grained GRANITE with closely to medium spaced, extremely narrow, rough undulating, clean joints, dipping 5 to 10.",Granite,High
+ASA_v1,1,0,3.5,Angular COBBLES and GRAVELS of moderately decomposed granite with some brown silty SAND and some concrete fragments. (FILL),Fill,High
+ASA_v1,1,3.5,18.7,Wash Boring. (No Recovery),No Recovery,High
+ASA_v1,2,18.7,19.3,Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey silty sand. (ALLUVIUM),Alluvium,High
+ASA_v1,2,19.3,20.7,Wash Boring. (No Recovery),No Recovery,High
+ASA_v1,3,20.7,25.9,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, extremely narrow to very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees and 70 degrees-80 degrees.",Granite,High
+B1_v1,1,0,0.2,Concrete slab,Concrete,High
+B1_v1,1,0.2,0.8,"Brown, gravelly silty medium to coarse SAND (FILL)",Fill,High
+B1_v1,1,0.8,19,No recovery,No recovery,High
+B1_v1,2,19,19.3,"Sub-angular Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM)",Alluvium,High
+B1_v1,3,19.3,22.83,No recovery,No recovery,High
+B1_v1,3,22.83,23.52,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+B1_v1,3,23.52,23.82,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed GRANITE",Granite,High
+B1_v1,3,23.82,23.97,"Weak, highly decomposed zone",Granite,High
+B1_v1,3,23.97,24.11,No recovery,No recovery,High
+B1_v1,3,24.11,33.32,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+B2_v1,1,0,0.2,Concrete Slab,Fill,High
+B2_v1,1,0.2,1.5,Wash boring,No recovery,High
+B2_v1,1,1.5,3.33,Concrete with cobbles and gravels of moderately decomposed granite (FILL),Fill,High
+B2_v1,1,3.33,24.6,Wash boring,No recovery,High
+B2_v1,3,24.6,25.03,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees",Granite,High
+B2_v1,3,25.03,25.2,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+B2_v1,3,25.2,25.6,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees",Granite,High
+B2_v1,3,25.6,25.74,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+B2_v1,3,25.74,34.17,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees",Granite,High
+B2A_v1,1,0,0.2,Concrete Slab,Concrete,High
+B2A_v1,1,0.2,1.4,Wash boring,No recovery,High
+B2A_v1,1,1.4,2.8,Concrete with cobbles and gravels of moderately decomposed granite and occasionally some steel fragment,Fill,High
+B2A_v1,1,2.8,18,Wash boring,No recovery,High
+B2A_v1,2,18,18.5,"Sub-rounded cobbles and gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+B2A_v1,2,18.5,22.8,Wash boring,No recovery,High
+B2A_v1,3,22.8,23.08,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints",Granite,High
+B2A_v1,3,23.08,23.4,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+B2A_v1,3,23.4,23.8,No recovery,No recovery,High
+B2A_v1,3,23.8,31.56,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints",Granite,High
+B2B_v1,1,0,0.2,Concrete Slab,Concrete,High
+B2B_v1,1,0.2,2.5,Concrete with cobbles and gravels of moderately decomposed granite and red bricks (FILL),Fill,High
+B2B_v1,1,2.5,19.7,Wash boring,No recovery,High
+B2B_v1,2,19.7,21.5,Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some red brick and steel fragment (FILL),Fill,High
+B2B_v1,3,21.5,26.04,Wash boring,No recovery,High
+B2B_v1,3,26.04,31.8,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow to very narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20, 40-60, 70-80",Granite,High
+B2C_v1,1,0,1.5,Concrete Slab with steel bars,Concrete,High
+B2C_v1,1,1.5,4,Concrete with cobbles and gravels of moderately decomposed granite (FILL),Fill,High
+B2C_v1,1,4,19.3,Wash boring (No recovery),No Recovery,High
+B2C_v1,2,19.3,19.7,Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND,Soil,High
+B2C_v1,2,19.7,24.55,Wash boring (No recovery),No Recovery,High
+B2C_v1,3,24.55,24.9,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+B2C_v1,3,24.9,31.71,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints",Granite,High
+B3_v1,1,0,0.2,Concrete Slab,Concrete,High
+B3_v1,1,0.2,0.85,Wash boring,No recovery,High
+B3_v1,1,0.85,3.32,Concrete with cobbles and gravels of moderately decomposed granite and occasionally some red bricks,Fill,High
+B3_v1,1,3.32,19.2,Wash boring,No recovery,High
+B3_v1,2,19.2,20.63,"Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+B3_v1,3,20.63,27.77,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+B3A_v1,1,0,0.2,Concrete Slab.,Concrete,High
+B3A_v1,1,0.2,0.8,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+B3A_v1,1,0.8,3,Concrete with cobbles and gravels of moderately decomposed granite. (FILL),Fill,High
+B3A_v1,1,3,19.55,Wash boring. (No recovery),No Recovery,High
+B3A_v1,3,19.55,25.63,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, chlorite and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees, 70 degrees-85 degrees.",Granite,High
+B3A_v1,3,25.63,28.3,"Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE.",Granite,High
+B3B_v1,1,0,0.33,Concrete Slab,Concrete,High
+B3B_v1,1,0.33,18.5,Wash boring. (No recovery),No recovery,High
+B3B_v1,2,18.5,19.1,Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM),Alluvium,High
+B3B_v1,2,19.1,21.1,Wash boring. (No recovery),No recovery,High
+B3B_v1,3,21.1,28.05,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 80 degrees-85 degrees.",Granite,High
+B3C_v1,1,0,0.5,Concrete Slab with steel bars,Concrete,High
+B3C_v1,1,0.5,18.1,Wash boring,No recovery,High
+B3C_v1,2,18.1,19.34,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 60 degrees-70 degrees, 80 degrees-85 degrees.",Granite,High
+B3C_v1,3,19.34,19.57,No recovery,No recovery,High
+B3C_v1,3,19.57,28.13,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 60 degrees-70 degrees, 80 degrees-85 degrees.",Granite,High
+B4_v1,1,0,0.6,Concrete Slab with steel bars,Concrete,High
+B4_v1,1,0.6,17.85,Wash boring,No recovery,High
+B4_v1,2,17.85,18.05,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed, medium to coarse grained GRANITE",Granite,High
+B4_v1,2,18.05,19.25,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 75-85 and occasionally vertical joints",Granite,High
+B4_v1,2,19.25,19.45,No recovery,No recovery,High
+B4_v1,3,19.45,28.14,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 75-85 and occasionally vertical joints",Granite,High
+B4A_v1,1,0,0.3,Concrete Slab.,Concrete,High
+B4A_v1,1,0.3,0.8,Concrete with cobbles and gravels of moderately decomposed granite. (FILL),Fill,High
+B4A_v1,1,0.8,3,Wash boring. (No recovery),No Recovery,High
+B4A_v1,1,3,16.98,Angular Cobbles and Gravels of moderately decomposed granite with some concrete fragment and steel fragment. (FILL),Fill,High
+B4A_v1,2,16.98,27.52,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin stained joints, dipping 10-20, 40-65, 75-85.",Granite,High
+BLA_v1,1,0,0.2,CONCRETE SLAB,Concrete,High
+BLA_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+BLA_v1,1,2,11,No recovery,No Recovery,High
+BLA_v1,2,11,11.3,"Alluvium: Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+BLA_v1,2,11.3,16.5,No recovery,No Recovery,High
+BLA_v1,2,16.5,16.9,"Alluvium: Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+BLA_v1,2,16.9,18.3,No recovery,No Recovery,High
+BLA_v1,2,18.3,19,"Alluvium: Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+BLA_v1,2,19,23.54,No recovery,No Recovery,High
+BLA_v1,3,23.54,32.2,"Moderately strong to strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+C1_v1,1,0,0.2,Concrete Slab.,Concrete,High
+C1_v1,1,0.2,1,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+C1_v1,1,1,29.65,Wash boring.,No recovery,High
+C1_v1,4,29.65,35.61,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese stained chlorite and kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 70 degrees-85 degrees and occasionally vertical joints.",Granite,High
+C2_v1,1,0,1.5,Concrete with steel bar,Concrete,High
+C2_v1,1,1.5,3.7,Wash boring. (No recovery),No recovery,High
+C2_v1,1,3.7,4.9,"Angular BOULDER, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND. (FILL)",Fill,High
+C2_v1,1,4.9,18.8,Wash boring. (No recovery),No recovery,High
+C2_v1,2,18.8,19.6,Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM),Alluvium,High
+C2_v1,3,19.6,26.33,Wash boring. (No recovery),No recovery,High
+C2_v1,3,26.33,31.39,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20, 40-50, 75-85 and occasionally vertical joints.",Granite,High
+C2A_v1,1,0,0.2,Concrete Slab,Concrete,High
+C2A_v1,1,0.2,0.6,Wash boring. (No recovery),No Recovery,High
+C2A_v1,1,0.6,2.5,Concrete with cobbles and gravels of moderately decomposed granite and some rubbish. (FILL),Fill,High
+C2A_v1,1,2.5,23.6,Wash boring. (No recovery),No Recovery,High
+C2A_v1,3,23.6,29.87,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-75 degrees.",Granite,High
+C3_v1,1,0,0.2,Concrete Slab,Concrete,High
+C3_v1,1,0.2,3.2,Concrete with cobbles and gravels of moderately decomposed granite and steel bars. (FILL),Fill,High
+C3_v1,1,3.2,21.45,Wash boring. (No recovery),No recovery,High
+C3_v1,3,21.45,22.9,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow to very narrow, rough planar, limonite, manganese and kaolin stained and clean joints, dipping 10 degrees-20 degrees, 70 degrees-85 degrees.",Granite,High
+C3_v1,3,22.9,28.7,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.",Granite,High
+C3A_v1,1,0,0.2,Concrete Slab.,Concrete,High
+C3A_v1,1,0.2,0.4,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+C3A_v1,1,0.4,3.68,Concrete with cobbles and gravels of moderately decomposed granite. (FILL),Fill,High
+C3A_v1,1,3.68,18.89,Wash boring. (No recovery),No Recovery,High
+C3A_v1,3,18.89,28.09,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, manganese, limonite stained and clean joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees and occasionally vertical joints.",Granite,High
+C4_v1,1,0,1.72,Concrete with steel bars,Concrete,High
+C4_v1,1,1.72,17.88,Concrete with steel bars and steel fragments,Concrete,High
+C4_v1,2,17.88,28.06,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained, kaolin coated and clean joints, dipping 10 degrees-20 degrees, 75 degrees-85 degrees and occasionally vertical joints.",Granite,High
+C6_v1,1,0,0.6,Concrete with red brick fragments. (FILL),Fill,High
+C6_v1,1,0.6,17.25,Wash Boring. (No Recovery),No Recovery,High
+C6_v1,2,17.25,26.19,"Strong, greyish pink spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-60 degrees and 70 degrees-80 degrees.",Granite,High
+DIA_v1,1,0,0.2,Concrete slab,Concrete,High
+DIA_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DIA_v1,1,2,7.5,"Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragment. (FILL)",Fill,High
+DIA_v1,1,7.5,27.5,Wash boring. No recovery at 7.50m-27.50m.,No recovery,High
+DIA_v1,3,27.5,38.3,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally extremely narrow, rough planar, limonite, manganese stained, chloride and kaolin coated joints, dipping 10 degrees-20 degrees and 30 degrees-50 degrees.",Granite,High
+B6_v1,1,0,2,Concrete with red brick fragments and steel fragments. (FILL),Fill,High
+B6_v1,1,2,18.3,Wash Boring. (No Recovery),No Recovery,High
+B6_v1,2,18.3,18.79,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 55 degrees-70 degrees and occasionally vertical joints.",Granite,High
+B6_v1,2,18.79,19.3,No Recovery,No Recovery,High
+B6_v1,2,19.3,20.2,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 55 degrees-70 degrees and occasionally vertical joints.",Granite,High
+B6_v1,3,20.2,20.7,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+B6_v1,3,20.7,20.82,No Recovery,No Recovery,High
+B6_v1,3,20.82,26.35,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH10_v1,1,0,19,Wash Boring. (No Recovery),No Recovery,High
+DH10_v1,2,19,19.5,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND. (ALLUVIUM)",Alluvium,High
+DH10_v1,2,19.5,21.2,Wash Boring. (No Recovery),No Recovery,High
+DH10_v1,3,21.2,22.07,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite and manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees and 50 degrees-60 degrees.",Granite,High
+DH10_v1,3,22.07,27.43,"Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees and 50 degrees-60 degrees.",Granite,High
+DH11_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH11_v1,1,0.2,1,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH11_v1,1,1,17.8,Wash boring. (No recovery),No recovery,High
+DH11_v1,2,17.8,19.7,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand. (ALLUVIUM)",Alluvium,High
+DH11_v1,2,19.7,20.25,No recovery,No recovery,High
+DH11_v1,3,20.25,25.84,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-80 degrees and occasionally vertical joints.",Granite,High
+DH12_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH12_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH12_v1,1,2,6.5,Wash boring. (No recovery),No Recovery,High
+DH12_v1,1,6.5,7,Angular GRAVEL and COBBLES of moderately decomposed granite with some brown silty SAND. (FILL),Fill,High
+DH12_v1,1,7,18,Wash boring. (No recovery),No Recovery,High
+DH12_v1,2,18,18.7,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH12_v1,2,18.7,19.94,"Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 60 degrees-70 degrees and occasionally vertical joints.",Granite,High
+DH12_v1,3,19.94,20.5,No recovery,No Recovery,High
+DH12_v1,3,20.5,25.96,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH13_v1,1,0,2,Angular red bricks and concrete fragments with some grey silty SAND and some domestic rubbish and steel fragments. (FILL),Fill,High
+DH13_v1,1,2,21,Wash boring. (No recovery),No recovery,High
+DH13_v1,3,21,22,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH13_v1,3,22,27.35,"Strong to moderately strong, brownish grey spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees & 65 degrees-75 degrees.",Granite,High
+DH14_v1,1,0,2,"Angular red bricks and concrete fragments with some grey, silty sand and domestic rubbish.",Fill,High
+DH14_v1,1,2,19,Wash boring.,No recovery,High
+DH14_v1,2,19,20,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand.",Alluvium,High
+DH14_v1,3,20,20.86,Wash boring.,No recovery,High
+DH14_v1,3,20.86,26.16,"Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE, with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 40-50 & 70-80.",Granite,High
+DH15_v1,1,0,3,"Angular red bricks and concrete fragments with some grey, silty SAND. (FILL)",Fill,High
+DH15_v1,1,3,18,Wash boring. (No recovery),No Recovery,High
+DH15_v1,2,18,19,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand. (ALLUVIUM)",Alluvium,High
+DH15_v1,2,19,19.35,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed, medium to coarse grained GRANITE",Granite,High
+DH15_v1,3,19.35,19.5,No recovery,No Recovery,High
+DH15_v1,3,19.5,20,Wash boring,No Recovery,High
+DH15_v1,3,20,25.12,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE, with medium to closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.",Granite,High
+DH16_v1,2,11,18.5,Wash Boring,No Recovery,High
+DH16_v1,2,18.5,19.5,"Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM)",Alluvium,High
+DH16_v1,2,19.5,20,Boulder,Boulder,High
+DH16_v1,3,20,21,"Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM)",Alluvium,High
+DH16_v1,3,21,22.39,Boulder,Boulder,High
+DH16_v1,3,22.39,27.45,"Moderately strong to strong, pinkish grey to grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 70-80",Granite,High
+DH17_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH17_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH17_v1,1,2,17.91,No recovery,No recovery,High
+DH17_v1,2,17.91,19.5,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand. (ALLUVIUM)",Alluvium,High
+DH17_v1,2,19.5,21.32,No recovery,No recovery,High
+DH17_v1,3,21.32,26.77,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 60 degrees-70 degrees & 80 degrees-85 degrees.",Granite,High
+DH18_v1,1,0,3.5,Concrete with red brick fragments. (FILL),Fill,High
+DH18_v1,1,3.5,18.7,Wash Boring. (No Recovery),No Recovery,High
+DH18_v1,2,18.7,21.2,Sub-rounded COBBLES and GRAVELS of moderately decomposed tuff and granite with some silty sand. (ALLUVIUM),Alluvium,High
+DH18_v1,3,21.2,23.77,Wash boring. (No Recovery),No Recovery,High
+DH18_v1,3,23.77,29.71,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-80 degrees and vertical joints.",Granite,High
+DH19_v1,1,0,2,"Angular red brick and concrete fragments with some grey, silty SAND.(FILL)",Fill,High
+DH19_v1,1,2,18.5,Wash Boring.(No Recovery),No Recovery,High
+DH19_v1,2,18.5,19.3,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM)",Alluvium,High
+DH19_v1,2,19.3,24.3,Wash Boring.(No Recovery),No Recovery,High
+DH19_v1,3,24.3,24.6,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH19_v1,3,24.6,24.64,No Recovery,No Recovery,High
+DH19_v1,3,24.64,30.37,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH20_v1,1,0,2.5,"Angular red brick and concrete fragments with some grey, silty SAND.(FILL)",Fill,High
+DH20_v1,1,2.5,20,Wash Boring.(No Recovery),No Recovery,High
+DH20_v1,2,20,23.5,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM)",Alluvium,High
+DH20_v1,3,23.5,23.58,No Recovery,No Recovery,High
+DH20_v1,3,23.58,28.64,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 70 degrees-85 degrees and vertical joints.",Granite,High
+DH21_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH21_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH21_v1,1,2,22,Wash boring. (No recovery),No recovery,High
+DH21_v1,3,22,22.2,Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM),Alluvium,High
+DH21_v1,3,22.2,27.43,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with medium spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-65 degrees & occasionally vertical joints.",Granite,High
+DH22_v1,1,0,3,"Angular red bricks and concrete fragments with some grey, silty SAND. (FILL)",Fill,High
+DH22_v1,1,3,19.8,Wash boring. (No recovery),No recovery,High
+DH22_v1,2,19.8,20.5,Sub-rounded GRAVEL and COBBLES of moderately decomposed granite,Gravel,High
+DH22_v1,3,20.5,24,Wash boring. (No recovery),No recovery,High
+DH22_v1,3,24,29.52,"Moderately strong, brownish pink spotted black and white, moderately decomposed, medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained, chlorite and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 75 degrees-85 degrees.",Granite,High
+DH23_v1,1,0,6.3,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some grey, silty sand with some red bricks and concrete fragments (FILL)",Fill,High
+DH23_v1,1,6.3,23.3,Wash boring. (No recovery),No recovery,High
+DH23_v1,3,23.3,28,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 65 degrees-85 degrees",Granite,High
+DH23_v1,3,28,28.7,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 65 degrees-85 degrees (grade III bedrock)",Granite,High
+DH24_v1,1,0,3,"Angular COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND and red brick and concrete fragments",Fill,High
+DH24_v1,1,3,24.2,Wash Boring,No Recovery,High
+DH24_v1,3,24.2,30.64,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite, manganese stained, kaolin and chlorite coated joints, dipping 10-20 and vertical joints",Granite,High
+DH25_v1,1,0,1,Wash Boring,No Recovery,High
+DH25_v1,1,1,6,"Angular COBBLES and GRAVELS of moderately decomposed granite with some brown, silty SAND and some red brick and concrete fragments. (FILL)",Fill,High
+DH25_v1,1,6,10,Wash Boring,No Recovery,High
+DH25_v1,2,10,10.5,"Medium dense, grey, silty fine to medium SAND with occasionally some shell fragments. (MARINE DEPOSIT)",Sand,High
+DH25_v1,2,10.5,16.45,"Stiff, grey, sandy silty CLAY. (ALLUVIUM)",Clay,High
+DH25_v1,2,16.45,20,"Medium dense, grey, clayey silty fine to medium SAND. (ALLUVIUM)",Sand,High
+DH25_v1,3,20,24.04,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND. (ALLUVIUM) Extremely weak, brownish pink spotted black and white, completely decomposed, medium to coarse grained GRANITE. (Very dense, gravelly silty medium to coarse SAND.)",Granite,High
+DH25_v1,3,24.04,29.8,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20 and 40-60. Weak, highly decomposed zone at 24.23m-24.33m.",Granite,High
+DH26_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH26_v1,1,0.2,0.9,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH26_v1,1,0.9,3,Wash boring. (No recovery),No Recovery,High
+DH26_v1,1,3,18,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH26_v1,2,18,18.5,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH26_v1,2,18.5,22.72,Wash boring. (No recovery),No Recovery,High
+DH26_v1,3,22.72,28.53,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.",Granite,High
+DH27_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH27_v1,1,0.2,6.3,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH27_v1,1,6.3,23.6,Wash boring. (No recovery),No Recovery,High
+DH27_v1,3,23.6,29.27,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium to closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 40-50, 65-75.",Granite,High
+DH28_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH28_v1,1,0.2,1.8,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH28_v1,1,1.8,2.5,Wash boring. (No recovery),No recovery,High
+DH28_v1,1,2.5,17.5,"Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH28_v1,2,17.5,18.1,"Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH28_v1,2,18.1,23.67,Wash boring. (No recovery),No recovery,High
+DH28_v1,3,23.67,29.35,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10-20, 40-50, 60-70.",Granite,High
+DH29_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH29_v1,1,0.2,0.6,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH29_v1,1,0.6,1.34,Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL),Fill,High
+DH29_v1,1,1.34,4,"Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL) including boulder 3.75m-4.00m",Fill,High
+DH29_v1,1,4,7.3,"Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL)",Fill,High
+DH29_v1,1,7.3,7.55,"Boulder within Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL)",Boulder,High
+DH29_v1,1,7.55,8.3,"Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL)",Fill,High
+DH29_v1,1,8.3,18,Wash boring. (No recovery),No recovery,High
+DH29_v1,2,18,18.47,"Sub-rounded Boulder, Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND",Fill,High
+DH29_v1,2,18.47,18.9,Boulder,Boulder,High
+DH29_v1,2,18.9,19,"Sub-rounded Boulder, Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND",Fill,High
+DH29_v1,2,19,21,Wash boring. (No recovery),No recovery,High
+DH29_v1,3,21,22,Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND,Fill,High
+DH29_v1,3,22,24,Wash boring. (No recovery),No recovery,High
+DH29_v1,3,24,29.39,"Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10-20, 40-50, 65-75 and occasionally vertical joints.",Granite,High
+DH30_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH30_v1,1,0.2,1.5,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH30_v1,1,1.5,10.5,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some concrete fragment and red bricks. (FILL)",Fill,High
+DH30_v1,2,10.5,23,Wash boring. (No recovery),No recovery,High
+DH30_v1,3,23,24.5,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH30_v1,3,24.5,29.69,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 65 degrees-75 degrees.",Granite,High
+DH31_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH31_v1,1,0.2,2.1,Wash boring,No recovery,High
+DH31_v1,1,2.1,8.5,"Concrete with Boulder, Cobbles and Gravels of moderately decomposed granite with some red bricks (FILL)",Fill,High
+DH31_v1,1,8.5,24.58,Wash boring,No recovery,High
+DH31_v1,3,24.58,29,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, chlorite, kaolin and manganese stained joints, dipping 10-20, 40-50, 60-70",Granite,High
+DH31_v1,3,29,30.12,"Moderately strong, moderately decomposed zone",Granite,High
+DH32_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH32_v1,1,0.2,0.6,"Brown, gravelly silty medium to coarse SAND",Sand,High
+DH32_v1,1,0.6,5.78,"Concrete with GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH32_v1,1,5.78,11.2,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND and some red bricks. (FILL)",Fill,High
+DH32_v1,2,11.2,18.5,Wash boring. (No recovery),No Recovery,High
+DH32_v1,2,18.5,24.66,"Sub-rounded GRAVEL and COBBLES of moderately decomposed granite with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH32_v1,3,24.66,30.64,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-30 degrees.",Granite,High
+DH33_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH33_v1,1,0.2,1,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH33_v1,1,1,6.7,Concrete with GRAVEL and COBBLES of moderately decomposed granite and red bricks. (FILL),Fill,High
+DH33_v1,1,6.7,10,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some concrete fragments. (FILL)",Fill,High
+DH33_v1,2,10,25.65,Wash boring. (No recovery),No recovery,High
+DH33_v1,3,25.65,31.71,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20 and 40-50.",Granite,High
+DH34_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH34_v1,1,0.2,0.8,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH34_v1,1,0.8,6.3,Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL),Fill,High
+DH34_v1,1,6.3,9,"Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragments. (FILL)",Fill,High
+DH34_v1,1,9,21,Wash boring. (No recovery),No recovery,High
+DH34_v1,3,21,21.5,"Sub-rounded Cobbles and Gravels of moderately decomposed tuff and granite with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH34_v1,3,21.5,26.66,Wash boring. (No recovery),No recovery,High
+DH34_v1,3,26.66,32.53,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees.",Granite,High
+DH35_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH35_v1,1,0.2,0.7,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH35_v1,1,0.7,6.5,Concrete with cobbles and gravels of moderately decomposed granite and tuff with some red bricks and rubbish. (FILL),Fill,High
+DH35_v1,1,6.5,25.5,Wash boring. (No recovery),No Recovery,High
+DH35_v1,3,25.5,31.38,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-30",Granite,High
+DH36_v1,1,0,0.2,Concrete slab.,Concrete,High
+DH36_v1,1,0.2,1,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH36_v1,1,1,7.4,"Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown, silty SAND and red bricks. (FILL)",Fill,High
+DH36_v1,1,7.4,10.5,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown silty SAND and some red bricks. (FILL)",Fill,High
+DH36_v1,2,10.5,25,Wash boring. (No recovery),No Recovery,High
+DH36_v1,3,25,30.1,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees & 60 degrees-70 degrees.",Granite,High
+DH37_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH37_v1,1,0.2,1.2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH37_v1,1,1.2,2.05,"Angular red bricks, cobbles and gravels of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH37_v1,1,2.05,5.1,Concrete with cobbles and gravels of moderately decomposed granite. (FILL),Fill,High
+DH37_v1,1,5.1,9.1,"Angular BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND and occasionally some steel fragment and concrete fragment. (FILL)",Fill,High
+DH37_v1,1,9.1,24.3,Wash boring. (No recovery),No Recovery,High
+DH37_v1,3,24.3,26.15,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees.",Granite,High
+DH37_v1,3,26.15,26.6,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH37_v1,3,26.6,32.5,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees.",Granite,High
+DH39_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH39_v1,1,0.2,1.3,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH39_v1,1,1.3,1.75,"Angular Boulder, Cobbles and Gravels of moderately decomposed granite with some brown silty SAND. (FILL)",Granite,High
+DH39_v1,1,1.75,3.21,1.37m-1.70m: boulder. Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL),Granite,High
+DH39_v1,1,3.21,6.45,"Angular Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL)",Granite,High
+DH39_v1,1,6.45,23.9,Wash boring. (No recovery),No Recovery,High
+DH39_v1,3,23.9,24.43,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,24.43,24.63,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,24.63,24.93,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,24.93,25.65,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,25.65,27.44,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,27.44,27.61,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,27.61,27.77,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,27.77,28.14,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH39_v1,3,28.14,33.61,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH40_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH40_v1,1,0.2,8.6,"Angular GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND and some red bricks and concrete fragments. (FILL)",Fill,High
+DH40_v1,1,8.6,24.41,Wash boring,No recovery,High
+DH40_v1,3,24.41,24.7,No recovery,No recovery,High
+DH40_v1,3,24.7,25.25,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 70 degrees-80 degrees.",Granite,High
+DH40_v1,3,25.25,25.58,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH40_v1,3,25.58,29.95,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 70 degrees-80 degrees.",Granite,High
+DH41_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH41_v1,1,0.2,1,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH41_v1,1,1,9.5,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some red bricks, rubbish, concrete fragment and steel fragments.",Gravel,High
+DH41_v1,1,9.5,10,Wash boring,No recovery,High
+DH41_v1,2,10,25.19,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some red bricks, rubbish, concrete fragment and steel fragments.",Gravel,High
+DH41_v1,3,25.19,27.89,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally to very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 40-50 & 60-70.",Granite,High
+DH41_v1,3,27.89,30.34,"Moderately strong, moderately to slightly decomposed granite",Granite,High
+DH42_v1,4,30,34.99,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH43_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH43_v1,1,0.2,1.1,Wash boring.,No recovery,High
+DH43_v1,1,1.1,4.2,Concrete with red bricks and occasionally some cobbles and gravels of granite.,Fill,High
+DH43_v1,1,4.2,10,"Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND.",Fill,High
+DH43_v1,2,10,28,Wash boring.,No recovery,High
+DH43_v1,3,28,30,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10-20 degrees.",Granite,High
+DH43_v1,4,30,33.6,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH44_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH44_v1,1,0.2,1.2,Wash boring,No recovery,High
+DH44_v1,1,1.2,4.9,"Concrete with red bricks, cobbles and gravels of moderately decomposed granite",Fill,High
+DH44_v1,1,4.9,26,Wash boring,No recovery,High
+DH44_v1,3,26,31.42,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 75 degrees-85 degrees",Granite,High
+DH45_v1,1,0,0.2,Concrete slab,Concrete,High
+DH45_v1,1,0.2,1.2,"Brown, gravelly silty medium to coarse SAND (FILL)",Fill,High
+DH45_v1,1,1.2,2.3,Concrete with Cobbles and Gravels of moderately decomposed granite (FILL),Fill,High
+DH45_v1,1,2.3,25.5,No recovery,No recovery,High
+DH45_v1,3,25.5,26.03,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH45_v1,3,26.03,26.24,No recovery,No recovery,High
+DH45_v1,3,26.24,26.52,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH45_v1,3,26.52,31.6,"Moderately strong to strong, brownish pink spotted black and white, moderately decomposed to slightly medium to coarse grained GRANITE",Granite,High
+DH46_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH46_v1,1,0.2,4,Wash boring. (No recovery),No Recovery,High
+DH46_v1,1,4,4.5,Angular cobbles and gravels of moderately decomposed granite with some brown silty SAND. (FILL),Fill,High
+DH46_v1,1,4.5,25.2,Wash boring. (No recovery),No Recovery,High
+DH46_v1,3,25.2,31.74,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10 degrees-20 degrees, 65 degrees-85 degrees",Granite,High
+DH47_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH47_v1,1,0.2,2.5,Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND (FILL),Fill,High
+DH47_v1,1,2.5,2.9,No recovery,No recovery,High
+DH47_v1,1,2.9,5,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND (FILL)",Fill,High
+DH47_v1,2,5,18.72,Wash boring. (No recovery),No recovery,High
+DH47_v1,2,18.72,19.91,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints",Granite,High
+DH47_v1,3,19.91,20.55,No recovery,No recovery,High
+DH47_v1,3,20.55,23.14,"Moderately weak to moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH47_v1,3,23.14,23.35,No recovery,No recovery,High
+DH47_v1,3,23.35,28.85,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints",Granite,High
+DH48_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH48_v1,1,0.2,25.04,Wash boring,Wash boring,High
+DH48_v1,3,25.04,25.39,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH48_v1,3,25.39,25.44,No recovery,No recovery,High
+DH48_v1,3,25.44,30.54,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 65 degrees-80 degrees",Granite,High
+DH49_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH49_v1,1,0.2,18.6,Wash boring,No recovery,High
+DH49_v1,2,18.6,18.7,Cobbles and GRAVELS of moderately decomposed GRANITE,Granite,High
+DH49_v1,2,18.7,20.78,Wash boring,No recovery,High
+DH49_v1,3,20.78,22.58,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH49_v1,3,22.58,23.21,No recovery,No recovery,High
+DH49_v1,3,23.21,28.45,"Strong, pinkish grey spotted black and white, slightly decomposed to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH5_v1,1,0,0.2,Concrete Slab,Fill,High
+DH5_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND",Fill,High
+DH5_v1,1,2,4.1,"Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some red bricks and concrete fragments",Fill,High
+DH5_v1,1,4.1,19,Wash boring,No recovery,High
+DH5_v1,2,19,19.8,"Sub-rounded Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND",Alluvium,High
+DH5_v1,3,19.8,20.1,Boulder,Boulder,High
+DH5_v1,3,20.1,23.78,Wash boring,No recovery,High
+DH5_v1,3,23.78,24.44,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH5_v1,3,24.44,25.49,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse granite",Granite,High
+DH5_v1,3,25.49,32.21,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH50_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH50_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH50_v1,1,2,22.77,Wash boring. (No recovery),No Recovery,High
+DH50_v1,3,22.77,27.98,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 60 degrees-70 degrees.",Granite,High
+DH51_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH51_v1,1,0.2,21.28,Wash boring.,No recovery,High
+DH51_v1,3,21.28,26.3,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20, 50-70 and occasionally vertical joints.",Granite,High
+DH53_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH53_v1,1,0.2,19.6,Wash boring. (No recovery),No Recovery,High
+DH53_v1,2,19.6,24.81,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees.",Granite,High
+DH54_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH54_v1,1,0.2,19.33,Wash boring,No recovery,High
+DH54_v1,3,19.33,24.41,"Strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10 degrees-20 degrees, 65 degrees-80 degrees",Granite,High
+DH55_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH55_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH55_v1,1,2,16.31,Wash boring. (No recovery),No Recovery,High
+DH55_v1,2,16.31,16.91,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE. (CORESTONE)",Granite,High
+DH55_v1,2,16.91,19.01,Wash boring. (No recovery),No Recovery,High
+DH55_v1,3,19.01,24.15,"Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 75 degrees-85 degrees.",Granite,High
+DH58_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH58_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH58_v1,1,2,17.85,Wash boring. (No recovery),No recovery,High
+DH58_v1,2,17.85,18.35,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium to closely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10-20, 40-50, 70-80.",Granite,High
+DH58_v1,2,18.35,23.33,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium to closely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10-20, 40-50, 70-80. (moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE)",Granite,High
+DH59_v1,1,0,0.2,Concrete Slab.,Concrete,High
+DH59_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH59_v1,1,2,17.3,Wash boring. (No recovery),No recovery,High
+DH59_v1,2,17.3,17.7,"moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH59_v1,2,17.7,17.93,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees.",Granite,High
+DH59_v1,3,17.93,23.18,wash boring. (No recovery),No recovery,High
+DH6_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH6_v1,1,0.2,2.2,Wash boring. (No recovery),No Recovery,High
+DH6_v1,1,2.2,3.5,Concrete with cobbles and gravels of moderately decomposed granite with some brown silty SAND. (FILL),Fill,High
+DH6_v1,1,3.5,25.8,Wash boring. (No recovery),No Recovery,High
+DH6_v1,3,25.8,31.09,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20 degrees",Granite,High
+DH60_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH60_v1,1,0.2,7.5,Wash boring. (No recovery),No Recovery,High
+DH60_v1,1,7.5,8,Concrete with COBBLES and GRAVELS of moderately decomposed granite. (FILL),Fill,High
+DH60_v1,1,8,18.26,Wash boring. (No recovery),No Recovery,High
+DH60_v1,2,18.26,18.32,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10-20, 45-55.",Granite,High
+DH60_v1,3,18.32,23.63,"moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH7_v1,1,0,0.2,Concrete Slab,Fill,High
+DH7_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH7_v1,1,2,23.7,Wash boring. (No recovery),No recovery,High
+DH7_v1,3,23.7,23.85,No recovery,No recovery,High
+DH7_v1,3,23.85,23.95,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH7_v1,3,23.95,24.2,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH7_v1,3,24.2,24.32,No recovery,No recovery,High
+DH7_v1,3,24.32,30.37,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH8_v1,1,0,0.2,Concrete Slab,Fill,High
+DH8_v1,1,0.2,20.8,Wash boring. (No recovery),No Recovery,High
+DH8_v1,3,20.8,26.44,"Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally extremely narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 60 degrees-70 degrees.",Granite,High
+DH9_v1,1,0,0.2,Concrete Slab,Concrete,High
+DH9_v1,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH9_v1,1,2,18.4,Wash boring. (No recovery),No recovery,High
+DH9_v1,2,18.4,19.35,"Sub-rounded GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND.",Gravel,High
+DH9_v1,2,19.35,19.7,Boulder,Boulder,High
+DH9_v1,2,19.7,20.35,"Sub-rounded GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND.",Gravel,High
+DH9_v1,3,20.35,27.05,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20 & 60-80.",Granite,High
+DH19_v2,1,0,2,"Angular red brick and concrete fragments with some grey, silty SAND.(FILL)",Fill,High
+DH19_v2,1,2,18.5,Wash Boring.(No Recovery),No Recovery,High
+DH19_v2,2,18.5,19.3,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM)",Alluvium,High
+DH19_v2,2,19.3,24.3,Wash Boring.(No Recovery),No Recovery,High
+DH19_v2,3,24.3,24.6,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH19_v2,3,24.6,24.64,No Recovery,No Recovery,High
+DH19_v2,3,24.64,30.37,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, manganese stained and kaolin coated joints, dipping 10-20, 30-40 and vertical joints",Granite,High
+DH34_v2,1,0,0.2,Concrete Slab,Concrete,High
+DH34_v2,1,0.2,0.8,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH34_v2,1,0.8,6.3,Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL),Fill,High
+DH34_v2,1,6.3,9,"Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH34_v2,1,9,21,Wash boring. (No recovery),No recovery,High
+DH34_v2,3,21,21.5,"Sub-rounded Cobbles and Gravels of moderately decomposed tuff and granite with some brown, silty SAND. (ALLUVIUM)",Alluvium,High
+DH34_v2,3,21.5,26.66,Wash boring. (No recovery),No recovery,High
+DH34_v2,3,26.66,32.53,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees.",Granite,High
+DH42_v2,1,0,0.2,Concrete Slab,Concrete,High
+DH42_v2,1,0.2,0.8,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH42_v2,1,0.8,1.4,Concrete with cobbles and gravels of moderately decomposed granite and some red bricks. (FILL),Fill,High
+DH42_v2,1,1.4,4,Wash boring. (No recovery),No recovery,High
+DH42_v2,1,4,5.8,"Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some red bricks. (FILL)",Fill,High
+DH42_v2,1,5.8,6.1,Boulder,Boulder,High
+DH42_v2,1,6.1,6.5,"Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some red bricks. (FILL)",Fill,High
+DH42_v2,1,6.5,29,Wash boring. (No recovery),No recovery,High
+DH42_v2,3,29,29.4,Moderately decomposed granite,Granite,High
+DH42_v2,4,29.4,34.99,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10 degrees-20 degrees, 50 degrees-65 degrees. (Including 29.00m-29.10m: weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE)",Granite,High
+DH47_v2,1,0,0.2,Concrete Slab,Concrete,High
+DH47_v2,1,0.2,2.5,Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND and red bricks. (FILL),Fill,High
+DH47_v2,1,2.5,2.9,Wash boring,No recovery,High
+DH47_v2,1,2.9,5,"Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL)",Fill,High
+DH47_v2,1,5,18.72,Wash boring,No recovery,High
+DH47_v2,2,18.72,19.91,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees & 40 degrees-50 degrees.",Granite,High
+DH47_v2,3,19.91,20.55,No recovery,No recovery,High
+DH47_v2,3,20.55,23.14,"Moderately weak to moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE",Granite,High
+DH47_v2,3,23.14,23.35,No recovery,No recovery,High
+DH47_v2,3,23.35,25.88,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.",Granite,High
+DH47_v2,3,25.88,28.85,"Moderately strong to strong, brownish pink, moderately to slightly decomposed, medium grained GRANITE with medium spaced rough planar joints.",Granite,High
+DH55_v2,1,0,0.2,Concrete Slab,Concrete,High
+DH55_v2,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Sand,High
+DH55_v2,1,2,16.31,Wash boring. (No recovery),No recovery,High
+DH55_v2,2,16.31,16.91,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE. (CORESTONE)",Granite,High
+DH55_v2,2,16.91,19.01,Wash boring. (No recovery),No recovery,High
+DH55_v2,2,19.01,20.31,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE",Granite,High
+DH55_v2,3,20.31,24.15,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 75 degrees-85 degrees",Granite,High
+DH7_v2,1,0,0.2,Concrete Slab,Concrete,High
+DH7_v2,1,0.2,2,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
+DH7_v2,1,2,23.7,Wash boring. (No recovery),No Recovery,High
+DH7_v2,3,23.7,23.85,No recovery,No Recovery,High
+DH7_v2,3,23.85,23.95,"weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.",Granite,High
+DH7_v2,3,23.95,24.2,"Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE",Granite,High
+DH7_v2,3,24.2,24.32,No recovery,No Recovery,High
+DH7_v2,3,24.32,30.37,"Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE",Granite,High

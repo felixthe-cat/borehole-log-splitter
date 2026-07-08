@@ -1,63 +1,69 @@
-# Walkthrough - Geological Verification & Extraction Skill
+# Walkthrough - Resilient Batch Borehole Log Extraction
 
-This document details the completed implementation of the geological verification checks, the self-correction retry loop, and the new data extraction skill.
-
-## Changes Made
-
-### 1. Enhanced Geological Verification Checks
-We created a new validation module `borehole_extractor_lib/validation.py` implementing four critical geological checks:
-- **Layer Depth Continuity and Range Ordering:** Sorts layers by start depth and verifies that:
-  - `Start Depth < End Depth` for each layer.
-  - No duplicate depth ranges exist.
-  - No depth ranges overlap (`Start Depth[i+1] >= End Depth[i]`).
-  - No gaps exist between consecutive layers (`Start Depth[i+1] == End Depth[i]`).
-- **Termination Depth Match:** Queries Gemini to identify the total termination depth (often written at the bottom-left or bottom title block of log sheets) and compares it with the ending depth of the final geological layer.
-- **Title Block Consistency:** Queries Gemini to extract the 'Hole No', 'Project Name', and 'Project Number' from the title block of each page and ensures they match across all sheets of a single borehole.
-
-### 2. Self-Correction Retry Loop
-We integrated these verifications into the orchestration pipeline in `jobs/run_pipeline.py`:
-- After data is extracted from Gemini, the validation checks are run.
-- If any check fails, the validation errors and the current CSV are sent back to Gemini in a follow-up query requesting correction.
-- The pipeline retries this correction up to 3 times. If issues persist after 3 attempts, it proceeds with the best-effort output and logs the remaining issues in a final warning summary.
-
-### 3. Creation of the Data Extractor Skill
-- **[SKILL.md (borehole-data-extractor)](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/.agents/skills/borehole-data-extractor/SKILL.md)**: Created a dedicated skill configuration explaining the CLI parameters, target models, and the geological verification steps.
-- **Wrapper Fix**: Corrected the imports in `.agents/skills/borehole-log-splitter/scripts/borehole_splitter.py` to point to the actual script in the project root instead of the non-existent `jobs.run_pipeline`.
+This document summarizes the changes, verification steps, and execution results for the resilient batch extraction of all split borehole logs using the Gemini API.
 
 ---
 
-## Verification Results
+## 1. Summary of Changes
 
-### 1. Code Compilation
-Verified that all modified and newly created modules compile successfully:
+### library updates (`borehole_extractor_lib/`)
+We implemented versioning helpers, standard naming formatters, and filename verification checks:
+- **`writer.py`**:
+  - `get_next_master_csv_path(base_path)`: Resolves unique, version-incremented output paths (e.g. `results/borehole_stratigraphy_v1.csv`) so that previous master CSVs are never overwritten.
+  - `get_next_borehole_version(hole_name, master_csv_path)`: Scans the master CSV `Hole No` column and increments the borehole suffix (e.g. `DH7_v1`, `DH7_v2`) if records already exist.
+  - `get_standard_pdf_name(hole_no, prefix)` and `get_standard_excel_name(hole_name, prefix)`: Generates standard names matching project conventions.
+  - Updated `save_borehole_pdf` to enforce standard PDF naming.
+- **`validation.py`**:
+  - `verify_pdf_filename(filename)`: RegEx-checks split PDF filename structure.
+  - `verify_excel_filename(filename)`: RegEx-checks individual CSV log filename structure.
+- **`__init__.py`**:
+  - Exported all new helper functions for use in orchestration jobs.
+
+### Batch Orchestration Job (`jobs/extract_all_gemini.py`)
+We created a new orchestration script `jobs/extract_all_gemini.py` designed for robust batch processing of all split PDFs:
+- **Progress Checkpointing**: Saves progress to `outputs/extraction_progress.json` after every successfully completed log. If execution is interrupted (e.g. by network disconnects or API quota limits), the script loads progress and resumes from the exact checkpoint.
+- **Fallback Chain Integration**: Loops through fallback models (`gemini-3.5-flash` -> `gemini-2.5-flash` -> `gemini-2.5-flash-lite` -> `gemini-3.1-flash-lite`) if transient error or daily limit quota is encountered.
+- **Normalisations & Validations**: Runs depth continuity, termination depth, title block consistency, and classification checks, employing the 3-retry self-correction loop when issues occur.
+
+---
+
+## 2. Verification & Execution Results
+
+### Validation of Script Compilation
+We successfully verified that all modified library files and the batch script compile with no errors:
 ```powershell
-python -m py_compile borehole_splitter.py jobs/run_pipeline.py borehole_extractor_lib/validation.py
+python -m py_compile jobs/extract_all_gemini.py borehole_extractor_lib/writer.py borehole_extractor_lib/validation.py borehole_extractor_lib/__init__.py
 ```
-**Result**: The command completed successfully with zero syntax warnings or errors.
 
-### 2. Pipeline Run on Borehole DH7
-We executed the direct stratigraphy extraction on a fresh output path:
-```powershell
-python borehole_splitter.py --input "individual borehole logs/Borehole_DH7.pdf" --output-csv "Borehole_DH7_stratigraphy.csv" --extract-only --model "gemini-3.5-flash"
-```
-**Result Output:**
-- Loaded and rendered all 4 page images natively using PyMuPDF (no Poppler dependency).
-- Successfully executed the validation checks on Attempt 1:
-  - Depth continuity & Ordering: **PASSED** (strictly continuous, increasing, non-overlapping layers from 0.00m to 30.37m with no duplicates).
-  - Termination depth match: **PASSED** (ending layer matches termination depth of 30.37m).
-  - Title block details match: **PASSED** (consistent across all pages).
-- Successfully appended 8 stratigraphy records to `Borehole_DH7_stratigraphy.csv`.
+### Batch Processing Execution & Resiliency Check
 
-**Extracted CSV Contents:**
-```csv
-Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
-DH7,1,0.00,0.20,Concrete Slab.,Concrete,High
-DH7,1,0.20,2.00,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill,High
-DH7,1,2.00,23.70,Wash boring. (No recovery),No Recovery,High
-DH7,3,23.70,23.85,No recovery.,No Recovery,High
-DH7,3,23.85,23.95,"Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.",Granite,High
-DH7,3,23.95,24.20,"Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10°-20°, 40°-50°, 60°-75°.",Granite,High
-DH7,3,24.20,24.32,No recovery.,No Recovery,High
-DH7,3,24.32,30.37,"Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10°-20°, 40°-50°, 60°-75°.",Granite,High
-```
-*(The depth ranges are strictly increasing and continuous, and descriptions with commas are properly quoted, fulfilling all acceptance criteria.)*
+1. **Initial Run**:
+   - The script initialized the master CSV as `results/borehole_stratigraphy_v1.csv`, successfully preserving the original `results/borehole_stratigraphy.csv`.
+   - Processed `Aug1996_Borehole_B6A.pdf` and `Aug1996_Borehole_B6B.pdf` successfully, writing results to the master CSV and saving individual raw CSV files.
+   - On the 3rd log, the Gemini API daily request limits for free-tier primary models (`gemini-3.5-flash` and `gemini-2.5-flash`) were exhausted.
+   - Following that, a network disconnection occurred (causing host lookup and connect timeout errors on the fallback models).
+   - The script aborted cleanly and saved progress to `outputs/extraction_progress.json`.
+
+2. **Resume Run**:
+   - We triggered a resume. The script loaded `outputs/extraction_progress.json`, identified that the first 2 logs were completed, and skipped them.
+   - Resumed extraction on `Aug1996_Borehole_C6A.pdf`.
+   - Successfully completed processing all remaining **89 split borehole logs** in the directory.
+   - The fallback chain handled daily quota exhaustions on primary models by executing extractions using `gemini-3.1-flash-lite`.
+
+### Final Summary
+- **Total Split Logs Scanned**: 91
+- **Skipped (Already Processed)**: 2
+- **Newly Processed**: 89
+- **Failed**: 0
+- **Generated Master CSV**: [borehole_stratigraphy_v1.csv](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/results/borehole_stratigraphy_v1.csv)
+- **Individual CSV Logs Directory**: [outputs/](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/outputs/) (fully verified via `verify_excel_filename`)
+
+---
+
+## 3. Post-Extraction CSV Cleanup
+
+We performed a cleanup step on the generated `results/borehole_stratigraphy_v1.csv` to create the final cleaned version:
+- **Rule**: For duplicate borehole runs, we retained only the highest version (e.g. keeping `DH19_v2` and removing `DH19_v1`).
+- **Standardization**: Stripped the version suffixes (`_v1`, `_v2`, etc.) from all `Hole No` entries, leaving only the clean borehole numbers.
+- **Output**: Saved the cleaned file as [borehole_stratigraphy_v2.csv](file:///c:/Users/lawfe/VS%20Code%20Projects/Borehole%20Log%20Splitter/results/borehole_stratigraphy_v2.csv).
+

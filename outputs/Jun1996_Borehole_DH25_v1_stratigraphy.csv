@@ -1,0 +1,10 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH25_v1;1;0.00;1.00;Wash Boring;No Recovery;High
+DH25_v1;1;1.00;6.00;Angular COBBLES and GRAVELS of moderately decomposed granite with some brown, silty SAND and some red brick and concrete fragments. (FILL);Fill;High
+DH25_v1;1;6.00;10.00;Wash Boring;No Recovery;High
+DH25_v1;2;10.00;10.50;Medium dense, grey, silty fine to medium SAND with occasionally some shell fragments. (MARINE DEPOSIT);Sand;High
+DH25_v1;2;10.50;16.45;Stiff, grey, sandy silty CLAY. (ALLUVIUM);Clay;High
+DH25_v1;2;16.45;20.00;Medium dense, grey, clayey silty fine to medium SAND. (ALLUVIUM);Sand;High
+DH25_v1;3;20.00;24.04;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND. (ALLUVIUM) Extremely weak, brownish pink spotted black and white, completely decomposed, medium to coarse grained GRANITE. (Very dense, gravelly silty medium to coarse SAND.);Granite;High
+DH25_v1;3;24.04;29.80;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20 and 40-60. Weak, highly decomposed zone at 24.23m-24.33m.;Granite;High

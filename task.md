@@ -1,12 +1,9 @@
-# Tasks - Verification Checks & Data Extractor Skill
+# Tasks
 
-- [x] Fix the `borehole_splitter.py` redirection wrapper in the skill folder
-- [x] Create the `borehole-data-extractor` skill directory and `SKILL.md`
-- [x] Refactor `borehole_splitter.py` (orchestrated via jobs/run_pipeline.py) in the project root to add verification steps:
-  - [x] Implement `check_depth_continuity`
-  - [x] Implement `check_termination_depth` (using Gemini check)
-  - [x] Implement `check_title_block_consistency` (using Gemini check)
-  - [x] Implement the self-correction retry loop and summary report
-- [x] Verify script compilation
-- [x] Verify execution on `Borehole_DH7.pdf`
-- [x] Create final walkthrough documentation
+- [x] Implement versioning and standard naming helpers in `borehole_extractor_lib/writer.py`
+- [x] Implement filename validation checks in `borehole_extractor_lib/validation.py`
+- [x] Export new functions in `borehole_extractor_lib/__init__.py`
+- [x] Create the batch extraction orchestration script `jobs/extract_all_gemini.py`
+- [x] Compile and verify syntax of modified files
+- [x] Run a test execution to verify progress checkpointing and output versioning
+- [x] Run the complete batch extraction on all individual borehole logs

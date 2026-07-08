@@ -1,0 +1,12 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B1_v1;1;0.00;0.20;Concrete slab;Concrete;High
+B1_v1;1;0.20;0.80;Brown, gravelly silty medium to coarse SAND (FILL);Fill;High
+B1_v1;1;0.80;19.00;No recovery;No recovery;High
+B1_v1;2;19.00;19.30;Sub-angular Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM);Alluvium;High
+B1_v1;3;19.30;22.83;No recovery;No recovery;High
+B1_v1;3;22.83;23.52;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+B1_v1;3;23.52;23.82;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed GRANITE;Granite;High
+B1_v1;3;23.82;23.97;Weak, highly decomposed zone;Granite;High
+B1_v1;3;23.97;24.11;No recovery;No recovery;High
+B1_v1;3;24.11;33.32;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High

@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C2A_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+C2A_v1;1;0.20;0.60;Wash boring. (No recovery);No Recovery;High
+C2A_v1;1;0.60;2.50;Concrete with cobbles and gravels of moderately decomposed granite and some rubbish. (FILL);Fill;High
+C2A_v1;1;2.50;23.60;Wash boring. (No recovery);No Recovery;High
+C2A_v1;3;23.60;29.87;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-75 degrees.;Granite;High

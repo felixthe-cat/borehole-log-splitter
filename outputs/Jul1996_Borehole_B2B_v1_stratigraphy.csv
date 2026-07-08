@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2B_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+B2B_v1;1;0.20;2.50;Concrete with cobbles and gravels of moderately decomposed granite and red bricks (FILL);Fill;High
+B2B_v1;1;2.50;19.70;Wash boring;No recovery;High
+B2B_v1;2;19.70;21.50;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some red brick and steel fragment (FILL);Fill;High
+B2B_v1;3;21.50;26.04;Wash boring;No recovery;High
+B2B_v1;3;26.04;31.80;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow to very narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20, 40-60, 70-80;Granite;High

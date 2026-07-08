@@ -1,0 +1,12 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH47_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+DH47_v1;1;0.20;2.50;Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND (FILL);Fill;High
+DH47_v1;1;2.50;2.90;No recovery;No recovery;High
+DH47_v1;1;2.90;5.00;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND (FILL);Fill;High
+DH47_v1;2;5.00;18.72;Wash boring. (No recovery);No recovery;High
+DH47_v1;2;18.72;19.91;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints;Granite;High
+DH47_v1;3;19.91;20.55;No recovery;No recovery;High
+DH47_v1;3;20.55;23.14;Moderately weak to moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH47_v1;3;23.14;23.35;No recovery;No recovery;High
+DH47_v1;3;23.35;28.85;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints;Granite;High

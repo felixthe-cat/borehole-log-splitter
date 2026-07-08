@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C6A_v1;1;0.00;1.10;Wash boring.;No Recovery;High
+C6A_v1;1;1.10;2.40;Rounded and sub-rounded COBBLES, fine to coarse GRAVEL and CONCRETE. No recovery, assumed finer material washed out. (FILL);Fill;High
+C6A_v1;1;2.40;18.95;Wash boring.;No Recovery;High
+C6A_v1;2;18.95;19.80;Moderately strong, brownish grey spotted yellow, moderately decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees-35 degrees.;Granite;High
+C6A_v1;2;19.80;25.29;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed, medium grained GRANITE with closely to medium spaced, very narrow to extremely narrow, rough undulating, clean joints, dipping 5 degrees-10 degrees.;Granite;High
+C6A_v1;3;25.29;26.57;Strong to moderately strong, spotted black and white, slightly to moderately decomposed, medium grained GRANITE with closely to medium spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 5 degrees-10 degrees and 25 degrees-35 degrees.;Granite;High

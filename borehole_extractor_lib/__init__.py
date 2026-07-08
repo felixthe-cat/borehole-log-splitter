@@ -28,11 +28,17 @@ from .validation import (
     resolve_as_sheet_descriptions,
     merge_consecutive_identical_layers,
     normalize_degree_symbols,
+    verify_pdf_filename,
+    verify_excel_filename,
 )
 from .writer import (
     save_borehole_pdf,
     clean_and_parse_csv,
     append_rows_to_master_csv,
+    get_next_master_csv_path,
+    get_next_borehole_version,
+    get_standard_pdf_name,
+    get_standard_excel_name,
 )
 
 __all__ = [
@@ -57,7 +63,13 @@ __all__ = [
     "resolve_as_sheet_descriptions",
     "merge_consecutive_identical_layers",
     "normalize_degree_symbols",
+    "verify_pdf_filename",
+    "verify_excel_filename",
     "save_borehole_pdf",
     "clean_and_parse_csv",
     "append_rows_to_master_csv",
+    "get_next_master_csv_path",
+    "get_next_borehole_version",
+    "get_standard_pdf_name",
+    "get_standard_excel_name",
 ]

@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH35_v1;1;0.00;0.20;Concrete Slab.;Concrete;High
+DH35_v1;1;0.20;0.70;Brown, gravelly silty medium to coarse SAND. (FILL);Sand;High
+DH35_v1;1;0.70;6.50;Concrete with cobbles and gravels of moderately decomposed granite and tuff with some red bricks and rubbish. (FILL);Fill;High
+DH35_v1;1;6.50;25.50;Wash boring. (No recovery);No Recovery;High
+DH35_v1;3;25.50;31.38;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-30;Granite;High

@@ -1,0 +1,9 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH40_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+DH40_v1;1;0.20;8.60;Angular GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND and some red bricks and concrete fragments. (FILL);Fill;High
+DH40_v1;1;8.60;24.41;Wash boring;No recovery;High
+DH40_v1;3;24.41;24.70;No recovery;No recovery;High
+DH40_v1;3;24.70;25.25;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 70 degrees-80 degrees.;Granite;High
+DH40_v1;3;25.25;25.58;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
+DH40_v1;3;25.58;29.95;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 70 degrees-80 degrees.;Granite;High

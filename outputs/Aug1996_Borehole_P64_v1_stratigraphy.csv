@@ -1,0 +1,13 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+P64_v1;1;0.00;2.00;wash boring;Fill;High
+P64_v1;1;2.00;3.00;Rounded to subrounded COBBLES and fine to coarse GRAVEL. No recovery assumed, finer material washed out. (FILL);Fill;High
+P64_v1;1;3.00;11.70;wash boring;Fill;High
+P64_v1;2;11.70;12.20;Moderately strong to moderately weak, brownish grey, spotted yellow, moderately to highly decomposed medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and stained joints, dipping 15 to 35.;Granite;High
+P64_v1;2;12.20;16.00;wash boring;No recovery;High
+P64_v1;2;16.00;17.53;Moderately strong, pinkish grey, spotted black and white, moderately decomposed medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 5 to 25.;Granite;High
+P64_v1;2;17.53;17.87;wash boring;No recovery;High
+P64_v1;2;17.87;19.20;Strong to moderately strong, pinkish grey, spotted black and white, slightly to moderately decomposed medium grained GRANITE with closely spaced to medium spaced, very narrow, rough undulating, limonite and manganese stained joints, dipping 5 to 15.;Granite;High
+P64_v1;3;19.20;22.00;Strong, pinkish grey, spotted black and white, slightly decomposed medium grained GRANITE with closely to medium spaced, extremely narrow, rough undulating, clean joints, dipping 5 to 10.;Granite;High
+P64_v1;3;22.00;23.53;moderately strong to strong, moderately to slightly decomposed zone.;Granite;High
+P64_v1;3;23.53;24.98;Strong, pinkish grey, spotted black and white, slightly decomposed medium grained GRANITE with closely to medium spaced, extremely narrow, rough undulating, clean joints, dipping 5 to 10.;Granite;High

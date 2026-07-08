@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH18_v1;1;0.00;3.50;Concrete with red brick fragments. (FILL);Fill;High
+DH18_v1;1;3.50;18.70;Wash Boring. (No Recovery);No Recovery;High
+DH18_v1;2;18.70;21.20;Sub-rounded COBBLES and GRAVELS of moderately decomposed tuff and granite with some silty sand. (ALLUVIUM);Alluvium;High
+DH18_v1;3;21.20;23.77;Wash boring. (No Recovery);No Recovery;High
+DH18_v1;3;23.77;29.71;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-80 degrees and vertical joints.;Granite;High

@@ -1,0 +1,5 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH53_v1;1;0.00;0.20;Concrete Slab;Concrete;High
+DH53_v1;1;0.20;19.60;Wash boring. (No recovery);No Recovery;High
+DH53_v1;2;19.60;24.81;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees.;Granite;High
