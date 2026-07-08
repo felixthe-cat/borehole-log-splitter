@@ -131,12 +131,13 @@ def run_pipeline(
         print(f"Note: Split PDFs have been preserved in: {os.path.abspath(splits_dir)}")
         return False
         
-    # Initialize Gemini API Client
-    try:
-        model = initialize_gemini_client(api_key=api_key, model_name=model_name)
-    except Exception as e:
-        print(f"[Error] Failed to initialize Gemini model '{model_name}': {e}", file=sys.stderr)
-        return False
+    # Setup list of models for robust fallback chain
+    fallback_chain = ["gemini-3.5-flash", "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-3.1-flash-lite"]
+    if model_name not in fallback_chain:
+        fallback_chain.insert(0, model_name)
+    else:
+        fallback_chain.remove(model_name)
+        fallback_chain.insert(0, model_name)
         
     print("\nStarting Phase 2 & 3: Gemini Multimodal Extraction & CSV Appending")
     print("-" * 60)
@@ -175,121 +176,139 @@ def run_pipeline(
             stats_failed += 1
             continue
             
-        # Call Gemini model
+        # Call Gemini model using robust fallback chain
+        current_model_idx = 0
+        success_extraction = False
+        
         try:
-            print(f"    Calling Gemini API ({model_name})...", end="", flush=True)
-            extraction_data = extract_stratigraphy_with_retry(
-                model=model,
-                images=images,
-                borehole_name=hole,
-                max_retries=5,
-                initial_delay=4.0,
-                backoff_factor=2.0
-            )
-            print(" Done.")
-            
-            # Clean and run geological verifications
-            if extraction_data:
-                csv_text = extraction_data.get("stratigraphy_csv", "")
-                term_depth = float(extraction_data.get("termination_depth", 0.0))
-                title_blocks = extraction_data.get("title_blocks", [])
-                
-                rows = clean_and_parse_csv(csv_text)
-                rows = resolve_as_sheet_descriptions(rows)
-                rows = merge_consecutive_identical_layers(rows)
-                rows = normalize_degree_symbols(rows)
-                
-                # Validation retry loop (up to 3 attempts)
-                validation_errors = []
-                validation_passed = False
-                
-                for v_attempt in range(1, 4):
-                    if not rows:
-                        break
-                    print(f"    Running validation checks (Attempt {v_attempt}/3)...", end="", flush=True)
+            while current_model_idx < len(fallback_chain):
+                active_model_name = fallback_chain[current_model_idx]
+                try:
+                    print(f"    Calling Gemini API ({active_model_name})...", end="", flush=True)
+                    # Initialize Gemini client for the current model
+                    model = initialize_gemini_client(api_key=api_key, model_name=active_model_name)
                     
-                    # 1. Depth continuity check
-                    errors = check_depth_continuity(rows)
+                    extraction_data = extract_stratigraphy_with_retry(
+                        model=model,
+                        images=images,
+                        borehole_name=hole,
+                        max_retries=5,
+                        initial_delay=4.0,
+                        backoff_factor=2.0
+                    )
+                    print(" Done.")
                     
-                    # 2. Termination depth comparison
-                    try:
-                        sorted_rows = sorted(rows, key=lambda x: float(x[2]))
-                        last_end_depth = float(sorted_rows[-1][3])
-                        term_errors = check_termination_depth(term_depth, last_end_depth)
-                        errors.extend(term_errors)
-                    except Exception as te:
-                        print(f"      [Warning] Termination depth comparison error: {te}")
+                    # Clean and run geological verifications
+                    if extraction_data:
+                        csv_text = extraction_data.get("stratigraphy_csv", "")
+                        term_depth = float(extraction_data.get("termination_depth", 0.0))
+                        title_blocks = extraction_data.get("title_blocks", [])
                         
-                    # 3. Title block details match check
-                    title_errors = check_title_block_consistency(title_blocks)
-                    errors.extend(title_errors)
-                    
-                    # 4. Description and classification consistency check
-                    desc_errors = check_description_and_classification(rows)
-                    errors.extend(desc_errors)
-                    
-                    if not errors:
-                        print(" PASSED.")
-                        validation_passed = True
-                        break
-                    else:
-                        print(f" FAILED with {len(errors)} issue(s):")
-                        for err in errors:
-                            print(f"      [Validation Error] {err}")
-                        validation_errors = errors
+                        rows = clean_and_parse_csv(csv_text)
+                        rows = resolve_as_sheet_descriptions(rows)
+                        rows = merge_consecutive_identical_layers(rows)
+                        rows = normalize_degree_symbols(rows)
                         
-                        if v_attempt < 3:
-                            print(f"    Requesting Gemini correction for borehole {hole}...", end="", flush=True)
-                            original_json_str = json.dumps(extraction_data, indent=2)
+                        # Validation retry loop (up to 3 attempts)
+                        validation_errors = []
+                        validation_passed = False
+                        
+                        for v_attempt in range(1, 4):
+                            if not rows:
+                                break
+                            print(f"    Running validation checks (Attempt {v_attempt}/3)...", end="", flush=True)
                             
-                            extraction_data = request_gemini_correction(
-                                model=model,
-                                images=images,
-                                borehole_name=hole,
-                                original_json_str=original_json_str,
-                                errors=errors
-                            )
-                            print(" Done.")
+                            # 1. Depth continuity check
+                            errors = check_depth_continuity(rows)
                             
-                            csv_text = extraction_data.get("stratigraphy_csv", "")
-                            term_depth = float(extraction_data.get("termination_depth", 0.0))
-                            title_blocks = extraction_data.get("title_blocks", [])
+                            # 2. Termination depth comparison
+                            try:
+                                sorted_rows = sorted(rows, key=lambda x: float(x[2]))
+                                last_end_depth = float(sorted_rows[-1][3])
+                                term_errors = check_termination_depth(term_depth, last_end_depth)
+                                errors.extend(term_errors)
+                            except Exception as te:
+                                print(f"      [Warning] Termination depth comparison error: {te}")
+                                
+                            # 3. Title block details match check
+                            title_errors = check_title_block_consistency(title_blocks)
+                            errors.extend(title_errors)
                             
-                            rows = clean_and_parse_csv(csv_text)
-                            rows = resolve_as_sheet_descriptions(rows)
-                            rows = merge_consecutive_identical_layers(rows)
-                            rows = normalize_degree_symbols(rows)
+                            # 4. Description and classification consistency check
+                            desc_errors = check_description_and_classification(rows)
+                            errors.extend(desc_errors)
+                            
+                            if not errors:
+                                print(" PASSED.")
+                                validation_passed = True
+                                break
+                            else:
+                                print(f" FAILED with {len(errors)} issue(s):")
+                                for err in errors:
+                                    print(f"      [Validation Error] {err}")
+                                validation_errors = errors
+                                
+                                if v_attempt < 3:
+                                    print(f"    Requesting Gemini correction for borehole {hole}...", end="", flush=True)
+                                    original_json_str = json.dumps(extraction_data, indent=2)
+                                    
+                                    extraction_data = request_gemini_correction(
+                                        model=model,
+                                        images=images,
+                                        borehole_name=hole,
+                                        original_json_str=original_json_str,
+                                        errors=errors
+                                    )
+                                    print(" Done.")
+                                    
+                                    csv_text = extraction_data.get("stratigraphy_csv", "")
+                                    term_depth = float(extraction_data.get("termination_depth", 0.0))
+                                    title_blocks = extraction_data.get("title_blocks", [])
+                                    
+                                    rows = clean_and_parse_csv(csv_text)
+                                    rows = resolve_as_sheet_descriptions(rows)
+                                    rows = merge_consecutive_identical_layers(rows)
+                                    rows = normalize_degree_symbols(rows)
+                                else:
+                                    print(f"    [Warning] Max correction attempts reached. Proceeding with best-effort results.")
+                                    
+                        if validation_errors and not validation_passed:
+                            all_validation_issues.append((hole, validation_errors))
+                            
+                        if rows:
+                            append_rows_to_master_csv(rows, output_csv)
+                            # Copy raw CSV/JSON outputs to outputs/ in the project root for raw tracing
+                            project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+                            raw_out_dir = os.path.join(project_root, "outputs")
+                            os.makedirs(raw_out_dir, exist_ok=True)
+                            raw_csv_path = os.path.join(raw_out_dir, f"raw_{hole}_extraction.csv")
+                            with open(raw_csv_path, "w", encoding="utf-8") as rf:
+                                rf.write(csv_text)
+                            
+                            stats_extracted += 1
                         else:
-                            print(f"    [Warning] Max correction attempts reached. Proceeding with best-effort results.")
-                            
-                if validation_errors and not validation_passed:
-                    all_validation_issues.append((hole, validation_errors))
+                            print("    [Warning] Gemini response did not contain parseable CSV rows.")
+                            stats_failed += 1
+                    else:
+                        print("    [Warning] Empty response received from Gemini.")
+                        stats_failed += 1
                     
-                if rows:
-                    append_rows_to_master_csv(rows, output_csv)
-                    # Copy raw CSV/JSON outputs to outputs/ in the project root for raw tracing
-                    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-                    raw_out_dir = os.path.join(project_root, "outputs")
-                    os.makedirs(raw_out_dir, exist_ok=True)
-                    raw_csv_path = os.path.join(raw_out_dir, f"raw_{hole}_extraction.csv")
-                    with open(raw_csv_path, "w", encoding="utf-8") as rf:
-                        rf.write(csv_text)
+                    success_extraction = True
+                    break
                     
-                    stats_extracted += 1
-                else:
-                    print("    [Warning] Gemini response did not contain parseable CSV rows.")
+                except DailyQuotaExhaustedError as eq:
+                    print(f" Quota exhausted for model {active_model_name}.")
+                    current_model_idx += 1
+                    if current_model_idx < len(fallback_chain):
+                        print(f"    Falling back to model: {fallback_chain[current_model_idx]}...")
+                    else:
+                        print(f"\n    [Permanent Quota Error] Daily API quota exhausted for all fallback models. Aborting.")
+                        raise eq
+                except Exception as e:
+                    print(f" Failed: {e}")
+                    print(f"\n    [Error] Failed to extract data for borehole {hole} using {active_model_name}: {e}")
                     stats_failed += 1
-            else:
-                print("    [Warning] Empty response received from Gemini.")
-                stats_failed += 1
-                
-        except DailyQuotaExhaustedError as e:
-            print(f"\n    [Permanent Quota Error] Daily API quota exhausted. Aborting pipeline execution.")
-            raise e
-        except Exception as e:
-            print(f"\n    [Error] Failed to extract data for borehole {hole}: {e}")
-            stats_failed += 1
-            
+                    break
         finally:
             # Clean up PIL images
             for img in images:
