@@ -1,0 +1,11 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2a;1;0.00;0.24;Concrete Slab.;Concrete;High
+B2a;1;0.24;1.10;Wash boring. (No recovery);No Recovery;High
+B2a;1;1.10;1.40;Concrete with cobbles and gravels of moderately decomposed granite and occasionally some steel fragment. (FILL);Fill;High
+B2a;1;1.40;3.04;Wash boring. (No recovery);No Recovery;High
+B2a;1;3.04;18.00;Wash boring. (No recovery);No Recovery;High
+B2a;2;18.00;18.50;Sub-rounded cobbles and gravels of moderately decomposed granite and weathered fine-grained, silty SAND (ALLUVIUM). Wash boring. (No recovery);Alluvium/Sand;High
+B2a;2;18.50;22.80;Wash boring. (No recovery);No Recovery;High
+B2a;3;22.80;23.40;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE;Granite;High
+B2a;3;23.40;25.80;No recovery.;No Recovery;High
+B2a;3;25.80;31.56;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE;Granite;High

@@ -1,0 +1,8 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C2;1;0.00;0.74;Concrete with steel bar.;Concrete;High
+C2;1;0.74;1.50;Wash boring. (No recovery);No recovery;High
+C2;1;1.50;4.90;ANGULAR BOULDER, COBBLES AND PEBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (FILL);Fill (Boulder/Sand);High
+C2;1;4.90;19.60;Wash boring. (No recovery);No recovery;High
+C2;2;19.60;20.60;Sub-rounded COBBLES and PEBBLES of moderately decomposed granite and tuff with yellowish brown clayey SAND. (ALLUVIUM);Alluvium (Cobbles/Sand);High
+C2;3;20.60;21.89;Wash boring. (No recovery);No recovery;High
+C2;3;21.89;31.39;Moderately strong, brownish pink spotted black and white, moderately decomposed FINE GRAINED GRANITE with widely spaced, extremely narrow, rough planar, limonite, manganese stained, vertical joints, dipping 10°-20°, 40°-50°, 75°-85° and occasionally vertical joints.;Granite;High

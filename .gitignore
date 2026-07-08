@@ -6,8 +6,10 @@ __pycache__/
 *.pyc
 
 # Local log files and data
-borehole_stratigraphy.csv
+/borehole_stratigraphy.csv
 temp_splits/
 split_pdfs/
 *.tmp
 *.log
+scratch/
+

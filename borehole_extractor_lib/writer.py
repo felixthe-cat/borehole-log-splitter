@@ -11,7 +11,8 @@ def save_borehole_pdf(
     page_indices: list[int],
     hole_no: str,
     output_dir: str,
-    overwrite: bool = True
+    overwrite: bool = True,
+    prefix: str = None
 ) -> str | None:
     """
     Extracts the specified page indices from the source PDF and writes them
@@ -21,7 +22,10 @@ def save_borehole_pdf(
         return None
         
     sanitized = sanitize_filename(hole_no)
-    filename = f"Borehole_{sanitized}.pdf"
+    if prefix:
+        filename = f"{prefix}_Borehole_{sanitized}.pdf"
+    else:
+        filename = f"Borehole_{sanitized}.pdf"
     
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -61,7 +65,7 @@ def save_borehole_pdf(
 def clean_and_parse_csv(csv_text: str) -> list[list[str]]:
     """
     Cleans up the raw Gemini API CSV text response (removing markdown block syntax if present)
-    and parses it using the standard csv.reader to handle commas in descriptions safely.
+    and parses it using the standard csv.reader to handle semicolons in descriptions safely.
     """
     csv_text = csv_text.strip()
     
@@ -78,7 +82,7 @@ def clean_and_parse_csv(csv_text: str) -> list[list[str]]:
         return []
         
     f_in = io.StringIO(csv_text)
-    reader = csv.reader(f_in)
+    reader = csv.reader(f_in, delimiter=';')
     
     rows = []
     for row in reader:
@@ -86,6 +90,10 @@ def clean_and_parse_csv(csv_text: str) -> list[list[str]]:
             continue
         row_cleaned = [cell.strip() for cell in row]
         
+        # Skip sep=; instruction line if present
+        if row_cleaned and row_cleaned[0].lower().startswith("sep="):
+            continue
+            
         # Skip header rows if generated in response
         row_lower = [cell.lower() for cell in row_cleaned]
         if any(h in row_lower[0] for h in ["hole", "borehole"]) and any("depth" in cell for cell in row_lower):
@@ -114,8 +122,9 @@ def append_rows_to_master_csv(rows: list[list[str]], master_csv_path: str):
     
     try:
         with open(master_csv_path, mode="a", encoding="utf-8", newline="") as f_out:
-            writer = csv.writer(f_out)
+            writer = csv.writer(f_out, delimiter=';')
             if not file_exists:
+                f_out.write("sep=;\n")
                 writer.writerow(headers_expected)
             writer.writerows(rows)
         print(f"    Added {len(rows)} record(s) to: {os.path.basename(master_csv_path)}")

@@ -1,0 +1,5 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C3;1;0.00;1.00;Concrete Slab. Dark grey with cobbles and gravels of moderately decomposed granite and steel bars. (FILL);Fill;High
+C3;1;1.00;21.45;Wash boring. (No recovery);No Recovery;High
+C3;3;21.45;22.90;Strong, pinkish grey spotted black and white, slightly decomposed coarse to fine grained GRANITE with widely to medium spaced, with moderately close fractures, rough planar, limonitic, manganese stained. Moderately open joint, dipping 10°-20°, 70°-85°.;Granite;High
+C3;3;22.90;28.70;Strong, pinkish grey to yellowish white, moderately decomposed medium to coarse grained GRANITE.;Granite;High

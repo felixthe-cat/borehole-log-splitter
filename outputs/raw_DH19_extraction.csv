@@ -1,6 +1,7 @@
 Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
-DH19,1,0.00,2.00,"Angular red brick and concrete fragments with some grey, silty SAND.(FILL)",FILL,High
-DH19,1,2.00,18.50,"Wash Boring.(No Recovery)",No Recovery,High
-DH19,2,18.50,19.30,"Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM)",ALLUVIUM,High
-DH19,2,19.30,24.30,"Wash Boring.(No Recovery)",No Recovery,High
-DH19,3,24.30,30.37,"Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10°-20°, 30°-40° and vertical joints. Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE at 24.30m-24.60m. No Recovery at 24.60m-24.64m.",GRANITE,High
+DH19,1,0.00,1.00,Angular red brick and concrete fragments with some grey, silty SAND (FILL).,Fill,High
+DH19,1,1.00,18.50,Wash Boring (No Recovery).,No recovery,High
+DH19,2,18.50,19.30,Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown silty SAND (ALLUVIUM).,Alluvium,High
+DH19,2,19.30,24.60,Wash Boring (No Recovery).,No recovery,High
+DH19,3,24.60,28.64,Moderately strong, brownish pink spotted black and white, moderately to decomposed medium to coarse grained GRANITE with widely spaced medium and occasionally closely spaced very narrow, rough planar, smooth, mostly weathered and open core joints dipping 15-20, 30-40 and vertical joints.,Granite,High
+DH19,3,28.64,30.37,Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.,Granite,High

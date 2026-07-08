@@ -1,0 +1,8 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B3c;1;0.00;0.50;Concrete Slab with steel bars.;Concrete;High
+B3c;1;0.50;14.90;Wash boring. (No recovery);No recovery;High
+B3c;2;14.90;15.10;No recovery;No recovery;High
+B3c;2;15.10;19.34;Moderately strong to strong, pinkish grey, fine to coarse grained, moderately to slightly decomposed non-foliated FINE-GRAINED GRANITE with widely spaced, extremely narrow to wide, planar, smooth, iron stained and clean joints, dipping 10°-20°, 60°-70°, 80°-85°.;Granite;High
+B3c;3;19.34;19.57;no recovery.;No recovery;High
+B3c;3;19.57;19.75;Moderately strong to strong, pinkish grey, fine to coarse grained, moderately to slightly decomposed non-foliated FINE-GRAINED GRANITE with widely spaced, extremely narrow to wide, planar, smooth, iron stained and clean joints, dipping 10°-20°, 60°-70°, 80°-85°.;Granite;High
+B3c;3;19.75;28.13;No recovery;No recovery;High

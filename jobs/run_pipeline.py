@@ -3,6 +3,8 @@ import sys
 import gc
 import time
 import argparse
+import json
+import io
 import fitz  # PyMuPDF
 from PIL import Image
 
@@ -14,14 +16,18 @@ from borehole_extractor_lib import (
     triage_and_split_pdf,
     initialize_gemini_client,
     extract_stratigraphy_with_retry,
+    DailyQuotaExhaustedError,
     clean_and_parse_csv,
     append_rows_to_master_csv,
     check_depth_continuity,
     check_termination_depth,
     check_title_block_consistency,
+    check_description_and_classification,
     request_gemini_correction,
     resolve_as_sheet_descriptions,
     merge_consecutive_identical_layers,
+    normalize_degree_symbols,
+    get_unique_report_short_names,
 )
 
 
@@ -88,11 +94,19 @@ def run_pipeline(
         print("-" * 60)
         
         try:
+            # Determine unique short report name
+            pdf_dir = os.path.dirname(input_pdf) or "."
+            short_names_map = get_unique_report_short_names(pdf_dir)
+            short_report_name = short_names_map.get(os.path.basename(input_pdf))
+            if short_report_name:
+                print(f"Using short report name prefix: {short_report_name}")
+                
             created_splits = triage_and_split_pdf(
                 pdf_path=input_pdf,
                 dpi=dpi,
                 splits_dir=splits_dir,
-                overwrite_splits=True
+                overwrite_splits=True,
+                short_report_name=short_report_name
             )
         except Exception as e:
             print(f"[Error] Phase 1 page triage and split failed: {e}", file=sys.stderr)
@@ -164,7 +178,7 @@ def run_pipeline(
         # Call Gemini model
         try:
             print(f"    Calling Gemini API ({model_name})...", end="", flush=True)
-            csv_response = extract_stratigraphy_with_retry(
+            extraction_data = extract_stratigraphy_with_retry(
                 model=model,
                 images=images,
                 borehole_name=hole,
@@ -175,10 +189,15 @@ def run_pipeline(
             print(" Done.")
             
             # Clean and run geological verifications
-            if csv_response:
-                rows = clean_and_parse_csv(csv_response)
+            if extraction_data:
+                csv_text = extraction_data.get("stratigraphy_csv", "")
+                term_depth = float(extraction_data.get("termination_depth", 0.0))
+                title_blocks = extraction_data.get("title_blocks", [])
+                
+                rows = clean_and_parse_csv(csv_text)
                 rows = resolve_as_sheet_descriptions(rows)
                 rows = merge_consecutive_identical_layers(rows)
+                rows = normalize_degree_symbols(rows)
                 
                 # Validation retry loop (up to 3 attempts)
                 validation_errors = []
@@ -196,14 +215,18 @@ def run_pipeline(
                     try:
                         sorted_rows = sorted(rows, key=lambda x: float(x[2]))
                         last_end_depth = float(sorted_rows[-1][3])
-                        term_errors = check_termination_depth(model, images, last_end_depth)
+                        term_errors = check_termination_depth(term_depth, last_end_depth)
                         errors.extend(term_errors)
-                    except Exception:
-                        pass
+                    except Exception as te:
+                        print(f"      [Warning] Termination depth comparison error: {te}")
                         
                     # 3. Title block details match check
-                    title_errors = check_title_block_consistency(model, images)
+                    title_errors = check_title_block_consistency(title_blocks)
                     errors.extend(title_errors)
+                    
+                    # 4. Description and classification consistency check
+                    desc_errors = check_description_and_classification(rows)
+                    errors.extend(desc_errors)
                     
                     if not errors:
                         print(" PASSED.")
@@ -217,23 +240,25 @@ def run_pipeline(
                         
                         if v_attempt < 3:
                             print(f"    Requesting Gemini correction for borehole {hole}...", end="", flush=True)
-                            import csv as csv_module
-                            io_out = io.StringIO()
-                            writer = csv_module.writer(io_out)
-                            writer.writerows(rows)
-                            current_csv_text = io_out.getvalue()
+                            original_json_str = json.dumps(extraction_data, indent=2)
                             
-                            csv_response = request_gemini_correction(
+                            extraction_data = request_gemini_correction(
                                 model=model,
                                 images=images,
                                 borehole_name=hole,
-                                original_csv=current_csv_text,
+                                original_json_str=original_json_str,
                                 errors=errors
                             )
                             print(" Done.")
-                            rows = clean_and_parse_csv(csv_response)
+                            
+                            csv_text = extraction_data.get("stratigraphy_csv", "")
+                            term_depth = float(extraction_data.get("termination_depth", 0.0))
+                            title_blocks = extraction_data.get("title_blocks", [])
+                            
+                            rows = clean_and_parse_csv(csv_text)
                             rows = resolve_as_sheet_descriptions(rows)
                             rows = merge_consecutive_identical_layers(rows)
+                            rows = normalize_degree_symbols(rows)
                         else:
                             print(f"    [Warning] Max correction attempts reached. Proceeding with best-effort results.")
                             
@@ -242,13 +267,13 @@ def run_pipeline(
                     
                 if rows:
                     append_rows_to_master_csv(rows, output_csv)
-                    # Copy raw CSV outputs to outputs/ in the project root for raw tracing
+                    # Copy raw CSV/JSON outputs to outputs/ in the project root for raw tracing
                     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
                     raw_out_dir = os.path.join(project_root, "outputs")
                     os.makedirs(raw_out_dir, exist_ok=True)
                     raw_csv_path = os.path.join(raw_out_dir, f"raw_{hole}_extraction.csv")
                     with open(raw_csv_path, "w", encoding="utf-8") as rf:
-                        rf.write(csv_response if csv_response else "")
+                        rf.write(csv_text)
                     
                     stats_extracted += 1
                 else:
@@ -258,6 +283,9 @@ def run_pipeline(
                 print("    [Warning] Empty response received from Gemini.")
                 stats_failed += 1
                 
+        except DailyQuotaExhaustedError as e:
+            print(f"\n    [Permanent Quota Error] Daily API quota exhausted. Aborting pipeline execution.")
+            raise e
         except Exception as e:
             print(f"\n    [Error] Failed to extract data for borehole {hole}: {e}")
             stats_failed += 1

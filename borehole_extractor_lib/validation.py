@@ -7,16 +7,23 @@ import google.generativeai as genai
 def check_depth_continuity(rows: list[list[str]]) -> list[str]:
     """
     Checks that:
-    1. Start depth is strictly less than end depth for each layer.
-    2. Depth ranges are of increasing depth and do not repeat or overlap.
-    3. The ending depth of the Nth layer is the same as the starting depth of the N+1th layer (continuous).
+    1. Every row has exactly 7 fields (corresponding to the 7 headers).
+    2. Sheet No is a single integer number (preventing Excel date-parsing like '1-3').
+    3. Start depth is strictly less than end depth for each layer.
+    4. Depth ranges are of increasing depth and do not repeat or overlap.
+    5. The ending depth of the Nth layer is the same as the starting depth of the N+1th layer (continuous).
     """
     errors = []
     parsed_rows = []
     
     for idx, r in enumerate(rows):
-        if len(r) < 4:
-            errors.append(f"Row {idx+1}: Incomplete data row (fewer than 4 fields)")
+        if len(r) != 7:
+            errors.append(f"Row {idx+1}: Invalid column count ({len(r)} columns, expected 7 columns separated by semicolons). Row data: {r}")
+            continue
+            
+        sheet_no_str = r[1].strip()
+        if not sheet_no_str.isdigit():
+            errors.append(f"Row {idx+1}: Sheet No '{sheet_no_str}' is not a valid integer. Ranges (like '1-3') or text are not allowed.")
             continue
             
         try:
@@ -67,88 +74,85 @@ def check_depth_continuity(rows: list[list[str]]) -> list[str]:
     return errors
 
 
-def check_termination_depth(model: genai.GenerativeModel, images: list, last_end_depth: float) -> list[str]:
+def check_termination_depth(term_depth: float, last_end_depth: float) -> list[str]:
     """
-    Extracts the termination depth of the borehole from the log sheet (typically at bottom-left)
-    and verifies if it matches the final soil/rock layer end depth.
+    Verifies if the total termination depth of the borehole matches the final soil/rock layer end depth.
     """
     errors = []
-    prompt = (
-        "Identify the total termination depth of the borehole log shown in these images. "
-        "The termination depth is usually explicitly written at the bottom-left corner of the page, "
-        "or in the bottom title block section, or as a final remark (e.g., 'Termination Depth: 10.50m', "
-        "'End of Hole at 15.0m', or 'EOB 12.0m'). "
-        "Return ONLY the numeric value in meters (e.g., 10.50) or 'None' if it is not explicitly written. "
-        "Do not include units, explanation, or extra characters."
-    )
-    try:
-        response = model.generate_content(images + [prompt])
-        text = response.text.strip() if response and response.text else ""
-        # Search for a float pattern
-        match = re.search(r"(\d+\.\d+|\d+)", text)
-        if match:
-            term_depth = float(match.group(1))
-            if abs(term_depth - last_end_depth) > 0.01:
-                errors.append(
-                    f"Termination depth mismatch: The log page indicates a termination depth of {term_depth:.2f} m, "
-                    f"but the final extracted geological layer ends at {last_end_depth:.2f} m."
-                )
-        else:
-            # If the model explicitly returned 'None' or no numeric value, we don't raise an error
-            pass
-    except Exception as e:
-        print(f"    [Warning] Failed to query termination depth for validation: {e}")
-        
+    if term_depth and term_depth > 0.01:
+        if abs(term_depth - last_end_depth) > 0.01:
+            errors.append(
+                f"Termination depth mismatch: The log page indicates a termination depth of {term_depth:.2f} m, "
+                f"but the final extracted geological layer ends at {last_end_depth:.2f} m."
+            )
     return errors
 
 
-def check_title_block_consistency(model: genai.GenerativeModel, images: list) -> list[str]:
+def check_title_block_consistency(title_blocks: list) -> list[str]:
     """
     Verifies that details in the title blocks match across all sheets of a single borehole.
     """
     errors = []
-    prompt = (
-        "Extract the following title block information from each page in these images: "
-        "Hole No, Project Name, Project Number, and Date. "
-        "Return the result strictly as a raw JSON list of objects, one for each page, with the exact keys: "
-        "\"page_number\", \"hole_no\", \"project_name\", \"project_number\", \"date\". "
-        "Do not wrap the JSON in markdown code blocks. Provide raw JSON text only."
-    )
-    try:
-        response = model.generate_content(images + [prompt])
-        text = response.text.strip() if response and response.text else ""
-        if text.startswith("```"):
-            lines = text.splitlines()
-            if lines[0].startswith("```"):
-                lines = lines[1:]
-            if lines and lines[-1].startswith("```"):
-                lines = lines[:-1]
-            text = "\n".join(lines).strip()
-            
-        data = json.loads(text)
-        if len(data) > 1:
-            first_page = data[0]
-            # We strictly check 'hole_no', 'project_name', and 'project_number'
-            fields_to_check = [
-                ("hole_no", "Hole Number"),
-                ("project_name", "Project Name"),
-                ("project_number", "Project Number")
-            ]
-            for key, label in fields_to_check:
-                val1 = str(first_page.get(key, '')).strip().lower()
-                for idx, page_data in enumerate(data[1:], start=2):
-                    val2 = str(page_data.get(key, '')).strip().lower()
-                    # Skip check if one of the values is empty or unclear to prevent false positives
-                    if not val1 or not val2 or val1 in ["unknown", "n/a", "none"] or val2 in ["unknown", "n/a", "none"]:
-                        continue
-                    if val1 != val2:
-                        errors.append(
-                            f"Title block mismatch: {label} differs between Page 1 ('{first_page.get(key)}') "
-                            f"and Page {idx} ('{page_data.get(key)}')."
-                        )
-    except Exception as e:
-        print(f"    [Warning] Failed to verify title block consistency: {e}")
+    if not title_blocks or len(title_blocks) <= 1:
+        return errors
         
+    first_page = title_blocks[0]
+    # We strictly check 'hole_no', 'project_name', and 'project_number'
+    fields_to_check = [
+        ("hole_no", "Hole Number"),
+        ("project_name", "Project Name"),
+        ("project_number", "Project Number")
+    ]
+    for key, label in fields_to_check:
+        val1 = str(first_page.get(key, '')).strip().lower()
+        for idx, page_data in enumerate(title_blocks[1:], start=2):
+            val2 = str(page_data.get(key, '')).strip().lower()
+            # Skip check if one of the values is empty or unclear to prevent false positives
+            if not val1 or not val2 or val1 in ["unknown", "n/a", "none"] or val2 in ["unknown", "n/a", "none"]:
+                continue
+            if val1 != val2:
+                errors.append(
+                    f"Title block mismatch: {label} differs between Page 1 ('{first_page.get(key)}') "
+                    f"and Page {idx} ('{page_data.get(key)}')."
+                )
+    return errors
+
+
+def check_description_and_classification(rows: list[list[str]]) -> list[str]:
+    """
+    Verifies that:
+    1. Descriptions do not contain unresolved 'As Sheet X' references.
+    2. Wash boring / No recovery descriptions are classified correctly (not as geological rock/soil types).
+    """
+    errors = []
+    as_sheet_pattern = re.compile(r"\b(?:as|refer\s+to|per)\s+sheet\s*\d+", re.IGNORECASE)
+    
+    for idx, r in enumerate(rows):
+        if len(r) < 6:
+            continue
+            
+        desc = r[4].strip()
+        material_type = r[5].strip().lower()
+        
+        # 1. Check for unresolved 'As Sheet X' references
+        if as_sheet_pattern.search(desc):
+            errors.append(
+                f"Row {idx+1}: Unresolved description reference '{desc}'. "
+                f"The description must state the actual geological material."
+            )
+            
+        # 2. Check for Wash Boring / No Recovery classification consistency
+        desc_lower = desc.lower()
+        has_wash_boring = "wash boring" in desc_lower or "no recovery" in desc_lower or "core loss" in desc_lower or "core photo" in desc_lower
+        
+        if has_wash_boring:
+            # Check if it was misclassified as a geological soil/rock type
+            geological_types = ["granite", "tuff", "sand", "clay", "silt", "gravel", "rock", "alluvium"]
+            if any(gt in material_type for gt in geological_types) and "fill" not in material_type:
+                errors.append(
+                    f"Row {idx+1}: Classification mismatch. Description mentions '{desc}', but it is classified as '{r[5]}'. "
+                    f"Intervals with no material recovery must be classified as 'No Recovery' or 'Wash Boring'."
+                )
     return errors
 
 
@@ -156,31 +160,39 @@ def request_gemini_correction(
     model: genai.GenerativeModel,
     images: list,
     borehole_name: str,
-    original_csv: str,
+    original_json_str: str,
     errors: list[str]
-) -> str:
+) -> dict:
     """
-    Sends the validation errors and original CSV back to Gemini to request a corrected extraction.
+    Sends the validation errors and original response JSON back to Gemini to request a corrected extraction.
     """
+    from .extractor import EXTRACTION_SCHEMA
     errors_str = "\n".join([f"- {err}" for err in errors])
     prompt = (
-        f"We extracted the following stratigraphy CSV for borehole '{borehole_name}':\n\n"
-        f"{original_csv}\n\n"
+        f"We extracted the following borehole data JSON for borehole '{borehole_name}':\n\n"
+        f"{original_json_str}\n\n"
         f"However, the following validation checks failed on this extraction:\n"
         f"{errors_str}\n\n"
         f"Please re-analyze the provided log images and correct the data extraction for borehole '{borehole_name}'. "
         f"Make sure to resolve all continuity, termination depth, and title block issues. "
-        f"Provide the output strictly as raw CSV text matching the headers: "
-        f"Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level\n"
-        f"Do not wrap the CSV in markdown code blocks."
+        f"Provide the output strictly as JSON matching the response schema."
     )
     contents = list(images) + [prompt]
     try:
-        response = model.generate_content(contents)
-        return response.text if response and response.text else ""
+        response = model.generate_content(
+            contents,
+            generation_config={
+                "response_mime_type": "application/json",
+                "response_schema": EXTRACTION_SCHEMA
+            }
+        )
+        if not response or not response.text:
+            print(f"    [Warning] Received empty response from Gemini during correction.")
+            return {}
+        return json.loads(response.text)
     except Exception as e:
         print(f"    [Error] Gemini correction request failed: {e}")
-        return ""
+        return {}
 
 
 def resolve_as_sheet_descriptions(rows: list[list[str]]) -> list[list[str]]:
@@ -264,3 +276,13 @@ def merge_consecutive_identical_layers(rows: list[list[str]]) -> list[list[str]]
             merged_rows.append(next_row)
             
     return merged_rows
+
+
+def normalize_degree_symbols(rows: list[list[str]]) -> list[list[str]]:
+    """
+    Replaces degree symbols (°) in descriptions with the word 'degrees'.
+    """
+    for r in rows:
+        if len(r) >= 5:
+            r[4] = r[4].replace("°", " degrees").replace("º", " degrees")
+    return rows

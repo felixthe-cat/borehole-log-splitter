@@ -9,6 +9,10 @@ from .config import (
     SHEET_PATTERNS,
     is_log_sheet_text,
     normalize_hole_name,
+    smooth_borehole_sequence,
+    expand_cover_list,
+    align_sequences,
+    parse_name_to_tuple,
 )
 from .ocr import process_page_ocr
 from .writer import save_borehole_pdf
@@ -34,7 +38,8 @@ def triage_and_split_pdf(
     pdf_path: str,
     dpi: int,
     splits_dir: str,
-    overwrite_splits: bool = True
+    overwrite_splits: bool = True,
+    short_report_name: str = None
 ) -> list[tuple[str, str]]:
     """
     Performs Phase 1: Local OCR and page triage.
@@ -107,10 +112,65 @@ def triage_and_split_pdf(
                 stats_discarded += 1
         
         # 2. Group consecutive log pages into blocks
+        # Splits when sheet_x == 1, or when a new valid/expected borehole name starts
+        page2_text = ""
+        for p in pages_data:
+            if p["page_num"] == 2:
+                page2_text = p["raw_text"]
+                break
+        expected_boreholes = []
+        if page2_text:
+            expected_boreholes = expand_cover_list(page2_text)
+        if not expected_boreholes and len(pages_data) >= 1:
+            expected_boreholes = expand_cover_list(pages_data[0]["raw_text"])
+            
+        expected_set = {name.upper() for name in expected_boreholes}
+        
         blocks = []
         current_block = []
         for pdata in pages_data:
             if pdata["is_log"] and not pdata["is_photo"]:
+                should_split = False
+                if current_block:
+                    if pdata["sheet_x"] == 1 and current_block[-1]["sheet_x"] and current_block[-1]["sheet_x"] > 1:
+                        should_split = True
+                    elif pdata["detected_hole"] and pdata["detected_hole"] != "UNKNOWN":
+                        votes = [p["detected_hole"] for p in current_block if p["detected_hole"] and p["detected_hole"] != "UNKNOWN"]
+                        voted_name = Counter(votes).most_common(1)[0][0] if votes else None
+                        if voted_name and pdata["detected_hole"] != voted_name:
+                            # Check consecutive sheet exception
+                            is_consecutive_sheet = False
+                            if pdata["sheet_x"] and current_block[-1]["sheet_x"]:
+                                if pdata["sheet_x"] == current_block[-1]["sheet_x"] + 1:
+                                    is_consecutive_sheet = True
+                                    
+                            if not is_consecutive_sheet:
+                                # Parse normalized representation
+                                t_new = parse_name_to_tuple(pdata["detected_hole"])
+                                t_old = parse_name_to_tuple(voted_name)
+                                # Normalize expected list match
+                                is_new_in_expected = False
+                                if expected_set:
+                                    # Direct or normalized tuple match
+                                    for exp in expected_set:
+                                        if exp == pdata["detected_hole"]:
+                                            is_new_in_expected = True
+                                            break
+                                        t_exp = parse_name_to_tuple(exp)
+                                        if t_exp and t_new and t_exp == t_new:
+                                            is_new_in_expected = True
+                                            break
+                                            
+                                if expected_set:
+                                    if is_new_in_expected:
+                                        should_split = True
+                                else:
+                                    if pdata["detected_hole"] != voted_name:
+                                        should_split = True
+                                    
+                if should_split and current_block:
+                    blocks.append(current_block)
+                    current_block = []
                 current_block.append(pdata)
             else:
                 if current_block:
@@ -144,20 +204,91 @@ def triage_and_split_pdf(
                         block[i]["detected_hole"] = prev_hole
         
         # 4. Group log pages by their final voted normalized borehole name
-        hole_to_pages = {}
+        # We first build raw voted names for each block, identify the dominant prefix,
+        # smooth the sequence to correct any errors, and then group.
+        block_items = []
         for block in blocks:
             hole_votes = [p["detected_hole"] for p in block if p["detected_hole"]]
-            if not hole_votes:
-                print(f"\n[Warning] Block of pages {[p['page_num'] for p in block]} has no borehole name. Skipping.")
-                continue
-            block_hole = Counter(hole_votes).most_common(1)[0][0]
+            voted_raw = Counter(hole_votes).most_common(1)[0][0] if hole_votes else None
+            block_items.append({
+                "block": block,
+                "voted_raw": voted_raw,
+                "corrected_name": voted_raw
+            })
             
-            for p in block:
+        # Determine dominant prefix from voted names
+        dominant_prefix = "DH"
+        prefixes = []
+        for item in block_items:
+            if item["voted_raw"]:
+                match = re.match(r"^([a-zA-Z]{2})", item["voted_raw"])
+                if match:
+                    prefixes.append(match.group(1).upper())
+        if prefixes:
+            dominant_prefix = Counter(prefixes).most_common(1)[0][0]
+            
+        # Try to extract cover-page expected borehole list (page 2, page 1 fallback)
+        page2_text = ""
+        for p in pages_data:
+            if p["page_num"] == 2:
+                page2_text = p["raw_text"]
+                break
+                
+        expected_boreholes = []
+        if page2_text:
+            expected_boreholes = expand_cover_list(page2_text)
+        if not expected_boreholes and len(pages_data) >= 1:
+            expected_boreholes = expand_cover_list(pages_data[0]["raw_text"])
+            
+        if expected_boreholes:
+            # Sort expected list using first-letter prefix priority from raw blocks to match physical sequence
+            block_prefixes = []
+            for item in block_items:
+                if item["voted_raw"]:
+                    t = parse_name_to_tuple(item["voted_raw"])
+                    if t and t[0]:
+                        first_letter = t[0][0]
+                        if first_letter not in block_prefixes:
+                            block_prefixes.append(first_letter)
+                            
+            def get_expected_sort_key(name: str):
+                t = parse_name_to_tuple(name)
+                if not t:
+                    return (999, "", 0, "")
+                prefix, num, suffix = t
+                first_letter = prefix[0] if prefix else ""
+                try:
+                    prefix_priority = block_prefixes.index(first_letter)
+                except ValueError:
+                    prefix_priority = 999
+                return (prefix_priority, prefix, num, suffix)
+                
+            expected_boreholes.sort(key=get_expected_sort_key)
+            print(f"\nSequence Verification: Found cover-page borehole list: {expected_boreholes}")
+            
+            raw_block_names = [item["voted_raw"] for item in block_items]
+            aligned_names = align_sequences(raw_block_names, expected_boreholes)
+            for idx, name in enumerate(aligned_names):
+                block_items[idx]["corrected_name"] = name
+                if block_items[idx]["voted_raw"] != name:
+                    print(f"--> Cover page verified correction: '{block_items[idx]['voted_raw']}' -> '{name}'")
+        else:
+            print("\nSequence Verification: Cover-page borehole list not found. Falling back to sequence smoothing.")
+            smooth_borehole_sequence(block_items, dominant_prefix)
+        
+        hole_to_pages = {}
+        for item in block_items:
+            block_hole = item["corrected_name"]
+            if not block_hole:
+                print(f"\n[Warning] Block of pages {[p['page_num'] for p in item['block']]} has no borehole name. Skipping.")
+                continue
+                
+            for p in item["block"]:
                 p["detected_hole"] = block_hole
                 
             if block_hole not in hole_to_pages:
                 hole_to_pages[block_hole] = []
-            hole_to_pages[block_hole].extend(block)
+            hole_to_pages[block_hole].extend(item["block"])
         
         # 5. Verify and split each borehole log
         for hole_no, bpages in hole_to_pages.items():
@@ -165,13 +296,17 @@ def triage_and_split_pdf(
             
             # Determine total sheet count Y
             sheet_y_values = [p["sheet_y"] for p in bpages if p["sheet_y"]]
+            sheet_x_values = [p["sheet_x"] for p in bpages if p["sheet_x"]]
             block_y = None
             if sheet_y_values:
-                block_y = Counter(sheet_y_values).most_common(1)[0][0]
+                most_common_y = Counter(sheet_y_values).most_common(1)[0][0]
+                if most_common_y <= 20:
+                    block_y = most_common_y
+                else:
+                    block_y = max(max(sheet_x_values) if sheet_x_values else 1, len(bpages))
             else:
-                sheet_x_values = [p["sheet_x"] for p in bpages if p["sheet_x"]]
                 if sheet_x_values:
-                    block_y = max(sheet_x_values)
+                    block_y = max(max(sheet_x_values), len(bpages))
                 else:
                     block_y = len(bpages)
             
@@ -224,9 +359,17 @@ def triage_and_split_pdf(
             
             # Save split PDF
             page_indices = [p["fitz_idx"] for p in verified_pages]
-            pdf_path_output = save_borehole_pdf(src_doc, page_indices, hole_no, splits_dir, overwrite=overwrite_splits)
+            pdf_path_output = save_borehole_pdf(
+                src_doc,
+                page_indices,
+                hole_no,
+                splits_dir,
+                overwrite=overwrite_splits,
+                prefix=short_report_name
+            )
             if pdf_path_output:
-                created_splits.append((hole_no, pdf_path_output))
+                prefixed_hole = f"{short_report_name}_{hole_no}" if short_report_name else hole_no
+                created_splits.append((prefixed_hole, pdf_path_output))
                 
     finally:
         src_doc.close()

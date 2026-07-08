@@ -54,7 +54,7 @@ After calling Gemini and parsing the raw CSV, the pipeline applies the following
 
 ## Geological Verification Checks
 
-After normalisation, the pipeline runs the following four checks. Failures trigger the self-correction retry loop (see below).
+After normalisation, the pipeline runs the following six checks. Failures trigger the self-correction retry loop (see below).
 
 ### Check 1 — Depth Range Validity and Ordering
 - `Start Depth < End Depth` for every layer.
@@ -70,6 +70,18 @@ After normalisation, the pipeline runs the following four checks. Failures trigg
 ### Check 3 — Title Block Consistency Across Sheets
 - `Hole No`, `Project Name`, and `Project Number` extracted from each sheet's title block must be identical across all sheets for a single borehole.
 
+### Check 4 — Column Count Consistency
+- Every row of the output CSV must have exactly the same number of columns as the header row (7 columns). No extra columns from unquoted commas or malformed rows are allowed.
+
+### Check 5 — Strict Numeric Formatting
+- Columns intended to be numbers (`Sheet No`, `Start Depth`, `End Depth`) must strictly contain numeric values (a single positive integer for `Sheet No`, and floats for depths). Range formats (like `1-3`) or text suffixes are prohibited to avoid Excel formatting issues.
+
+### Check 6 — Description Reference Resolution
+- Final layer descriptions must not contain unresolved `"As Sheet X"` style references. The actual material descriptions must be resolved from the reference sheets.
+
+### Check 7 — Classification Method Consistency
+- Interval descriptions mentioning "wash boring", "no recovery", or "core loss" must be classified as "No Recovery" or "Wash Boring" (or "Fill" if fill material is washed out). They must not be misclassified as primary geological soil/rock types (e.g. Granite, Sand, Clay).
+
 ---
 
 ## Self-Correction Retry Workflow
@@ -77,7 +89,7 @@ After normalisation, the pipeline runs the following four checks. Failures trigg
 If any verification check fails, the pipeline:
 1. Aggregates all validation errors into a structured list.
 2. Sends the current CSV extraction and the full error list back to Gemini in a follow-up query, asking it to re-analyse the images and correct the discrepancies.
-3. Re-applies `resolve_as_sheet_descriptions` and `merge_consecutive_identical_layers` on the corrected output.
+3. Re-applies normalisation passes (sheet resolution, consecutive merging, degree symbols).
 4. Re-runs all verification checks.
 5. Repeats up to **3 times**. If errors persist after 3 attempts, writes the best-effort CSV and prints a final **Geological Validation Issues Summary**.
 
@@ -97,7 +109,12 @@ The following is the complete list of data-quality rules derived from real proje
 | V6 | Title block `Hole No` is identical across all sheets | Admin mismatch | Gemini query |
 | V7 | Title block `Project Name` is identical across all sheets | Admin mismatch | Gemini query |
 | V8 | Title block `Project Number` is identical across all sheets | Admin mismatch | Gemini query |
+| V9 | Row column count matches header count (exactly 7 columns) | Structural mismatch | Programmatic |
+| V10 | Sheet No and Depths are strictly numeric values (no text or ranges like '1-3') | Format mismatch | Programmatic |
+| V11 | No unresolved '"As Sheet"' references remain in descriptions | Reference mismatch | Programmatic |
+| V12 | Description wash boring/no recovery matches classified type | Classification mismatch | Programmatic |
 | N1 | `"As Sheet X"` descriptions resolved to actual material | Normalisation | Programmatic |
 | N2 | Consecutive identical layers merged into one | Normalisation | Programmatic |
+| N3 | Degree symbols (°) normalized to the word 'degrees' | Normalisation | Programmatic |
 
 > **Note**: Rules prefixed `V` are validations (they trigger correction retries on failure). Rules prefixed `N` are normalisation pre-passes (they transform the data silently before validation runs).

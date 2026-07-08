@@ -1,0 +1,11 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B1a;1;0.00;0.20;CONCRETE SLAB;Concrete;Medium
+B1a;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill / Sand;Medium
+B1a;1;2.00;11.00;Wash boring. No recovery at 2.00m-11.00m.;No Recovery;Medium
+B1a;1;11.00;11.30;Sub-rounded to sub-angular completely decomposed granite and tuff with abundant silty sand. (ALLUVIUM);Alluvium;Medium
+B1a;1;11.30;16.50;Wash boring. No recovery at 11.30m-16.50m;No Recovery;Medium
+B1a;1;16.50;16.90;No recovery (gap between described wash boring sections);No Recovery;Medium
+B1a;1;16.90;17.50;Wash boring. No recovery at 16.90m-18.30m (partial);No Recovery;Medium
+B1a;1;17.50;19.00;Sub-rounded to sub-angular completely decomposed granite and tuff with abundant silty sand. (ALLUVIUM);Alluvium;Medium
+B1a;1;19.00;23.54;Wash boring. No recovery at 19.00m-23.54m.;No Recovery;Medium
+B1a;1;23.54;32.20;Moderately strong to strong, brownish pink spotted black and white, fine to medium to coarse grained GRANITE (partially weathered and altered) very narrow to extremely narrow, rough planar, generally closely to moderately jointed and kaolin coated joints, dipping. 10°-20°, 30°-40° and 50°-60°.;Granite;Medium

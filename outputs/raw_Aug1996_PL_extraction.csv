@@ -1,0 +1,7 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+P1;1;0.00;3.00;0.00-3.00m: wash boring;Wash Boring;High
+P1;1;3.00;17.00;Rounded and subrounded COBBLES, fine to coarse GRAVEL and SAND. 3:30-17:00m: washed boring;Cobbles, Gravel, Sand;High
+P1;2;17.00;17.50;No recovery;No recovery;High
+P1;2;17.50;24.98;Rounded and subrounded COBBLES and fine to coarse GRAVEL. No recovery of finer material washed out. 17.50-24.98m: wash boring;Cobbles, Gravel;High
+P1;3;24.98;28.38;Moderately strong to moderately weak, brown to grey, mottled black and yellow, moderately to highly decomposed medium grained GRANITE with closely spaced, narrow to very narrow, rough and manganese stained joints, dipping 15° to 35°;Granite;High
+P1;3;28.38;30.91;Strong, pinkish grey, spotted black and white, slightly decomposed medium grained GRANITE with widely spaced, undulated, very narrow, rough undulating, clean joints, dipping 15° to 35°;Granite;High

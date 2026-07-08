@@ -1,0 +1,6 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C2a;1;0.00;0.60;Concrete Slab.;Concrete;High
+C2a;1;0.60;0.84;Wash boring. (No recovery);No recovery;High
+C2a;1;0.84;1.60;Concrete with cobbles and gravels of metamorphosed decomposed granite and some rubbish. (FILL);Fill;High
+C2a;1;1.60;1.94;Wash boring. (No recovery);No recovery;High
+C2a;1;1.94;29.87;Moderately strong to strong, fine to coarse grained, white and white, moderately to slightly decomposed FINE GRAINED GRANITE with widely to closely spaced, very close to extremely narrow, rough planar, smooth, undulating, persistent joints, dipping 10°-20°, 40°-50°, 60°-70°.;Granite;High

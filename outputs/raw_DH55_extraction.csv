@@ -1,7 +1,8 @@
 Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
-DH55,1,0.00,0.20,Concrete Slab.,Concrete,High
-DH55,1,0.20,2.00,"Brown, gravelly silty medium to coarse SAND. (FILL)",Fill (Sand),High
-DH55,1,2.00,16.31,Wash boring. (No recovery),No Recovery,High
-DH55,2,16.31,16.91,"Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE. (CORESTONE)",Granite,High
-DH55,2,16.91,19.01,Wash boring. (No recovery),No Recovery,High
-DH55,2,19.01,24.15,"Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10°-20°, 75°-85°.",Granite,High
+DH55,1,0.00,0.30,Concrete Slab.,Concrete,High
+DH55,1,0.30,2.42,Brown, very silty medium to coarse SAND. (FILL),Fill,High
+DH55,1,2.42,16.31,Wash boring. (No recovery),No recovery,High
+DH55,2,16.31,16.91,Moderately weak to moderately strong, brownish pink spotted black and white, fine to medium grained, medium to coarse grained GRANITE. (CORE LOSS),Granite,High
+DH55,2,16.91,19.93,Wash boring. (No recovery),No recovery,High
+DH55,3,19.93,20.31,No recovery (Bridged gap),No recovery,High
+DH55,3,20.31,24.15,Strong, pinkish grey spotted black and white, slightly decomposed to fresh, medium grained GRANITE with widely spaced, extremely narrow to narrow, persistent stained and clean joints, dipping 10°-20°, 75°-85°.,Granite,High
