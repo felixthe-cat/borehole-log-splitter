@@ -1,8 +1,9 @@
+sep=;
 Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
 DH40;1;0.00;0.77;Concrete Slab.;Concrete;High
 DH40;1;0.77;2.97;Brownish grey silty medium to coarse SAND. (FILL);Sand, Fill;High
 DH40;1;2.97;8.60;Angular GRAVEL and COBBLES of moderately decomposed granite and fine to medium coarse SAND and some red bricks and concrete fragments. (FILL);Gravel, Cobbles, Fill;High
 DH40;1;8.60;21.97;Wash boring. (No recovery);No recovery;High
-DH40;3;21.97;24.41;Moderately strong, brownish pink moderately to completely decomposed medium to coarse grained GRANITE. Closely to medium spaced and occasionally widely spaced, very close to extremely narrow, rough planar, infinite, iron-stained and kaolin coated joints, dipping 10°-20° & 70°-80°.;Granite;High
+DH40;3;21.97;24.41;Moderately strong, brownish pink moderately to completely decomposed medium to coarse grained GRANITE. Closely to medium spaced and occasionally widely spaced, very close to extremely narrow, rough planar, infinite, iron-stained and kaolin coated joints, dipping 10 degrees-20 degrees & 70 degrees-80 degrees.;Granite;High
 DH40;3;24.41;24.70;No recovery;No recovery;High
 DH40;3;24.70;29.95;Moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;High

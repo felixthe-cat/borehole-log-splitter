@@ -1,0 +1,10 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH57;1;0.00;0.20;Concrete Slab.;Concrete;High
+DH57;1;0.20;3.00;Wash boring. (No recovery);No Recovery;High
+DH57;1;3.00;13.50;No recovery (gap in log);No Recovery;High
+DH57;2;13.50;14.06;Moderately weak to moderately strong, pinkish brown to yellowish black and white, moderately decomposed fine to coarse grained GRANITE (CORESTONE).;Granite;High
+DH57;2;14.06;14.50;no recovery.;No Recovery;High
+DH57;2;14.50;17.70;wash boring. (no recovery);No Recovery;High
+DH57;2;17.70;17.75;no recovery.;No Recovery;High
+DH57;3;17.75;18.00;weak to moderately weak, reddish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;High
+DH57;2;18.00;23.38;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely close to very close, smooth, stained and clean joints, dipping 10°-20°, 50°-85°.;Granite;High

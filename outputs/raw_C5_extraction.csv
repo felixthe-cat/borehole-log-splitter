@@ -1,0 +1,5 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C5;1;0.00;0.20;Concrete Slab.;Concrete;High
+C5;1;0.20;2.50;Concrete with Cobbles and Gravels of moderately decomposed granite with some steel bars and steel fragment. (FILL);Fill;High
+C5;1;2.50;16.45;Wash boring. (No recovery);No Recovery;High
+C5;2;16.45;28.07;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10°-20°. 16.45m-19.01m: moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE.;Granite;High
