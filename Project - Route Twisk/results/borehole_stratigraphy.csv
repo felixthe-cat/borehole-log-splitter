@@ -1,0 +1,92 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH 5;1;0.00;0.70;Pale brown (10YR 6/3), clayey sandy SILT with fine to coarse gravel, fine to coarse gravel of rock fragments and with some roots. (FILL);FILL;High
+DH 5;1;0.70;1.55;Dark greyish brown, mottled light brownish grey and yellowish brown, angular to subangular, gravels and much coarse gravel of rock fragments. (FILL);FILL;High
+DH 5;1;1.55;3.00;Light grey (10YR 7/1) and light yellowish brown (10YR 6/4), angular to subangular, clayey silty sandy fine to coarse GRAVEL and much coarse of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;3.00;6.00;Yellow (10YR 8/8) dappled grey, angular to subangular, slightly clayey silty sandy fine to coarse GRAVEL of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;6.00;7.00;Grey (10YR 6/1) mottled light brownish grey and yellowish brown, angular to subangular, medium to coarse GRAVEL and much coarse of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;7.00;7.69;Moderately weak to moderately strong, grey and yellowish brown, moderately decomposed, coarse ash TUFF. Joints are very closely to closely spaced, rough planar and rough stepped, iron and manganese oxide staining, dipping at 0 degrees to 10 degrees, 0 degrees to 20 degrees and 65 degrees to 75 degrees.;TUFF;High
+DH 5;1;7.69;8.08;Moderately weak. Moderately strong to strong, grey dappled yellowish brown and light olive green, moderately decomposed, coarse ash TUFF. Joints are moderately to very closely and occasionally very closely spaced, rough planar and rough stepped, iron and manganese oxide staining, chlorite coated, dipping at 0 degrees to 10 degrees, 15 degrees to 25 degrees, 45 degrees to 65 degrees and 70 degrees to 75 degrees.;TUFF;High
+DH 5;1;8.08;10.98;Moderately weak to moderately strong, light brownish grey and greenish grey, moderately decomposed coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0 degrees to 10 degrees, 45 degrees to 55 degrees and 70 degrees to 75 degrees.;TUFF;High
+DH 5;2;10.98;14.05;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;14.05;14.15;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;14.15;14.95;Strong and slightly decomposed.;TUFF;High
+DH 5;2;14.95;15.12;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;15.12;15.43;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;15.43;15.60;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;15.60;15.73;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;15.73;16.41;Strong and slightly decomposed.;TUFF;High
+DH 5;2;16.41;16.72;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;16.72;16.98;Strong and slightly decomposed.;TUFF;High
+DH 5;2;16.98;17.20;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;17.20;18.63;Weak, reddish yellowish grey (5YR 6/6), highly decomposed, coarse ash TUFF. (Angular, slightly subangular, gravel and much coarse GRAVEL of highly decomposed tuff fragments);TUFF;High
+DH 5;2;18.63;18.77;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;18.77;20.20;Moderately weak to moderately strong, light yellowish brown (10YR 6/4) and yellowish grey (5Y 7/2), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0 degrees to 10 degrees, 45 degrees to 55 degrees and 70 degrees to 75 degrees.;TUFF;High
+DH 5;3;20.20;20.94;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;3;20.94;21.84;Weak, pale brown (10YR 6/3), highly decomposed, coarse ash TUFF. (Angular, subangular, very fine to coarse GRAVEL and some cobble of highly decomposed tuff fragments);TUFF;High
+DH 5;3;21.84;21.91;No recovery.;No Recovery;High
+DH 5;3;21.91;22.25;Weak to moderately weak, reddish yellowish brown (5YR 6/6), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0 degrees to 10 degrees, 45 degrees to 55 degrees and 70 degrees to 75%.;TUFF;High
+DH 5;3;22.25;22.43;No recovery (assumed to be completely decomposed SILTSTONE).;No Recovery;High
+DH 5;3;22.43;22.73;Weak to moderately weak, reddish yellowish brown (5YR 6/6), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0 degrees to 10 degrees, 45 degrees to 55 degrees and 70 degrees to 75%.;TUFF;High
+DH 5;3;22.73;27.99;Strong to very strong, dark grey and bluish grey dappled pink and light grey, slightly decomposed, coarse ash TUFF. Joints are very widely spaced, rough planar, calcite and chlorite coating, dipping at 0 degrees to 10 degrees. From 24.29m to 24.64m: With some quartz veins (<10mm thick). From 24.64m to 24.74m: With some quartz veins (<10mm thick). From 24.74m: Moderately decomposed.;TUFF;High
+DH 3;1;0.00;0.20;Brownish yellow (10YR 6/6), slightly clayey sandy SILT with some angular to subangular fine to medium gravel. (FILL);FILL (Silt);High
+DH 3;1;0.20;1.10;Light yellowish brown (10YR 6/4), angular to subangular, coarse GRAVEL of rock fragments. (FILL);FILL (Gravel);High
+DH 3;1;1.10;2.70;Weak, brownish yellow (10YR 6/8) deeply weathered, highly decomposed, coarse ash TUFF. Angular to subangular, fine to medium GRAVEL of highly decomposed tuff fragments;TUFF (decomposed);High
+DH 3;1;2.70;7.10;Weak, brownish yellow (10YR 6/8) dark grey, highly decomposed, TUFF BRECCIA. (Angular, slightly subangular, fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA (decomposed);High
+DH 3;1;7.10;10.40;Extremely weak to very weak, light yellowish brown (10YR 6/4), completely decomposed to moderately decomposed, coarse ash TUFF. (Slightly clayey fine to coarse SAND with much angular fine to medium gravel);TUFF (decomposed);High
+DH 3;2;10.40;11.15;Moderately weak to moderately strong, light brownish grey, moderately decomposed, coarse ash TUFF (COMPTONITE).;TUFF (decomposed);High
+DH 3;2;11.15;11.51;No recovery, assumed to be completely decomposed TUFF.;No recovery;High
+DH 3;2;11.51;12.36;Weak to moderately weak, grey (10YR 7/1), mottled light brownish grey, highly decomposed, TUFF BRECCIA. (Angular, fine to coarse GRAVEL and occasional cobble of highly decomposed tuff breccia fragments).;TUFF BRECCIA (decomposed);High
+DH 3;2;12.36;13.39;No recovery, assumed to be completely decomposed TUFF BRECCIA.;No recovery;High
+DH 3;2;13.39;14.86;Weak to moderately weak, light yellowish brown (10YR 6/4), highly decomposed, TUFF BRECCIA. (Angular, slightly silty fine to coarse GRAVEL of highly decomposed tuff breccia fragments).;TUFF BRECCIA (decomposed);High
+DH 3;2;14.86;15.01;Moderately weak to moderately strong, light greyish brown, moderately decomposed, FINE-GRAINITE. Joints are very closely to closely spaced, rough, planar, with clay coating, 0.5-1.0mm thick, with oxide stained, dipping at 15 degrees to 25 degrees, 25 degrees to 35 degrees and 80 degrees to 85 degrees.;FINE-GRAINITE (decomposed);High
+DH 4;1;0.00;1.00;Brown (7.5YR 5/4) mottled yellowish red, slightly sandy fine to coarse gravel with angular to subangular fine to coarse gravel. (FILL) / Greyish brown (10YR 5/2) and reddish yellow (7.5YR 6/6), mottled yellowish brown, slightly silty sandy fine to coarse GRAVEL and much cobble of grey decomposed granite. (FILL);FILL;High
+DH 4;1;1.00;2.00;Very stiff, reddish yellow (7.5YR 8/6) mottled yellowish brown, slightly silty fine to coarse GRAVEL and much cobble of grey decomposed granite.;GRAVEL;High
+DH 4;1;2.00;3.00;Very stiff, reddish yellow (7.5YR 8/6) mottled yellowish brown, slightly silty sandy fine to coarse gravel, angular to subangular fine to coarse gravel. (COLLUVIUM);COLLUVIUM;High
+DH 4;1;3.00;3.50;No recovery;No recovery;High
+DH 4;1;3.50;8.00;Weak, light yellowish brown (2.5Y 6/3), highly decomposed, TUFF BRECCIA. (Angular, slightly silty sandy fine to medium GRAVEL of highly decomposed tuff breccia fragments) / Weak to moderately weak, reddish yellow (7.5YR 8/6), highly decomposed, TUFF BRECCIA (Angular, slightly silty sandy fine to medium GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA;High
+DH 4;1;8.00;9.00;Moderately strong to strong, light brownish grey and light to moderately decomposed TUFF BRECCIA. (CORESTONE);TUFF BRECCIA (CORESTONE);High
+DH 4;1;9.00;10.96;Weak, pale olive (5Y 6/3), completely decomposed, TUFF BRECCIA. (Stiff, slightly sandy silt);TUFF BRECCIA;High
+DH 4;2;10.96;11.50;Weak to moderately weak, yellowish brown (10YR 7/6), moderately decomposed, TUFF BRECCIA. (Angular, clayey silty sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA;High
+DH 4;2;11.50;11.73;From 11.50m to 11.73m and 13.10m to 13.30m. No recovery, assumed to be completely decomposed TUFF BRECCIA.;No recovery;High
+DH 4;2;11.73;13.10;Weak to moderately weak, yellowish brown (10YR 7/6), moderately decomposed, TUFF BRECCIA. (Angular, clayey silty sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA;High
+DH 4;2;13.10;13.30;No recovery;No recovery;High
+DH 4;2;13.30;14.38;Extremely weak, pale olive (5Y 6/3), completely decomposed, TUFF BRECCIA. (Silty clayey sandy SILT);TUFF BRECCIA;High
+DH 4;2;14.38;14.50;No recovery;No recovery;High
+DH 4;2;14.50;17.60;Weak to moderately weak, pale olive (5Y 6/3), highly decomposed, TUFF BRECCIA. (Angular, clayey silty sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA;High
+DH 4;2;17.60;17.75;Moderately strong and moderately decomposed. (CORESTONE);CORESTONE;High
+DH 4;2;17.75;18.98;Moderately strong, light grey dappled light yellowish brown, moderately decomposed, TUFF BRECCIA (CORESTONE);TUFF BRECCIA (CORESTONE);High
+DH 4;2;18.98;19.93;Strong and slightly decomposed. (CORESTONE);CORESTONE;High
+DH 4;2;19.93;20.22;No recovery;No recovery;High
+DH 4;3;20.22;20.60;Weak to moderately weak, yellowish brown (10YR 7/6), moderately decomposed, TUFF BRECCIA. (Angular, clayey silty sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA;High
+DH 4;3;20.60;22.15;Moderately strong to strong and moderately decomposed. (CORESTONE);CORESTONE;High
+DH 4;3;22.15;25.14;From 22.15m to 25.24m: No recovery, assumed to be completely decomposed TUFF BRECCIA.;No recovery;High
+DH 4;3;25.14;26.03;Very strong to extremely strong and slightly decomposed to moderately decomposed, TUFF BRECCIA (CORESTONE);TUFF BRECCIA (CORESTONE);High
+DH 6;1;0.00;0.50;GREY CONCRETE (PAVEMENT);Concrete;High
+DH 6;1;0.50;1.00;Brownish yellow (10YR 6/8), very sandy SILT with some angular to subangular fine to medium gravel. (COLLUVIUM);Silty Sand with Gravel;High
+DH 6;1;1.00;3.50;Very weak, brownish yellow (10YR 6/8) dappled light red, completely decomposed, TUFF BRECCIA. (Silt, clayey SILT);Tuff Breccia (Silt);High
+DH 6;1;3.50;5.00;Very weak, brownish yellow (10YR 6/8) dappled light red, completely decomposed, TUFF BRECCIA. (Very stiff, slightly sandy clayey SILT with occasional angular fine gravel);Tuff Breccia (Clayey Silty Sand);High
+DH 6;1;5.00;7.10;Extremely weak to very weak, brownish yellow (10YR 6/8) dappled light red, very highly to completely decomposed, TUFF BRECCIA. (Slightly clayey silty SAND to SAND);Tuff Breccia (Silty Sand);High
+DH 6;1;7.10;9.10;Extremely weak, light red (2.5YR 7/8) streaked dark grey, completely decomposed, TUFF BRECCIA. (Very stiff, slightly clayey sandy SILT);Tuff Breccia (Clayey Sandy Silt);High
+DH 6;1;9.10;10.90;Extremely weak to very weak, light red (2.5YR 7/8) mottled reddish yellow, completely decomposed, TUFF CLAYSTONE. (Very stiff, slightly sandy clayey SILT);Tuff Claystone;High
+DH 6;1;10.90;11.75;weak, brownish yellow (10YR 6/8) dappled light red, highly decomposed, TUFF BRECCIA. (Slightly clayey silty SAND to fine GRAVEL of tuff breccia fragments);Tuff Breccia (Silty Sand with Gravel);High
+DH 6;1;11.75;12.50;Very weak, brownish yellow (10YR 6/8) dappled light red, highly decomposed, TUFF BRECCIA. (Very stiff, slightly clayey sandy SILT);Tuff Breccia (Clayey Sandy Silt);High
+DH 6;1;12.50;14.00;Moderately strong, light grey mottled light red and brownish yellow, moderately decomposed, TUFF BRECCIA. (CORESTONE);Tuff Breccia (Corestone);High
+DH 6;1;14.00;14.20;No recovery, assumed to be completely decomposed TUFF BRECCIA.;No Recovery;High
+DH 6;1;14.20;16.10;Weak, light red (2.5YR 7/8) and light grey (5Y 7/1), highly decomposed, TUFF BRECCIA. (Subangular, slightly sandy fine to coarse GRAVEL of slightly decomposed tuff breccia fragments);Tuff Breccia (Sandy Gravel);High
+DH 6;1;16.10;17.90;Moderately strong, light grey mottled light grey, moderately decomposed, TUFF BRECCIA. (CORESTONE);Tuff Breccia (Corestone);High
+DH 6;1;17.90;19.10;Weak, brownish yellow (10YR 6/8) mottled light grey, highly decomposed, TUFF BRECCIA. (Subangular, slightly sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);Tuff Breccia (Sandy Gravel);High
+DH 6;1;19.10;19.20;No recovery, assumed to be completely decomposed TUFF BRECCIA.;No Recovery;High
+DH 6;1;19.20;20.20;Weak, light olive grey (5Y 6/2) and brownish yellow (10YR 6/8) mottled light grey, highly decomposed, TUFF BRECCIA. (Very stiff, slightly clayey sandy silty fine to coarse GRAVEL of highly decomposed tuff breccia fragments);Tuff Breccia (Clayey Sandy Silt with Gravel);High
+DH 6;1;20.20;20.30;decomposed tuff breccia fragments;Tuff Breccia Fragments;High
+DH 6;1;20.30;22.40;No recovery;No Recovery;High
+DH 6;1;22.40;23.90;Extremely weak, olive yellow (5Y 6/8), completely decomposed, TUFF BRECCIA. (Very stiff, sandy SILT);Tuff Breccia (Silt);High
+DH 6;1;23.90;24.40;Weak to moderately weak, light olive grey (5Y 6/2) mottled light red (7.5R 6/6), highly decomposed, TUFF BRECCIA. (Angular, slightly sandy fine to coarse GRAVEL of highly decomposed tuff breccia fragments);Tuff Breccia (Sandy Gravel);High
+DH 6;1;24.40;25.40;No recovery;No Recovery;High
+DH 6;1;25.40;26.60;Extremely weak, light olive grey (5Y 6/2) mottled brownish yellow, completely decomposed, TUFF BRECCIA. (Very stiff, slightly clayey to coarse SAND with occasional angular fine gravel);Tuff Breccia (Clayey Sand with Gravel);High
+DH 6;1;26.60;28.00;Moderately strong to strong, dark grey and greenish grey, rough planar, rough stepped and rough undulating, iron oxide stained, fresh to slightly weathered, TUFF BRECCIA. (Joints are very closely to closely spaced).;Tuff Breccia;High
+DH 6;1;28.00;30.00;Moderately to very strong, grey and olive grey, moderately decomposed, TUFF BRECCIA.;Tuff Breccia;High
+DH 6;1;30.00;30.40;No recovery;No Recovery;High
+DH 6;1;30.40;31.18;Moderately decomposed TUFF BRECCIA.;Tuff Breccia;High
+DH 6;1;31.18;33.40;No recovery;No Recovery;High
+DH 6;1;33.40;41.76;Strong to very strong, dark grey and greenish grey, rough planar, rough stepped and rough undulating, iron oxide stained, fresh to slightly weathered, TUFF BRECCIA. (Joints are very closely to closely spaced).;Tuff Breccia;High

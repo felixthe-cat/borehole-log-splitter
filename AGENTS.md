@@ -59,14 +59,24 @@ The repo is split into a frozen library + thin orchestration. **Respect the laye
 
 ## 5. Canonical Paths
 
+The repo is organized **per-project**: every distinct client/site engagement lives in its
+own folder named `Project - <Name>/` (e.g. `Project - for Jasmine/`, `Project - Route Twisk/`),
+each containing the same four subfolders. Never write reports, splits, or output data
+directly at the repo root — always inside the relevant project folder. Job scripts that
+touch these folders (`jobs/split_all_reports.py`, `jobs/extract_all_gemini.py`) take a
+`--project "Project - <Name>"` argument; `jobs/run_pipeline.py` and the skill scripts take
+explicit `--input`/`--output-csv`/`--reports-dir`/etc. paths that must be scoped into the
+project folder.
+
 | Thing | Path |
 |---|---|
-| Master geotech reports | `Borehole Reports/` |
-| Split borehole logs | `individual borehole logs/` or `temp_splits/` |
-| Master stratigraphy output | `results/borehole_stratigraphy.csv` |
-| Library | `borehole_extractor_lib/` |
-| Orchestration jobs | `jobs/` |
-| Raw data outputs | `outputs/` |
+| Project root | `Project - <Name>/` |
+| Master geotech reports | `Project - <Name>/Borehole Reports/` |
+| Split borehole logs | `Project - <Name>/individual borehole logs/` or `temp_splits/` |
+| Master stratigraphy output | `Project - <Name>/results/borehole_stratigraphy.csv` |
+| Library (shared across all projects) | `borehole_extractor_lib/` |
+| Orchestration jobs (shared across all projects) | `jobs/` |
+| Raw data outputs | `Project - <Name>/outputs/` |
 
 ---
 

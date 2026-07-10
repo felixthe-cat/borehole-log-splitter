@@ -6,6 +6,9 @@ description: Project-specific skill to automate the splitting, classification, a
 
 This project-specific skill allows the agent to process scanned, flat multipage PDFs of Ground Investigation (GI) borehole logs, classify pages, filter out irrelevant cover/index/photo pages, and group valid pages into separate PDFs named after their respective borehole numbers.
 
+## Project Folders
+The repo is organized per-project: each project lives in a folder named `Project - <Name>/` containing its own `Borehole Reports/`, `individual borehole logs/`, `outputs/`, and `results/` subfolders. Always pass paths scoped to the relevant project folder (e.g. `"Project - for Jasmine/Borehole Reports/report.pdf"`), never bare `"Borehole Reports/"`.
+
 ## Prerequisites
 
 This skill requires the following tools to be installed on the system:
@@ -23,8 +26,8 @@ Run the script from the command line:
 
 ```powershell
 python ".agents/skills/borehole-log-splitter/scripts/borehole_splitter.py" \
-  --input "path/to/master.pdf" \
-  --splits-dir "individual borehole logs" \
+  --input "Project - for Jasmine/Borehole Reports/path/to/master.pdf" \
+  --splits-dir "Project - for Jasmine/individual borehole logs" \
   --keep-splits \
   --tesseract-path "C:\Program Files\Tesseract-OCR\tesseract.exe"
 ```

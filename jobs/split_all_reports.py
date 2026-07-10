@@ -4,10 +4,12 @@ Batch Borehole Log Splitter
 ---------------------------
 Author: Antigravity (AI Coding Assistant)
 Description:
-    Locates all PDF reports in 'Borehole Reports/', assigns unique short names,
-    and runs the Phase 1 splitter using local OCR to save split logs in 'individual borehole logs/'.
+    Locates all PDF reports in '<project>/Borehole Reports/', assigns unique short names,
+    and runs the Phase 1 splitter using local OCR to save split logs in '<project>/individual borehole logs/'.
+    Usage: python jobs/split_all_reports.py --project "Project - for Jasmine"
 """
 
+import argparse
 import os
 import sys
 
@@ -22,8 +24,18 @@ from borehole_extractor_lib import (
 from borehole_extractor_lib.config import DEFAULT_TESSERACT_PATH
 
 def main():
-    reports_dir = "Borehole Reports"
-    splits_dir = "individual borehole logs"
+    parser = argparse.ArgumentParser(
+        description="Batch-split all master reports in a project's 'Borehole Reports/' folder."
+    )
+    parser.add_argument(
+        "--project",
+        required=True,
+        help="Project folder name, e.g. 'Project - for Jasmine' (must exist at repo root)"
+    )
+    args = parser.parse_args()
+
+    reports_dir = os.path.join(args.project, "Borehole Reports")
+    splits_dir = os.path.join(args.project, "individual borehole logs")
     dpi = 150
     
     # 1. Configure Tesseract

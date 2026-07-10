@@ -1,0 +1,12 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH 3;1;0.00;0.20;Brownish yellow (10YR 6/6), slightly clayey sandy SILT with some angular to subangular fine to medium gravel. (FILL);FILL (Silt);High
+DH 3;1;0.20;1.10;Light yellowish brown (10YR 6/4), angular to subangular, coarse GRAVEL of rock fragments. (FILL);FILL (Gravel);High
+DH 3;1;1.10;2.70;Weak, brownish yellow (10YR 6/8) deeply weathered, highly decomposed, coarse ash TUFF. Angular to subangular, fine to medium GRAVEL of highly decomposed tuff fragments;TUFF (decomposed);High
+DH 3;1;2.70;7.10;Weak, brownish yellow (10YR 6/8) dark grey, highly decomposed, TUFF BRECCIA. (Angular, slightly subangular, fine to coarse GRAVEL of highly decomposed tuff breccia fragments);TUFF BRECCIA (decomposed);High
+DH 3;1;7.10;10.40;Extremely weak to very weak, light yellowish brown (10YR 6/4), completely decomposed to moderately decomposed, coarse ash TUFF. (Slightly clayey fine to coarse SAND with much angular fine to medium gravel);TUFF (decomposed);High
+DH 3;2;10.40;11.15;Moderately weak to moderately strong, light brownish grey, moderately decomposed, coarse ash TUFF (COMPTONITE).;TUFF (decomposed);High
+DH 3;2;11.15;11.51;No recovery, assumed to be completely decomposed TUFF.;No recovery;High
+DH 3;2;11.51;12.36;Weak to moderately weak, grey (10YR 7/1), mottled light brownish grey, highly decomposed, TUFF BRECCIA. (Angular, fine to coarse GRAVEL and occasional cobble of highly decomposed tuff breccia fragments).;TUFF BRECCIA (decomposed);High
+DH 3;2;12.36;13.39;No recovery, assumed to be completely decomposed TUFF BRECCIA.;No recovery;High
+DH 3;2;13.39;14.86;Weak to moderately weak, light yellowish brown (10YR 6/4), highly decomposed, TUFF BRECCIA. (Angular, slightly silty fine to coarse GRAVEL of highly decomposed tuff breccia fragments).;TUFF BRECCIA (decomposed);High
+DH 3;2;14.86;15.01;Moderately weak to moderately strong, light greyish brown, moderately decomposed, FINE-GRAINITE. Joints are very closely to closely spaced, rough, planar, with clay coating, 0.5-1.0mm thick, with oxide stained, dipping at 15° to 25°, 25° to 35° and 80° to 85°.;FINE-GRAINITE (decomposed);High

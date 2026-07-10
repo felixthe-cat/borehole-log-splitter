@@ -11,14 +11,17 @@ This project-specific skill ingests split, single-borehole PDF log documents, re
 - **Python Libraries**: `google-generativeai`, `python-dotenv`, `pymupdf` (fitz), `pytesseract`, `pillow`.
 - **API Key**: A valid `GEMINI_API_KEY` configured in the local `.env` file.
 
+## Project Folders
+The repo is organized per-project: each project lives in a folder named `Project - <Name>/` containing its own `Borehole Reports/`, `individual borehole logs/`, `outputs/`, and `results/` subfolders. Always scope `--input` and `--output-csv` to the relevant project folder.
+
 ## CLI Usage
 
 Run the direct data extraction on a pre-split log PDF:
 
 ```powershell
 python borehole_splitter.py `
-  --input "individual borehole logs/Borehole_DH7.pdf" `
-  --output-csv "results/borehole_stratigraphy.csv" `
+  --input "Project - for Jasmine/individual borehole logs/Borehole_DH7.pdf" `
+  --output-csv "Project - for Jasmine/results/borehole_stratigraphy.csv" `
   --extract-only `
   --model "gemini-3.5-flash"
 ```

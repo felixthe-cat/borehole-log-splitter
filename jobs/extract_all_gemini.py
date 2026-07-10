@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import os
 import sys
 import gc
@@ -48,9 +49,19 @@ def main():
         import io
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-    splits_dir = "individual borehole logs"
-    outputs_dir = "outputs"
-    results_dir = "results"
+    parser = argparse.ArgumentParser(
+        description="Batch-extract stratigraphy for all split logs in a project's 'individual borehole logs/' folder."
+    )
+    parser.add_argument(
+        "--project",
+        required=True,
+        help="Project folder name, e.g. 'Project - for Jasmine' (must exist at repo root)"
+    )
+    args = parser.parse_args()
+
+    splits_dir = os.path.join(args.project, "individual borehole logs")
+    outputs_dir = os.path.join(args.project, "outputs")
+    results_dir = os.path.join(args.project, "results")
     progress_file = os.path.join(outputs_dir, "extraction_progress.json")
     
     os.makedirs(outputs_dir, exist_ok=True)
@@ -88,7 +99,7 @@ def main():
     master_csv_path = progress.get("master_csv_path")
     if not master_csv_path:
         # Determine unique master CSV path (does not overwrite existing)
-        master_csv_path = get_next_master_csv_path("results/borehole_stratigraphy.csv")
+        master_csv_path = get_next_master_csv_path(os.path.join(results_dir, "borehole_stratigraphy.csv"))
         progress["master_csv_path"] = master_csv_path
         progress["completed_files"] = {}
         

@@ -1,0 +1,30 @@
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH 5;1;0.00;0.70;Pale brown (10YR 6/3), clayey sandy SILT with fine to coarse gravel, fine to coarse gravel of rock fragments and with some roots. (FILL);FILL;High
+DH 5;1;0.70;1.55;Dark greyish brown, mottled light brownish grey and yellowish brown, angular to subangular, gravels and much coarse gravel of rock fragments. (FILL);FILL;High
+DH 5;1;1.55;3.00;Light grey (10YR 7/1) and light yellowish brown (10YR 6/4), angular to subangular, clayey silty sandy fine to coarse GRAVEL and much coarse of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;3.00;6.00;Yellow (10YR 8/8) dappled grey, angular to subangular, slightly clayey silty sandy fine to coarse GRAVEL of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;6.00;7.00;Grey (10YR 6/1) mottled light brownish grey and yellowish brown, angular to subangular, medium to coarse GRAVEL and much coarse of rock fragments. (COLLUVIUM);COLLUVIUM;High
+DH 5;1;7.00;7.69;Moderately weak to moderately strong, grey and yellowish brown, moderately decomposed, coarse ash TUFF. Joints are very closely to closely spaced, rough planar and rough stepped, iron and manganese oxide staining, dipping at 0° to 10°, 0° to 20° and 65° to 75°.;TUFF;High
+DH 5;1;7.69;8.08;Moderately weak. Moderately strong to strong, grey dappled yellowish brown and light olive green, moderately decomposed, coarse ash TUFF. Joints are moderately to very closely and occasionally very closely spaced, rough planar and rough stepped, iron and manganese oxide staining, chlorite coated, dipping at 0° to 10°, 15° to 25°, 45° to 65° and 70° to 75°.;TUFF;High
+DH 5;1;8.08;10.98;Moderately weak to moderately strong, light brownish grey and greenish grey, moderately decomposed coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0° to 10°, 45° to 55° and 70° to 75°.;TUFF;High
+DH 5;2;10.98;14.05;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;14.05;14.15;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;14.15;14.95;Strong and slightly decomposed.;TUFF;High
+DH 5;2;14.95;15.12;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;15.12;15.43;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;15.43;15.60;Weak and highly decomposed, brown/grey (10YR 5/2) very fine to fine GRAVEL of highly decomposed tuff fragments);GRAVEL;High
+DH 5;2;15.60;15.73;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;15.73;16.41;Strong and slightly decomposed.;TUFF;High
+DH 5;2;16.41;16.72;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;16.72;16.98;Strong and slightly decomposed.;TUFF;High
+DH 5;2;16.98;17.20;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;17.20;18.63;Weak, reddish yellowish grey (5YR 6/6), highly decomposed, coarse ash TUFF. (Angular, slightly subangular, gravel and much coarse GRAVEL of highly decomposed tuff fragments);TUFF;High
+DH 5;2;18.63;18.77;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;2;18.77;20.20;Moderately weak to moderately strong, light yellowish brown (10YR 6/4) and yellowish grey (5Y 7/2), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0° to 10°, 45° to 55° and 70° to 75°.;TUFF;High
+DH 5;3;20.20;20.94;No recovery, assumed to be completely decomposed TUFF.;No Recovery;High
+DH 5;3;20.94;21.84;Weak, pale brown (10YR 6/3), highly decomposed, coarse ash TUFF. (Angular, subangular, very fine to coarse GRAVEL and some cobble of highly decomposed tuff fragments);TUFF;High
+DH 5;3;21.84;21.91;No recovery.;No Recovery;High
+DH 5;3;21.91;22.25;Weak to moderately weak, reddish yellowish brown (5YR 6/6), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0° to 10°, 45° to 55° and 70° to 75%.;TUFF;High
+DH 5;3;22.25;22.43;No recovery (assumed to be completely decomposed SILTSTONE).;No Recovery;High
+DH 5;3;22.43;22.73;Weak to moderately weak, reddish yellowish brown (5YR 6/6), highly decomposed, coarse ash TUFF. Joints are moderately closely to very closely spaced, rough planar and rough stepped, iron staining and chlorite coating, dipping at 0° to 10°, 45° to 55° and 70° to 75%.;TUFF;High
+DH 5;3;22.73;27.99;Strong to very strong, dark grey and bluish grey dappled pink and light grey, slightly decomposed, coarse ash TUFF. Joints are very widely spaced, rough planar, calcite and chlorite coating, dipping at 0° to 10°. From 24.29m to 24.64m: With some quartz veins (<10mm thick). From 24.64m to 24.74m: With some quartz veins (<10mm thick). From 24.74m: Moderately decomposed.;TUFF;High

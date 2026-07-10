@@ -1,6 +1,6 @@
 ---
 name: borehole-audit
-description: Project-specific skill to audit the borehole splitting/extraction pipeline for missed boreholes. Cross-checks the "HOLE NOS." list declared on page 2 of each report in "Borehole Reports/" against the split PDFs in "individual borehole logs/" and the master CSV in "results/", and flags supplementary/re-investigation reports whose newer split is missing (so the CSV would silently keep stale older data). Use this whenever the user asks to audit, double-check, or verify that no boreholes were missed, dropped, or skipped by the splitter or extractor — including after adding new reports to "Borehole Reports/" or after re-running the splitter/extractor.
+description: Project-specific skill to audit the borehole splitting/extraction pipeline for missed boreholes. Cross-checks the "HOLE NOS." list declared on page 2 of each report in a project's "Borehole Reports/" folder against the split PDFs in its "individual borehole logs/" and the master CSV in its "results/" (each project lives under "Project - <Name>/"), and flags supplementary/re-investigation reports whose newer split is missing (so the CSV would silently keep stale older data). Use this whenever the user asks to audit, double-check, or verify that no boreholes were missed, dropped, or skipped by the splitter or extractor — including after adding new reports to a project's "Borehole Reports/" or after re-running the splitter/extractor.
 ---
 # Borehole Pipeline Audit Skill
 
@@ -13,9 +13,15 @@ It is read-only. It never edits the splitter/extractor output itself; re-running
 splitter or extractor for anything the audit flags is a separate task (see the
 `borehole-log-splitter` and `borehole-data-extractor` skills).
 
+## Project Folders
+The repo is organized per-project: each project lives in a folder named `Project - <Name>/`
+containing its own `Borehole Reports/`, `individual borehole logs/`, `outputs/`, and
+`results/` subfolders. All paths below must be scoped to the relevant project folder
+(e.g. `"Project - for Jasmine/Borehole Reports"`), never bare `"Borehole Reports"`.
+
 ## Why page 2, and why brackets
 
-Every report in `Borehole Reports/` is a scanned Bachy Soletanche site-investigation
+Every report in `<project>/Borehole Reports/` is a scanned Bachy Soletanche site-investigation
 cover document. Page 2 (the title page) states, in brackets, the authoritative list of
 hole numbers that report covers, e.g.:
 
@@ -34,7 +40,7 @@ it must be read visually.
 
 ```powershell
 python ".claude/skills/borehole-audit/scripts/render_cover_pages.py" `
-  --reports-dir "Borehole Reports" `
+  --reports-dir "Project - for Jasmine/Borehole Reports" `
   --output-dir "scratch/page2_check"
 ```
 
@@ -68,7 +74,7 @@ Assemble one JSON file, one entry per report, matching this schema:
 ```
 
 - `report`: the PDF filename (for the audit report's citations).
-- `report_label`: the short prefix used in split filenames in `individual borehole logs/`
+- `report_label`: the short prefix used in split filenames in `<project>/individual borehole logs/`
   (they follow `{report_label}_Borehole_{HOLE}.pdf`, e.g. `Jun1996_Borehole_DH7.pdf`).
   Get this right — it's how the script matches a report to its split logs and detects
   missing supplementary re-splits.
@@ -84,16 +90,17 @@ Save this as e.g. `scratch/declared_holes.json`.
 ```powershell
 python ".claude/skills/borehole-audit/scripts/audit_boreholes.py" `
   --reports-json "scratch/declared_holes.json" `
-  --splits-dir "individual borehole logs" `
+  --splits-dir "Project - for Jasmine/individual borehole logs" `
+  --results-dir "Project - for Jasmine/results" `
   --output "borehole_audit.md"
 ```
 
-By default it diffs against the **newest** `results/borehole_stratigraphy*.csv` (highest
+By default it diffs against the **newest** `<results-dir>/borehole_stratigraphy*.csv` (highest
 `_vN` suffix, tie-broken by mtime) — pass `--csv` to target a specific file explicitly.
 
 The script:
 1. Expands every report's raw tokens into individual hole numbers.
-2. Diffs the declared set against filenames in `individual borehole logs/`, using
+2. Diffs the declared set against filenames in `<project>/individual borehole logs/`, using
    OCR-tolerant matching (collapses commonly-confused characters like `0/O`, `1/I/L`,
    `5/S`, `8/B` before comparing) so it doesn't false-flag known OCR name-garbling
    (e.g. `A5A` split as `ASA`) as a missing hole.
@@ -115,8 +122,8 @@ surfacing what's missing. If the audit is clean, say so explicitly.
 ## Notes for future reports
 
 - The script does not hardcode any hole numbers or report filenames — it discovers
-  reports from whatever JSON you feed it and whatever's in `individual borehole logs/`
-  and `results/`. Adding a new report to `Borehole Reports/` just means re-running
+  reports from whatever JSON you feed it and whatever's in `<project>/individual borehole logs/`
+  and `<project>/results/`. Adding a new report to `<project>/Borehole Reports/` just means re-running
   Steps 1–3.
 - If a report's page 2 has no bracketed hole list (rare, but possible for a differently
   formatted report), check page 1 and page 3 as fallbacks before giving up — the
