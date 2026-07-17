@@ -1,9 +1,9 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B2C_v1;1;0.00;1.50;Concrete Slab with steel bars;Concrete;High
-B2C_v1;1;1.50;4.00;Concrete with cobbles and gravels of moderately decomposed granite (FILL);Fill;High
-B2C_v1;1;4.00;19.30;Wash boring (No recovery);No Recovery;High
-B2C_v1;2;19.30;19.70;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND;Soil;High
-B2C_v1;2;19.70;24.55;Wash boring (No recovery);No Recovery;High
-B2C_v1;3;24.55;24.90;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-B2C_v1;3;24.90;31.71;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2C_v1;839912.13;816540.46;1;0.00;1.50;;Concrete Slab with steel bars.;Concrete;1.00
+B2C_v1;839912.13;816540.46;1;1.50;4.00;;Concrete with cobbles and gravels of moderately decomposed granite. (FILL) No recovery 2.93-4.00m.;Fill;1.00
+B2C_v1;839912.13;816540.46;1;4.00;19.30;;Wash boring. (No recovery);No Recovery;1.00
+B2C_v1;839912.13;816540.46;2;19.30;19.70;;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM);Alluvium;1.00
+B2C_v1;839912.13;816540.46;3;19.70;24.55;;Wash boring. (No recovery);No Recovery;1.00
+B2C_v1;839912.13;816540.46;3;24.55;24.90;IV/III;Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed coarse grained GRANITE with widely to closely spaced and occasionally closely spaced, very narrow, rough, planar, slightly altered and chlorite and kaolin stained joints dipping 10, 20, 40, 50, 70, 80.;Granite;1.00
+B2C_v1;839912.13;816540.46;3;24.90;31.71;III;weak to moderately weak, brownish pink spotted, black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;0.90

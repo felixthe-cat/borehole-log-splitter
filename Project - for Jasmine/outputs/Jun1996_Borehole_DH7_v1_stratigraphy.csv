@@ -1,10 +1,9 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH7_v1;1;0.00;0.20;Concrete Slab;Fill;High
-DH7_v1;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH7_v1;1;2.00;23.70;Wash boring. (No recovery);No recovery;High
-DH7_v1;3;23.70;23.85;No recovery;No recovery;High
-DH7_v1;3;23.85;23.95;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-DH7_v1;3;23.95;24.20;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
-DH7_v1;3;24.20;24.32;No recovery;No recovery;High
-DH7_v1;3;24.32;30.37;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH7_v1;839894.47;816508.90;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH7_v1;839894.47;816508.90;1;0.20;2.00;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH7_v1;839894.47;816508.90;1;2.00;23.70;;Wash boring. (No recovery);No recovery;1.00
+DH7_v1;839894.47;816508.90;3;23.70;23.85;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 40-50, 60-75. 23.70m-23.85m & 24.20m-24.32m: no recovery.;Granite;0.95
+DH7_v1;839894.47;816508.90;3;23.85;23.95;IV/III;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;0.95
+DH7_v1;839894.47;816508.90;3;23.95;24.32;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 40-50, 60-75. 23.70m-23.85m & 24.20m-24.32m: no recovery.;Granite;0.95
+DH7_v1;839894.47;816508.90;3;24.32;30.37;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 40-50, 60-75.;Granite;0.95

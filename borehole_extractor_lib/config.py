@@ -49,6 +49,55 @@ LOG_SHEET_KEYWORDS = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# Canonical output CSV schema (single source of truth).
+#
+# The Gemini model emits the MODEL_CSV_HEADERS subset (the per-layer data it can
+# read off a sheet). Easting/Northing are NOT emitted per row by the model — they
+# are injected post-parse from the validated title blocks, because the coordinates
+# live in the sheet header and must be identical on every sheet of one borehole.
+# ---------------------------------------------------------------------------
+CSV_HEADERS = [
+    "Hole No",
+    "Easting",
+    "Northing",
+    "Sheet No",
+    "Start Depth",
+    "End Depth",
+    "Grade",
+    "Soil/Rock Description",
+    "Soil/Rock Type",
+    "Confidence Level",
+]
+NUM_COLS = len(CSV_HEADERS)  # 10
+
+# Column indices into a full output row (use these instead of magic numbers).
+(
+    COL_HOLE,
+    COL_EASTING,
+    COL_NORTHING,
+    COL_SHEET,
+    COL_START,
+    COL_END,
+    COL_GRADE,
+    COL_DESC,
+    COL_TYPE,
+    COL_CONF,
+) = range(NUM_COLS)
+
+# The columns the model is asked to emit directly (coordinates excluded — injected).
+MODEL_CSV_HEADERS = [
+    "Hole No",
+    "Sheet No",
+    "Start Depth",
+    "End Depth",
+    "Grade",
+    "Soil/Rock Description",
+    "Soil/Rock Type",
+    "Confidence Level",
+]
+
+
 def sanitize_filename(name: str) -> str:
     """
     Sanitizes a string to make it safe for use as a filename on Windows.

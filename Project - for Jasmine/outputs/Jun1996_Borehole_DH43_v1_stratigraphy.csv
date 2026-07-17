@@ -1,9 +1,9 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH43_v1;1;0.00;0.20;Concrete Slab.;Concrete;High
-DH43_v1;1;0.20;1.10;Wash boring.;No recovery;High
-DH43_v1;1;1.10;4.20;Concrete with red bricks and occasionally some cobbles and gravels of granite.;Fill;High
-DH43_v1;1;4.20;10.00;Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND.;Fill;High
-DH43_v1;2;10.00;28.00;Wash boring.;No recovery;High
-DH43_v1;3;28.00;30.00;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10-20 degrees.;Granite;High
-DH43_v1;4;30.00;33.60;weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH43_v1;839929.63;816549.74;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH43_v1;839929.63;816549.74;1;0.20;1.10;;Wash boring. (No recovery);No Recovery;1.00
+DH43_v1;839929.63;816549.74;1;1.10;4.20;;Concrete with red bricks and occasionally some cobbles and gravels of granite. (FILL);Fill;1.00
+DH43_v1;839929.63;816549.74;1;4.20;7.50;;Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND. (FILL);Fill;1.00
+DH43_v1;839929.63;816549.74;2;7.50;28.00;;Wash boring. (No recovery);No Recovery;1.00
+DH43_v1;839929.63;816549.74;3;28.00;30.60;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees.;Granite;1.00
+DH43_v1;839929.63;816549.74;4;30.60;33.60;III;weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;1.00

@@ -1,7 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH14_v1;1;0.00;2.00;Angular red bricks and concrete fragments with some grey, silty sand and domestic rubbish.;Fill;High
-DH14_v1;1;2.00;19.00;Wash boring.;No recovery;High
-DH14_v1;2;19.00;20.00;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty sand.;Alluvium;High
-DH14_v1;3;20.00;20.86;Wash boring.;No recovery;High
-DH14_v1;3;20.86;26.16;Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE, with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 40-50 & 70-80.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH14_v1;839894.79;816528.39;1;0.00;1.00;;Angular red bricks and concrete fragments with some dark grey sand and domestic rubbish. (FILL);Fill;1.00
+DH14_v1;839894.79;816528.39;1;1.00;19.00;;Wash boring. (No recovery);No recovery;1.00
+DH14_v1;839894.79;816528.39;2;19.00;20.60;;Sub-rounded GRAVEL and COBBLES of weathered andesitic clasts and tuff with some brown silty sand. (ALLUVIUM);Alluvium;1.00
+DH14_v1;839894.79;816528.39;3;20.60;20.86;;Wash boring. (No recovery);No recovery;1.00
+DH14_v1;839894.79;816528.39;3;20.86;21.86;III;Strong, pinkish grey spotted black and white, slightly decomposed to moderately decomposed GRANITE, with medium to coarse grains, and occasionally closely spaced, very narrow to medium to narrow, rough planar, limonite and manganese stained joints dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 70 degrees-80 degrees. 20.86m-21.86m: moderately strong, brownish red, pinkish grey and white, moderately decomposed medium to coarse grained GRANITE.;Granite;1.00
+DH14_v1;839894.79;816528.39;3;21.86;26.16;II;Strong, pinkish grey spotted black and white, slightly decomposed to moderately decomposed GRANITE, with medium to coarse grains, and occasionally closely spaced, very narrow to medium to narrow, rough planar, limonite and manganese stained joints dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 70 degrees-80 degrees.;Granite;1.00

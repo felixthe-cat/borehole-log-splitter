@@ -1,6 +1,5 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B6B_v1;1;0.00;2.00;Inspection pit;Fill;High
-B6B_v1;1;2.00;24.32;Wash boring;Soil;High
-B6B_v1;3;24.32;27.90;Moderately strong, brownish grey spotted yellow, moderately decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees-35 degrees.;Granite;High
-B6B_v1;3;27.90;30.41;Strong, pinkish grey spotted black, slightly decomposed, medium grained GRANITE, with closely to medium spaced, rough undulating, extremely narrow, clean, joints, dipping 5 degrees-10 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B6B_v1;839902.31;816492.74;1;0.00;24.32;;Wash boring.;Wash Boring;0.98
+B6B_v1;839902.31;816492.74;3;24.32;27.90;III;Moderately strong, brownish grey spotted yellow, moderately decomposed, medium grained GRANITE with closely spaced, narrow to very narrow, rough undulating, limonite and manganese stained joints, dipping 15 degrees-35 degrees.;Granite;0.98
+B6B_v1;839902.31;816492.74;3;27.90;30.41;II;Strong, pinkish grey spotted black, slightly decomposed, medium grained GRANITE, with closely to medium spaced, rough undulating, extremely narrow, clean, joints, dipping 5 degrees-10 degrees.;Granite;0.98

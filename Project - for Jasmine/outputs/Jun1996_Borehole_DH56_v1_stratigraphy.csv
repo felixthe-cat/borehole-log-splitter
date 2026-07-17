@@ -1,0 +1,7 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH56_v1;839928.69;816514.20;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH56_v1;839928.69;816514.20;1;0.20;12.20;;Wash boring. (No recovery);No Recovery;1.00
+DH56_v1;839928.69;816514.20;2;12.20;16.29;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 40-50. 13.21m-13.27m: no recovery. 15.47m-15.52m: no recovery.;Granite;0.95
+DH56_v1;839928.69;816514.20;2;16.29;18.14;;Wash boring. (No recovery);No Recovery;1.00
+DH56_v1;839928.69;816514.20;2;18.14;23.31;II;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced and occasionally medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10-20, 70-80.;Granite;1.00

@@ -1,0 +1,6 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C5_v1;830916.63;816512.00;1;0.00;1.20;;Concrete Slab;Concrete;1.00
+C5_v1;830916.63;816512.00;1;1.20;2.50;;Brownish yellow Cobbles and Gravels of moderately decomposed granite with some steel bars and steel fragment. (FILL);Fill;1.00
+C5_v1;830916.63;816512.00;1;2.50;16.45;;Wash boring. (No recovery);Wash Boring;1.00
+C5_v1;830916.63;816512.00;2;16.45;28.07;III/II;Strong, pinkish grey spotted black and white, slightly to moderately decomposed medium grained GRANITE with widely to medium spaced, moderately open, rough planar, limonite, manganese stained, kaolin filled joints dipping at 70 degrees;Granite;0.95

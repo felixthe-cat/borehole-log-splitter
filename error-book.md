@@ -122,5 +122,20 @@ This file logs technical bugs, API quirks, library wrapper issues, compiler/inte
 * **API/Library:** Custom page grouping in `triage.py`
 * **Verified Solution:** Add a transition split check: if we transition from a page with `sheet_x > 1` to a page with `sheet_x == 1`, it immediately splits the block.
 
+## 20. Spurious Standalone "No Recovery" Layers Splitting Cored Rock Runs
+* **Bug / Error:** Manual-verification audit (Project - for Jasmine, cross-checked against a manually-transcribed answer key) found that a brief "No recovery at X-Ym" footnote inside an otherwise fully-described, cored rock/soil run (TCR/SCR/RQD reported, Grade assigned either side) was being extracted as its own standalone `No Recovery` layer, incorrectly overriding the surrounding decomposition-grade classification for that sub-range. Confirmed against source PDF (hole B1, sheet 3: Grade column reads `IV` continuously across 23.82-24.11m even though the description separately notes "No recovery at 23.97m-24.11m").
+* **API/Library:** Custom normalisation logic
+* **Verified Solution:** Added `absorb_short_no_recovery_annotations` (`borehole_extractor_lib/validation.py`) — merges a short (<=2m), terse "No recovery" row back into the preceding described layer when the gap is small and the neighbour is a real rock/soil classification, leaving genuine multi-metre wash-boring/uncored sections untouched. Also added extraction-prompt rule 15 (`extractor.py` `SYSTEM_INSTRUCTION`) to prevent this at the source.
+
+## 21. Inconsistent "(FILL)"-Suffixed Layers Not Classified as Type=Fill
+* **Bug / Error:** Layers whose description explicitly ends in `(FILL)` were sometimes classified with `Soil/Rock Type` set to the specific grain-size material (e.g. `Sand`) instead of `Fill`, inconsistently across different extraction runs of the same site. Also found a `Concrete Slab` layer classified as `Type=Fill` instead of `Type=Concrete`.
+* **API/Library:** Custom normalisation logic
+* **Verified Solution:** Added `force_fill_and_concrete_types` (`borehole_extractor_lib/validation.py`) — forces `Type=Fill` for any `(FILL)`-suffixed description, and `Type=Concrete` for standalone `Concrete Slab` descriptions. Also added extraction-prompt rule 16.
+
+## 22. Manually-Produced Answer Keys Can Themselves Contain Row-Alignment Errors
+* **Bug / Error:** When cross-checking extracted data against a manually-transcribed Excel "answer key" for QA, found that the answer key itself had likely transcription errors for several holes (e.g. DH6: answer key lists weathering grade `V` for 0.00-0.20m, but the source PDF's Grade column is blank there — the layer is literally just "Concrete Slab", no grade recorded). Don't assume a manual answer key is ground truth without spot-checking discrepancies against the primary source.
+* **API/Library:** N/A — audit process note
+* **Verified Solution:** When running a discrepancy-comparison audit, always render and read the actual source PDF for any flagged mismatch before "correcting" the extraction — the reference data can be wrong too.
+
 
 

@@ -1,7 +1,7 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-C3_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-C3_v1;1;0.20;3.20;Concrete with cobbles and gravels of moderately decomposed granite and steel bars. (FILL);Fill;High
-C3_v1;1;3.20;21.45;Wash boring. (No recovery);No recovery;High
-C3_v1;3;21.45;22.90;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow to very narrow, rough planar, limonite, manganese and kaolin stained and clean joints, dipping 10 degrees-20 degrees, 70 degrees-85 degrees.;Granite;High
-C3_v1;3;22.90;28.70;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C3_v1;839917.04;816533.05;1;0.00;0.30;;Concrete Slab;Concrete;0.90
+C3_v1;839917.04;816533.05;1;0.30;3.20;;Clay with cobbles and gravels of moderately decomposed granite and steel bars. (FILL);Fill;0.85
+C3_v1;839917.04;816533.05;1;3.20;21.45;;Wash boring. (No recovery);No Recovery;0.80
+C3_v1;839917.04;816533.05;3;21.45;22.90;III;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse-grained GRANITE with widely to medium spaced, rough planar, limonite, manganese stained joints, dipping 70 degrees, 20 degrees*, 85 degrees;Granite;0.95
+C3_v1;839917.04;816533.05;3;22.90;28.70;III;21.45m-22.90m: Moderately strong, pinkish grey spotted black and white, moderately decomposed medium to coarse-grained GRANITE.;Granite;0.95

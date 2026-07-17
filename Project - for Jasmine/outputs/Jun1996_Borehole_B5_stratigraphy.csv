@@ -1,0 +1,10 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B5;1;0.00;0.20;Concrete Slab.;Concrete;High
+B5;1;0.20;1.80;Concrete with COBBLES and GRAVELS of moderately decomposed granite and some red bricks. (FILL);Fill;High
+B5;1;1.80;19.30;Wash boring. (No recovery);No recovery;High
+B5;2;19.30;20.30;Weak to moderately weak, brownish grey, medium block size, fine to medium grained GRANITE, highly to moderately decomposed, dipping 10 degrees-20 degrees, 40 degrees-65 degrees, 75 degrees-85 degrees.;Granite;High
+B5;2;20.30;20.75;Moderately decomposed, medium to coarse grained GRANITE.;Granite;High
+B5;2;20.75;22.48;Strong, pinkish grey spotted black and white, slightly decomposed GRANITE with widely to medium spaced joints.;Granite;High
+B5;2;22.48;22.80;Moderately decomposed, medium to coarse grained GRANITE.;Granite;High
+B5;3;22.80;29.96;Strong, pinkish grey spotted black, fine to medium to fairly coarse grained, slightly decomposed GRANITE.;Granite;High

@@ -1,3 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH42_v1;4;30.00;34.99;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH42_v1;839929.71;816552.96;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH42_v1;839929.71;816552.96;1;0.20;0.80;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH42_v1;839929.71;816552.96;1;0.80;1.40;;Concrete with cobbles and gravels of moderately decomposed granite and some red bricks. (FILL);Fill;1.00
+DH42_v1;839929.71;816552.96;1;1.40;4.00;;Wash boring. (No recovery);No recovery;1.00
+DH42_v1;839929.71;816552.96;1;4.00;6.50;;Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some red bricks. (FILL);Fill;1.00
+DH42_v1;839929.71;816552.96;1;6.50;29.00;;Wash boring. (No recovery);No recovery;1.00
+DH42_v1;839929.71;816552.96;3;29.00;29.10;IV/III;weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;1.00
+DH42_v1;839929.71;816552.96;3;29.10;34.99;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10 degrees-20 degrees, 50 degrees-65 degrees.;Granite;1.00

@@ -1,8 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH36_v1;1;0.00;0.20;Concrete slab.;Concrete;High
-DH36_v1;1;0.20;1.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH36_v1;1;1.00;7.40;Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown, silty SAND and red bricks. (FILL);Fill;High
-DH36_v1;1;7.40;10.50;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown silty SAND and some red bricks. (FILL);Fill;High
-DH36_v1;2;10.50;25.00;Wash boring. (No recovery);No Recovery;High
-DH36_v1;3;25.00;30.10;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees & 60 degrees-70 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH36_v1;839914.94;816565.32;1;0.00;0.20;;Concrete slab;Concrete;1.00
+DH36_v1;839914.94;816565.32;1;0.20;1.00;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH36_v1;839914.94;816565.32;1;1.00;7.40;;Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown, silty SAND and red bricks. (FILL);Fill;1.00
+DH36_v1;839914.94;816565.32;1;7.40;10.00;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown silty SAND and some red bricks. (FILL);Fill;1.00
+DH36_v1;839914.94;816565.32;2;10.00;25.00;;Wash boring. (No recovery);No recovery;0.95
+DH36_v1;839914.94;816565.32;3;25.00;30.10;III;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees & 60 degrees-70 degrees.;Granite;0.95

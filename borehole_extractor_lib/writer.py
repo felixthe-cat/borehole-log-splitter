@@ -4,7 +4,7 @@ import csv
 import io
 import re
 import fitz  # PyMuPDF
-from .config import sanitize_filename
+from .config import sanitize_filename, CSV_HEADERS
 
 
 def get_next_master_csv_path(base_path: str = "results/borehole_stratigraphy.csv") -> str:
@@ -198,7 +198,7 @@ def append_rows_to_master_csv(rows: list[list[str]], master_csv_path: str):
         os.makedirs(parent_dir, exist_ok=True)
         
     file_exists = os.path.exists(master_csv_path) and os.path.getsize(master_csv_path) > 0
-    headers_expected = ["Hole No", "Sheet No", "Start Depth", "End Depth", "Soil/Rock Description", "Soil/Rock Type", "Confidence Level"]
+    headers_expected = list(CSV_HEADERS)
     
     try:
         with open(master_csv_path, mode="a", encoding="utf-8", newline="") as f_out:

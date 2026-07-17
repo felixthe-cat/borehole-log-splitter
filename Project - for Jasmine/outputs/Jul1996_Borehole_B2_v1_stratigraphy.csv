@@ -1,11 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B2_v1;1;0.00;0.20;Concrete Slab;Fill;High
-B2_v1;1;0.20;1.50;Wash boring;No recovery;High
-B2_v1;1;1.50;3.33;Concrete with cobbles and gravels of moderately decomposed granite (FILL);Fill;High
-B2_v1;1;3.33;24.60;Wash boring;No recovery;High
-B2_v1;3;24.60;25.03;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees;Granite;High
-B2_v1;3;25.03;25.20;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-B2_v1;3;25.20;25.60;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees;Granite;High
-B2_v1;3;25.60;25.74;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-B2_v1;3;25.74;34.17;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese, kaolin and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2_v1;839908.20;816543.92;1;0.00;0.50;;Concrete Slab. Wash boring. (No recovery);Concrete;0.95
+B2_v1;839908.20;816543.92;1;0.50;2.94;;Wash boring. (No recovery);No recovery;0.95
+B2_v1;839908.20;816543.92;1;2.94;3.30;;Concrete with cobbles and gravels of moderately decomposed granite. (FILL);Fill;0.95
+B2_v1;839908.20;816543.92;1;3.30;20.16;;Wash boring. (No recovery);No recovery;0.95
+B2_v1;839908.20;816543.92;3;20.16;24.60;III;Moderately weak to moderately strong, brownish pink, spotted black and white, moderately decomposed medium to coarse grained GRANITE. Slightly fractured, closely to very closely fractured, joints mainly rough planar. Moderately decomposed feldspars and chlorite stained joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees, 70 degrees-80 degrees+.;Granite;0.95
+B2_v1;839908.20;816543.92;3;24.60;25.60;III;Moderately weak to moderately strong, brownish pink, spotted black and white, moderately decomposed medium to coarse grained GRANITE.;Granite;0.95
+B2_v1;839908.20;816543.92;3;25.60;27.72;IV/III;weak to moderately strong brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;0.95
+B2_v1;839908.20;816543.92;3;27.72;34.17;III/II;Granite;Granite;0.90

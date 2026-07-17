@@ -1,0 +1,10 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH38_v1;839920.84;816562.25;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH38_v1;839920.84;816562.25;1;0.20;0.70;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH38_v1;839920.84;816562.25;1;0.70;5.24;;Concrete with GRAVEL and COBBLES of moderately decomposed granite with some red bricks. (FILL);Fill;1.00
+DH38_v1;839920.84;816562.25;1;5.24;8.00;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some concrete fragments. (FILL);Fill;1.00
+DH38_v1;839920.84;816562.25;1;8.00;18.00;;Wash boring. (No recovery);No Recovery;0.95
+DH38_v1;839920.84;816562.25;2;18.00;18.50;;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;0.95
+DH38_v1;839920.84;816562.25;2;18.50;24.65;;Wash boring. (No recovery);No Recovery;0.95
+DH38_v1;839920.84;816562.25;3;24.65;30.05;III;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 60 degrees-75 degrees.;Granite;1.00

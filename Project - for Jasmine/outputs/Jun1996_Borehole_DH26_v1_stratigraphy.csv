@@ -1,9 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH26_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH26_v1;1;0.20;0.90;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH26_v1;1;0.90;3.00;Wash boring. (No recovery);No Recovery;High
-DH26_v1;1;3.00;18.00;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL);Fill;High
-DH26_v1;2;18.00;18.50;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;High
-DH26_v1;2;18.50;22.72;Wash boring. (No recovery);No Recovery;High
-DH26_v1;3;22.72;28.53;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH26_v1;839895.30;816560.21;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH26_v1;839895.30;816560.21;1;0.20;0.90;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH26_v1;839895.30;816560.21;1;0.90;3.00;;Wash boring. (No recovery);No Recovery;1.00
+DH26_v1;839895.30;816560.21;1;3.00;6.30;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL);Fill;1.00
+DH26_v1;839895.30;816560.21;1;6.30;18.00;;Wash boring. (No recovery);No Recovery;1.00
+DH26_v1;839895.30;816560.21;2;18.00;18.50;;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;1.00
+DH26_v1;839895.30;816560.21;2;18.50;22.72;;Wash boring. (No recovery);No Recovery;1.00
+DH26_v1;839895.30;816560.21;3;22.72;28.53;III/II;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.;Granite;1.00

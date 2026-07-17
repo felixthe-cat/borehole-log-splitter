@@ -1,7 +1,7 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B3B_v1;1;0.00;0.33;Concrete Slab;Concrete;High
-B3B_v1;1;0.33;18.50;Wash boring. (No recovery);No recovery;High
-B3B_v1;2;18.50;19.10;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM);Alluvium;High
-B3B_v1;2;19.10;21.10;Wash boring. (No recovery);No recovery;High
-B3B_v1;3;21.10;28.05;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 80 degrees-85 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B3B_v1;839911.98;816534.61;1;0.00;0.33;;Concrete Slab.;Concrete;1.00
+B3B_v1;839911.98;816534.61;1;0.33;18.00;;Wash boring. (No recovery);No recovery;1.00
+B3B_v1;839911.98;816534.61;2;18.00;19.10;;Sub-rounded Cobbles and Gravels of metamorphic rock and quartz with some brown silty SAND. (ALLUVIUM);Alluvium;1.00
+B3B_v1;839911.98;816534.61;2;19.10;21.24;;wash boring. (No recovery);No recovery;1.00
+B3B_v1;839911.98;816534.61;3;21.24;28.05;III/II;Moderately strong to strong, pinkish grey, fine to coarse grained, moderately to slightly decomposed GRANITE. Closely to moderately jointed with widely to medium spaced and closely to very closely spaced, very narrow to extremely narrow, rough planar joints, dipping 10 degrees, 20 degrees, 80 degrees, 85 degrees.;Granite;1.00

@@ -13,3 +13,7 @@ split_pdfs/
 *.log
 scratch/
 
+# Ensure individual borehole logs are tracked
+!individual borehole logs/
+
+

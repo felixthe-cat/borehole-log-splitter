@@ -1,6 +1,6 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH13_v1;1;0.0;2.0;Angular red bricks and concrete fragments with some grey silty SAND and some domestic rubbish and steel fragments. (FILL);Fill;High
-DH13_v1;1;2.0;21.0;Wash boring. (No recovery);No recovery;High
-DH13_v1;3;21.0;22.0;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;High
-DH13_v1;3;22.0;27.35;Strong to moderately strong, brownish grey spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees & 65 degrees-75 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH13_v1;839894.76;816525.58;1;0.00;1.65;V;Angular red bricks and concrete fragments with some gray silty SAND and some rubbish and charred fragments. (FILL);Fill;0.90
+DH13_v1;839894.76;816525.58;1;1.65;16.49;;Wash boring. (No recovery);No Recovery;0.90
+DH13_v1;839894.76;816525.58;3;16.49;17.49;II/III;Sub-rounded gravel and cobbles of moderately decomposed granite and some brown, silty SAND. (ALLUVIUM);Alluvium;0.95
+DH13_v1;839894.76;816525.58;3;17.49;27.35;II/III;Strong to moderately strong, moderately to slightly weathered and white, moderately to slightly decomposed coarse to medium grained GRANITE with widely to closely spaced, extremely narrow, medium to coarse grained and stained joints, dipping 10 degrees-20 degrees & 65 degrees-75 degrees.;Granite;0.95

@@ -21,16 +21,20 @@ from borehole_extractor_lib import (
     check_depth_continuity,
     check_termination_depth,
     check_title_block_consistency,
+    check_coordinate_consistency,
     check_description_and_classification,
     request_gemini_correction,
-    resolve_as_sheet_descriptions,
-    merge_consecutive_identical_layers,
-    normalize_degree_symbols,
+    normalize_rows,
+    check_round_number_depths,
+    check_no_recovery_description_consistency,
     get_next_master_csv_path,
     get_next_borehole_version,
     get_standard_excel_name,
     verify_pdf_filename,
     verify_excel_filename,
+    CSV_HEADERS,
+    COL_START,
+    COL_END,
 )
 
 def parse_split_pdf_filename(filename: str):
@@ -192,33 +196,35 @@ def main():
                 
                 # Parse and normalise
                 rows = clean_and_parse_csv(csv_text)
-                rows = resolve_as_sheet_descriptions(rows)
-                rows = merge_consecutive_identical_layers(rows)
-                rows = normalize_degree_symbols(rows)
-                
+                rows = normalize_rows(rows, title_blocks)
+
                 # Validation retry loop
                 validation_passed = False
                 for v_attempt in range(1, 4):
                     if not rows:
                         break
                     print(f"    Running validations (Attempt {v_attempt}/3)...", end="", flush=True)
-                    
+
                     errors = check_depth_continuity(rows)
-                    
+
                     try:
-                        sorted_rows = sorted(rows, key=lambda x: float(x[2]))
-                        last_end_depth = float(sorted_rows[-1][3])
+                        sorted_rows = sorted(rows, key=lambda x: float(x[COL_START]))
+                        last_end_depth = float(sorted_rows[-1][COL_END])
                         term_errors = check_termination_depth(term_depth, last_end_depth)
                         errors.extend(term_errors)
                     except Exception as te:
                         print(f"      [Warning] Termination depth comparison error: {te}")
-                        
+
                     title_errors = check_title_block_consistency(title_blocks)
                     errors.extend(title_errors)
-                    
+
+                    errors.extend(check_coordinate_consistency(title_blocks))
+
                     desc_errors = check_description_and_classification(rows)
                     errors.extend(desc_errors)
-                    
+
+                    errors.extend(check_no_recovery_description_consistency(rows))
+
                     if not errors:
                         print(" PASSED.")
                         validation_passed = True
@@ -243,13 +249,15 @@ def main():
                             term_depth = float(extraction_data.get("termination_depth", 0.0))
                             title_blocks = extraction_data.get("title_blocks", [])
                             rows = clean_and_parse_csv(csv_text)
-                            rows = resolve_as_sheet_descriptions(rows)
-                            rows = merge_consecutive_identical_layers(rows)
-                            rows = normalize_degree_symbols(rows)
+                            rows = normalize_rows(rows, title_blocks)
                         else:
                             print("    [Warning] Max correction attempts reached. Saving best-effort result.")
                             
                 if rows:
+                    round_warnings = check_round_number_depths(rows)
+                    for w in round_warnings:
+                        print(f"    [Soft Warning] {w}")
+
                     # Version the borehole name column values to prevent overwriting/colliding in master CSV
                     versioned_hole = get_next_borehole_version(hole, master_csv_path)
                     for r in rows:
@@ -265,7 +273,7 @@ def main():
                     raw_csv_path = os.path.join(outputs_dir, raw_filename)
                     with open(raw_csv_path, "w", encoding="utf-8") as rf:
                         rf.write("sep=;\n")
-                        rf.write("Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level\n")
+                        rf.write(";".join(CSV_HEADERS) + "\n")
                         for r in rows:
                             rf.write(";".join(r) + "\n")
                     print(f"    Saved individual log to {raw_csv_path}")

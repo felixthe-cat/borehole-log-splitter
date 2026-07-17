@@ -1,0 +1,11 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH56;1;0.00;0.20;Concrete Slab.;Concrete;High
+DH56;1;0.20;12.20;Wash boring. (No recovery);No recovery;High
+DH56;2;12.20;13.21;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed GRANITE.;Granite;High
+DH56;2;13.21;13.27;Moderately weak to moderately strong, brownish pink spotted black and white, highly decomposed GRANITE. No recovery 13.21-13.27m.;Granite;High
+DH56;2;13.27;15.47;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed GRANITE.;Granite;High
+DH56;2;15.47;15.52;Moderately weak to moderately strong, brownish pink spotted black and white, highly decomposed GRANITE. No recovery 15.47-15.52m.;Granite;High
+DH56;2;15.52;16.29;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed GRANITE.;Granite;High
+DH56;2;16.29;18.14;Wash boring. (No recovery);No recovery;High
+DH56;2;18.14;23.31;Strong, pinkish grey spotted black and white, slightly decomposed GRANITE.;Granite;High

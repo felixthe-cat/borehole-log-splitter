@@ -1,0 +1,7 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+D1a_v1;839926.71;816550.74;1;0.00;0.20;;Concrete slab;Concrete;1.00
+D1a_v1;839926.71;816550.74;1;0.20;2.00;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+D1a_v1;839926.71;816550.74;1;2.00;7.50;;Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragment. (FILL);Fill;1.00
+D1a_v1;839926.71;816550.74;1;7.50;27.50;;Wash boring. No recovery.;No Recovery;1.00
+D1a_v1;839926.71;816550.74;3;27.50;38.30;III;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, chloride and kaolin coated joints, dipping 10 degrees-20 degrees and 30 degrees-50 degrees.;Granite;1.00

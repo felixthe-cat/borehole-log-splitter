@@ -53,6 +53,16 @@ After calling Gemini and parsing the raw CSV, the pipeline applies the following
 - **Rule**: If consecutive layers are depth-continuous and have identical descriptions (case-insensitive match), merge them into a single layer spanning the full combined depth range.
 - **Why**: Thick strata often span multiple borehole log sheets, producing duplicated rows in the extracted CSV that should be a single geological unit.
 
+### Step 3 — Absorb Short No-Recovery Annotations (`absorb_short_no_recovery_annotations`)
+- **Trigger**: A layer classified `No Recovery`/`Wash Boring` whose description is a terse "No recovery" note (<40 chars, no "wash boring" wording) spanning <=2m, immediately following a layer with a real rock/soil classification.
+- **Rule**: Merge it into the preceding layer, extending its End Depth and appending a "No recovery A-Bm." note to the description, instead of leaving it as a standalone layer.
+- **Why**: A brief core-loss gap inside an otherwise-cored, described rock run is a recovery-percentage footnote (the Grade column on the source log continues unbroken across it), not a distinct geological unit. Only a genuinely uncored, undescribed span should be classified `No Recovery`.
+
+### Step 4 — Force Fill/Concrete Type Consistency (`force_fill_and_concrete_types`)
+- **Trigger**: A description ending in `(FILL)` whose Type is not already `Fill`/`No Recovery`/`Wash Boring`; or a standalone `Concrete Slab` description (no `(FILL)` suffix) whose Type is not `Concrete`.
+- **Rule**: Force `Type=Fill` in the first case, `Type=Concrete` in the second.
+- **Why**: Different extraction runs classified the same `(FILL)`-suffixed material inconsistently (sometimes by grain-size name, sometimes as `Fill`), and standalone concrete slabs were sometimes folded into `Fill`.
+
 ---
 
 ## Geological Verification Checks
@@ -133,5 +143,7 @@ The following is the complete list of data-quality rules derived from real proje
 | N1 | `"As Sheet X"` descriptions resolved to actual material | Normalisation | Programmatic |
 | N2 | Consecutive identical layers merged into one | Normalisation | Programmatic |
 | N3 | Degree symbols (°) normalized to the word 'degrees' | Normalisation | Programmatic |
+| N4 | Short (<=2m) "No recovery at X-Ym" footnotes inside a cored/described rock or soil run are absorbed into the enclosing layer, not left as a standalone "No Recovery" row | Normalisation | Programmatic (`absorb_short_no_recovery_annotations`) |
+| N5 | Any `(FILL)`-suffixed description forces `Type=Fill`; a standalone "Concrete Slab" description forces `Type=Concrete` | Normalisation | Programmatic (`force_fill_and_concrete_types`) |
 
 > **Note**: Rules prefixed `V` are validations (they trigger correction retries on failure). Rules prefixed `N` are normalisation pre-passes (they transform the data silently before validation runs).

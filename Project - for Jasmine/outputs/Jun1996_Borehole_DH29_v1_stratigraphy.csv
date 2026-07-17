@@ -1,17 +1,12 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH29_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH29_v1;1;0.20;0.60;Brown, gravelly silty medium to coarse SAND. (FILL);Sand;High
-DH29_v1;1;0.60;1.34;Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL);Fill;High
-DH29_v1;1;1.34;4.00;Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL) including boulder 3.75m-4.00m;Fill;High
-DH29_v1;1;4.00;7.30;Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL);Fill;High
-DH29_v1;1;7.30;7.55;Boulder within Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL);Boulder;High
-DH29_v1;1;7.55;8.30;Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND. (FILL);Fill;High
-DH29_v1;1;8.30;18.00;Wash boring. (No recovery);No recovery;High
-DH29_v1;2;18.00;18.47;Sub-rounded Boulder, Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND;Fill;High
-DH29_v1;2;18.47;18.90;Boulder;Boulder;High
-DH29_v1;2;18.90;19.00;Sub-rounded Boulder, Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND;Fill;High
-DH29_v1;2;19.00;21.00;Wash boring. (No recovery);No recovery;High
-DH29_v1;3;21.00;22.00;Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND;Fill;High
-DH29_v1;3;22.00;24.00;Wash boring. (No recovery);No recovery;High
-DH29_v1;3;24.00;29.39;Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10-20, 40-50, 65-75 and occasionally vertical joints.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH29_v1;839895.54;816569.15;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH29_v1;839895.54;816569.15;1;0.20;0.60;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH29_v1;839895.54;816569.15;1;0.60;1.34;;Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL);Fill;1.00
+DH29_v1;839895.54;816569.15;1;1.34;8.30;;Sub-angular Boulders, Cobbles and Gravels of moderately decomposed granite and tuff with some brown, silty SAND and some red bricks. (FILL);Fill;1.00
+DH29_v1;839895.54;816569.15;1;8.30;18.47;;Wash boring. (No recovery);No Recovery;1.00
+DH29_v1;839895.54;816569.15;2;18.47;18.90;;Sub-rounded Boulder, Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND.;Alluvium;1.00
+DH29_v1;839895.54;816569.15;2;18.90;21.00;;Wash boring. (No recovery);No Recovery;1.00
+DH29_v1;839895.54;816569.15;3;21.00;22.00;;Cobbles and Gravels of moderately decomposed granite and tuff with some brown silty SAND.;Alluvium;1.00
+DH29_v1;839895.54;816569.15;3;22.00;24.00;;Wash boring. (No recovery);No Recovery;1.00
+DH29_v1;839895.54;816569.15;3;24.00;29.39;III/II;Moderately strong to strong, greyish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 65 degrees-75 degrees and occasionally vertical joints.;Granite;1.00

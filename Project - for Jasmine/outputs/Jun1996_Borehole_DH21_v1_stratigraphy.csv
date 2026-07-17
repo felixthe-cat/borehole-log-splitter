@@ -1,7 +1,7 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH21_v1;1;0.00;0.20;Concrete Slab.;Concrete;High
-DH21_v1;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH21_v1;1;2.00;22.00;Wash boring. (No recovery);No recovery;High
-DH21_v1;3;22.00;22.20;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM);Alluvium;High
-DH21_v1;3;22.20;27.43;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with medium spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-65 degrees & occasionally vertical joints.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH21_v1;839895.02;816546.65;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH21_v1;839895.02;816546.65;1;0.20;2.00;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH21_v1;839895.02;816546.65;1;2.00;22.00;;Wash boring. (No recovery);No Recovery;1.00
+DH21_v1;839895.02;816546.65;3;22.00;22.20;;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown silty SAND. (ALLUVIUM);Alluvium;1.00
+DH21_v1;839895.02;816546.65;3;22.20;27.43;III/II;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with medium spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-65 degrees & occasionally vertical joints.;Granite;1.00

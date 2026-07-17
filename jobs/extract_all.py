@@ -100,6 +100,8 @@ def main():
         # Run normalisation sequence
         rows = resolve_as_sheet_descriptions(rows)
         rows = merge_consecutive_identical_layers(rows)
+        rows = absorb_short_no_recovery_annotations(rows)
+        rows = force_fill_and_concrete_types(rows)
         rows = normalize_degree_symbols(rows)
         
         # Run validations

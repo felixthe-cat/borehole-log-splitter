@@ -1,8 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH30_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH30_v1;1;0.20;1.50;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH30_v1;1;1.50;10.50;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some concrete fragment and red bricks. (FILL);Fill;High
-DH30_v1;2;10.50;23.00;Wash boring. (No recovery);No recovery;High
-DH30_v1;3;23.00;24.50;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;High
-DH30_v1;3;24.50;29.69;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees & 65 degrees-75 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH30_v1;839895.64;816573.02;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH30_v1;839895.64;816573.02;1;0.20;1.50;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH30_v1;839895.64;816573.02;1;1.50;10.50;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite and tuff with some brown, silty SAND and some concrete fragment and red bricks. (FILL);Fill;0.95
+DH30_v1;839895.64;816573.02;2;10.50;23.00;;Wash boring. (No recovery);No Recovery;1.00
+DH30_v1;839895.64;816573.02;3;23.00;24.50;;Sub-rounded GRAVEL and COBBLES of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;1.00
+DH30_v1;839895.64;816573.02;3;24.50;29.69;III/II;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 40-50 & 65-75.;Granite;1.00

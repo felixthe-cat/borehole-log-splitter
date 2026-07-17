@@ -1,7 +1,7 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH20_v1;1;0.00;2.50;Angular red brick and concrete fragments with some grey, silty SAND.(FILL);Fill;High
-DH20_v1;1;2.50;20.00;Wash Boring.(No Recovery);No Recovery;High
-DH20_v1;2;20.00;23.50;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM);Alluvium;High
-DH20_v1;3;23.50;23.58;No Recovery;No Recovery;High
-DH20_v1;3;23.58;28.64;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 70 degrees-85 degrees and vertical joints.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH20_v1;839895.01;816544.09;1;0.00;2.50;;Angular red brick and concrete fragments with some grey, silty SAND.(FILL);Fill;1.00
+DH20_v1;839895.01;816544.09;1;2.50;20.00;;Wash Boring.(No Recovery);No Recovery;1.00
+DH20_v1;839895.01;816544.09;2;20.00;20.50;;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM);Alluvium;1.00
+DH20_v1;839895.01;816544.09;3;20.50;23.50;;Wash Boring.(No Recovery);No Recovery;1.00
+DH20_v1;839895.01;816544.09;3;23.50;28.64;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 70 degrees-85 degrees and vertical joints. No Recovery at 23.50m-23.58m.;Granite;1.00

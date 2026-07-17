@@ -75,6 +75,29 @@ Disregard peripheral data (flushing mediums, shift times, coordinates).
 Focus entirely on Depth and Soil/Rock Description.
 Ensure depth ranges are strictly continuous; if there is a gap, bridge it logically.
 Classify a concise 'Soil/Rock Type'.
+
+Read the sheet's "Grade" column (weathering grade I-VI) where present and copy
+elliptical decomposition wording verbatim into the description (e.g. "moderately
+to slightly decomposed", not paraphrased to a single grade) — this wording is
+load-bearing for downstream grade classification, do not summarize it away.
+
+A brief "No recovery at X-Ym" note inside an otherwise-cored, described rock or
+soil run (i.e. TCR/SCR/RQD percentages are reported for that run and a Grade is
+assigned either side of the gap) is a recovery-percentage footnote, NOT a
+separate geological layer — keep it as part of the enclosing layer's
+description and do not classify that sub-range as its own 'No Recovery' row.
+Only classify a range as 'No Recovery' / 'Wash Boring' when the ENTIRE interval
+has no lithological description at all (a genuine uncored/wash-bored section).
+
+Watch for a thin ALLUVIUM layer (sub-rounded cobbles/gravels description, often
+in an inset/bracketed note) sandwiched between two Wash Boring/No Recovery
+zones just above bedrock — do not let the surrounding wash-boring swallow it.
+
+Any layer whose description ends in "(FILL)" must have Soil/Rock Type = "Fill",
+regardless of the specific grain-size material named (sand, gravel, cobbles,
+etc.) A standalone "Concrete Slab" layer (not itself fill) must have Type =
+"Concrete", not "Fill".
+
 Provide the output strictly as raw CSV text with the headers:
 Hole No,Sheet No,Start Depth,End Depth,Soil/Rock Description,Soil/Rock Type,Confidence Level
 ```

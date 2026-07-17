@@ -1,8 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B2B_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-B2B_v1;1;0.20;2.50;Concrete with cobbles and gravels of moderately decomposed granite and red bricks (FILL);Fill;High
-B2B_v1;1;2.50;19.70;Wash boring;No recovery;High
-B2B_v1;2;19.70;21.50;Sub-rounded Cobbles and Gravels of moderately decomposed granite and tuff with some red brick and steel fragment (FILL);Fill;High
-B2B_v1;3;21.50;26.04;Wash boring;No recovery;High
-B2B_v1;3;26.04;31.80;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow to very narrow, rough planar, limonite, manganese and kaolin stained joints, dipping 10-20, 40-60, 70-80;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2B_v1;839912.22;816543.82;1;0.00;1.94;;Concrete Slab. Concrete with cobbles and gravels of sub-rounded decomposed granite and red bricks. (FILL);Fill;1.00
+B2B_v1;839912.22;816543.82;1;1.94;21.50;;Wash boring. (No recovery);No Recovery;1.00
+B2B_v1;839912.22;816543.82;3;21.50;22.50;;Sub-rounded Cobbles and Gravels of decomposed and fresh granite and tuff with some red brick and steel fragments (FILL);Fill;1.00
+B2B_v1;839912.22;816543.82;3;22.50;26.04;;Wash boring. (No recovery);No Recovery;1.00
+B2B_v1;839912.22;816543.82;3;26.04;30.34;III/II;Moderately strong to strong, fine to coarse grained, pink and white, moderately to slightly decomposed GRANITE with widely to medium spaced, medium to narrow to very narrow, rough planar, limonite, stained and kaolinized, joint plane, dipping 10 degrees-20 degrees, 40 degrees-80 degrees, 70 degrees-80 degrees No recovery 29.95-30.34m.;Granite;1.00
+B2B_v1;839912.22;816543.82;4;30.34;31.80;III/II;Moderately strong to strong, fine to coarse grained, pink and white, moderately to slightly decomposed GRANITE with widely to medium spaced, medium to narrow to very narrow, rough planar, limonite, stained and kaolinized, joint plane, dipping 10 degrees-20 degrees, 40 degrees-80 degrees, 70 degrees-80 degrees;Granite;1.00

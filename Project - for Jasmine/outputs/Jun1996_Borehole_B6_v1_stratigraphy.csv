@@ -1,10 +1,7 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B6_v1;1;0.00;2.00;Concrete with red brick fragments and steel fragments. (FILL);Fill;High
-B6_v1;1;2.00;18.30;Wash Boring. (No Recovery);No Recovery;High
-B6_v1;2;18.30;18.79;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 55 degrees-70 degrees and occasionally vertical joints.;Granite;High
-B6_v1;2;18.79;19.30;No Recovery;No Recovery;High
-B6_v1;2;19.30;20.20;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 55 degrees-70 degrees and occasionally vertical joints.;Granite;High
-B6_v1;3;20.20;20.70;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-B6_v1;3;20.70;20.82;No Recovery;No Recovery;High
-B6_v1;3;20.82;26.35;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B6_v1;839905.77;816498.75;1;0.00;0.70;;Concrete with red brick fragments and steel fragments. (FILL);Fill;1.00
+B6_v1;839905.77;816498.75;1;0.70;18.30;;Wash Boring. (No Recovery);No Recovery;1.00
+B6_v1;839905.77;816498.75;2;18.30;20.20;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;1.00
+B6_v1;839905.77;816498.75;3;20.20;20.70;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite and manganese stained, kaolin and chlorite coated joints, dipping 10-20, 30-40, 55-70 and occasionally vertical joints.;Granite;1.00
+B6_v1;839905.77;816498.75;3;20.70;26.35;IV;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;0.90

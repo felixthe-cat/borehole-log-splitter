@@ -1,12 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B2A_v1;1;0.0;0.2;Concrete Slab;Concrete;High
-B2A_v1;1;0.2;1.4;Wash boring;No recovery;High
-B2A_v1;1;1.4;2.8;Concrete with cobbles and gravels of moderately decomposed granite and occasionally some steel fragment;Fill;High
-B2A_v1;1;2.8;18.0;Wash boring;No recovery;High
-B2A_v1;2;18.0;18.5;Sub-rounded cobbles and gravels of moderately decomposed granite and tuff with some brown, silty SAND;Alluvium;High
-B2A_v1;2;18.5;22.8;Wash boring;No recovery;High
-B2A_v1;3;22.8;23.08;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints;Granite;High
-B2A_v1;3;23.08;23.4;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-B2A_v1;3;23.4;23.8;No recovery;No recovery;High
-B2A_v1;3;23.8;31.56;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10-20, 65-85 and occasionally vertical joints;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B2A_v1;839907.00;816539.32;1;0.00;0.24;;Concrete Slab.;Concrete;1.00
+B2A_v1;839907.00;816539.32;1;0.24;1.40;;Wash boring. (No recovery);No Recovery;1.00
+B2A_v1;839907.00;816539.32;1;1.40;3.04;;Concrete with cobbles and gravels of sub-angular to sub-rounded rock with occasionally some steel fragment. (FILL);Fill;1.00
+B2A_v1;839907.00;816539.32;1;3.04;18.00;;Wash boring. (No recovery);No Recovery;1.00
+B2A_v1;839907.00;816539.32;2;18.00;18.50;;Sub-rounded cobbles and gravels of moderately decomposed granite and sandstone in brown, silty SAND. (ALLUVIUM);Alluvium;1.00
+B2A_v1;839907.00;816539.32;2;18.50;22.80;;Wash boring. (No recovery);No Recovery;1.00
+B2A_v1;839907.00;816539.32;3;22.80;23.40;IV/III;Moderately strong to strong, brownish pink mottled black and white, moderately to slightly decomposed medium to coarse grained GRANITE with medium to close joint spacing, with natural orange brown, very narrow, extremely narrow, rough planar, stained joints, dipping 70 degrees to 90 degrees, 30 degrees to 45 degrees, and occasionally vertical joints.;Granite;0.95
+B2A_v1;839907.00;816539.32;3;23.40;31.56;III/II;Similar, but dark brown, grey to brownish pink mottled black and white, highly to moderately decomposed medium to coarse grained GRANITE. (Note: 23.40m-23.80m: No recovery.);Granite;0.95

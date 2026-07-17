@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH16;1;0.00;2.00;Angular COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND and trace of brick and concrete fragments and some domestic rubbish. (FILL);Fill;High
+DH16;1;2.00;18.50;Wash Boring. (No Recovery);No Recovery;High
+DH16;2;18.50;19.50;Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND. ALLUVIUM. Boulder at 19.50m-19.70m.;Alluvium;High
+DH16;2;19.50;20.50;Wash Boring. (No Recovery);No Recovery;High
+DH16;3;20.50;22.00;Sub rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND. ALLUVIUM.;Alluvium;High
+DH16;3;22.00;27.45;Moderately strong to strong, pinkish grey, brown, pale brown and white, moderately to slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and moderately close to spaced, extremely narrow, rough planar, stained and manganese stained joints, dipping 10 degrees-20 degrees, 70 degrees-80 degrees.;Granite;High

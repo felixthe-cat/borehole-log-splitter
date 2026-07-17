@@ -9,8 +9,8 @@ SYSTEM_INSTRUCTION = (
     "Your task is to extract the geological stratigraphy into a structured CSV. "
     "Strictly follow ALL of the following rules without exception:\n\n"
     "EXTRACTION RULES:\n"
-    "1. Disregard peripheral columns (flushing medium, shift times, coordinates, core photos). "
-    "Focus entirely on the depth column and the soil/rock description column.\n"
+    "1. Disregard peripheral columns (flushing medium, shift times, core photos). "
+    "Focus on the depth column, the Grade column, and the soil/rock description column.\n"
     "2. Output Start Depth and End Depth as numeric values in metres only (e.g. 10.50, not '10.50m').\n"
     "3. Sheet No must be a single positive integer number (e.g. 1, 2, not '1-3' or 'Sheet 1').\n"
     "4. Depth ranges must be STRICTLY CONTINUOUS: End Depth of row N must equal Start Depth of row N+1. "
@@ -26,11 +26,54 @@ SYSTEM_INSTRUCTION = (
     "10. The final row's End Depth must equal the total termination depth of the borehole "
     "(usually written at the bottom-left corner of the last log sheet).\n"
     "11. Classify a concise Soil/Rock Type (e.g. Sand, Clay, Granite, Fill, No Recovery).\n"
-    "12. Set Confidence Level to 'High', 'Medium', or 'Low' based on legibility of the scanned image.\n"
-    "13. Use a semicolon (;) as the delimiter for all fields in the CSV string output.\n\n"
+    "12. Confidence Level must be a DECIMAL NUMBER between 0.00 and 1.00 reflecting how legible and "
+    "certain the extraction of that row is (1.00 = crisp and unambiguous; lower for faint, damaged, "
+    "or ambiguous scans). Do NOT output words like 'High'/'Medium'/'Low' or percentages.\n"
+    "13. Use a semicolon (;) as the delimiter for all fields in the CSV string output. "
+    "If a field's own text ever needs to contain a semicolon (e.g. a list of joint dip "
+    "angles like '10; 20, 40; 50'), wrap that ENTIRE field in double quotes so it is not "
+    "mistaken for a column break (standard CSV quoting) — e.g. \"...dipping 10; 20, 40; 50...\". "
+    "Prefer rewording such lists with commas only (e.g. '10, 20, 40, 50') to avoid the issue "
+    "entirely wherever possible.\n"
+    "14. GRADE COLUMN: read the sheet's dedicated 'Grade' column (the rock weathering grade, roman "
+    "numerals I to VI, where I=fresh, II=slightly decomposed, III=moderately decomposed, IV=highly "
+    "decomposed, V=completely decomposed, VI=residual soil). Output the grade EXACTLY as printed in "
+    "that column for the row's depth interval. When a layer is logged as spanning TWO grades (the "
+    "Grade cell shows e.g. 'IV/III' or 'III/II'), output BOTH joined by a single forward slash '/', "
+    "in the same order printed (higher-decomposition grade first as logged). For any NON-rock layer "
+    "(Fill, Concrete, Alluvium, Marine Deposit, Wash Boring / No Recovery) the Grade column is blank "
+    "— output an EMPTY field for Grade. Also copy elliptical decomposition wording verbatim into the "
+    "description (e.g. 'moderately to slightly decomposed', not paraphrased) — do not summarize it away.\n"
+    "15. A brief 'No recovery at X-Ym' note inside an otherwise-cored, described rock or soil run "
+    "(i.e. TCR/SCR/RQD percentages are reported for that run and a Grade is assigned either side of "
+    "the gap) is a recovery-percentage footnote, NOT a separate geological layer — keep it as part of "
+    "the enclosing layer's description (retaining that layer's Grade) and do not classify that "
+    "sub-range as its own 'No Recovery' row. Only classify a range as 'No Recovery' / 'Wash Boring' "
+    "when the ENTIRE interval has no lithological description at all (a genuine uncored/wash-bored "
+    "section). Watch for a thin ALLUVIUM layer (sub-rounded cobbles/gravels, often in an inset/"
+    "bracketed note) sandwiched between two Wash Boring/No Recovery zones just above bedrock — do not "
+    "let the surrounding wash-boring swallow it.\n"
+    "16. Any layer whose description ends in '(FILL)' must have Soil/Rock Type = 'Fill', regardless "
+    "of the specific grain-size material named (sand, gravel, cobbles, etc). A standalone 'Concrete "
+    "Slab' layer (not itself fill) must have Type = 'Concrete', not 'Fill'.\n"
+    "17. CO-ORDINATES: from each sheet's header 'CO-ORDINATES' box, read the Easting (the number "
+    "after 'E') and Northing (the number after 'N') as plain numbers. These are identical on every "
+    "sheet of the same borehole; report them per page in the title_blocks output (do NOT put them in "
+    "the CSV rows).\n\n"
+    "18. DO NOT START A ROCK LAYER EARLY. A long Wash Boring / No Recovery zone can span an entire "
+    "sheet or more before rock is actually reached. Before writing a Grade/rock description for any "
+    "depth, confirm on THAT sheet that core recovery data genuinely starts there: the Total Core "
+    "Recovery %, Solid Core Recovery %, and R.Q.D. columns are populated (not blank) and the Legend "
+    "column has switched from the wash-boring texture to the rock-legend pattern, at or before the "
+    "depth you are about to describe. If the recovery columns and legend are still blank/wash-boring "
+    "at that depth, the ground is still 'No Recovery' there — do not invent or bring forward a rock "
+    "description to fill it, even if you can see the rock description further down the sheet. The "
+    "first row with an actual Grade and description must start at the exact depth where the recovery "
+    "percentages first appear, not earlier.\n\n"
     "OUTPUT FORMAT:\n"
-    "Provide the output STRICTLY as raw CSV text with the following headers (no markdown code blocks):\n"
-    "Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level"
+    "Provide the stratigraphy_csv STRICTLY as raw CSV text with the following headers (no markdown "
+    "code blocks, no coordinates column):\n"
+    "Hole No;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level"
 )
 
 
@@ -41,7 +84,7 @@ EXTRACTION_SCHEMA = {
     "properties": {
         "stratigraphy_csv": {
             "type": "STRING",
-            "description": "The extracted stratigraphy as raw CSV text with headers: Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level. Use semicolon (;) as the delimiter. Sheet No must be a single integer. Do not wrap in markdown code blocks."
+            "description": "The extracted stratigraphy as raw CSV text with headers: Hole No;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level. Use semicolon (;) as the delimiter. Sheet No must be a single integer. Grade is the rock weathering grade (roman numeral I-VI, or two grades joined by '/', empty for non-rock layers). Confidence Level is a decimal between 0.00 and 1.00. Do NOT include coordinates in these rows. If a field's text must contain a semicolon (e.g. a joint dip-angle list), wrap that field in double quotes so it isn't mistaken for a column break; prefer rewording with commas only instead. Do not wrap in markdown code blocks."
         },
         "termination_depth": {
             "type": "NUMBER",
@@ -57,9 +100,11 @@ EXTRACTION_SCHEMA = {
                     "hole_no": {"type": "STRING"},
                     "project_name": {"type": "STRING"},
                     "project_number": {"type": "STRING"},
-                    "date": {"type": "STRING"}
+                    "date": {"type": "STRING"},
+                    "easting": {"type": "NUMBER", "description": "Easting coordinate (the number after 'E' in the CO-ORDINATES box). 0.0 if not found."},
+                    "northing": {"type": "NUMBER", "description": "Northing coordinate (the number after 'N' in the CO-ORDINATES box). 0.0 if not found."}
                 },
-                "required": ["page_number", "hole_no", "project_name", "project_number", "date"]
+                "required": ["page_number", "hole_no", "project_name", "project_number", "date", "easting", "northing"]
             }
         }
     },

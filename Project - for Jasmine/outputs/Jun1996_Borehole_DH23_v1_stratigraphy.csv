@@ -1,6 +1,6 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH23_v1;1;0.0;6.3;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some grey, silty sand with some red bricks and concrete fragments (FILL);Fill;High
-DH23_v1;1;6.3;23.3;Wash boring. (No recovery);No recovery;High
-DH23_v1;3;23.3;28.0;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 65 degrees-85 degrees;Granite;High
-DH23_v1;3;28.0;28.7;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 65 degrees-85 degrees (grade III bedrock);Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH23_v1;839895.09;816552.16;1;0.00;6.30;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some grey, silty sand with some red bricks and concrete fragments. (FILL);Fill;1.00
+DH23_v1;839895.09;816552.16;1;6.30;23.30;;Wash boring. (No recovery);No recovery;1.00
+DH23_v1;839895.09;816552.16;3;23.30;28.00;III/II;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed, medium to coarse grained GRANITE with medium to closely spaced, extremely narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees & 65 degrees-85 degrees.;Granite;1.00
+DH23_v1;839895.09;816552.16;3;28.00;28.70;III/II;28.00m-28.30m: grade III bedrock.;Granite;1.00

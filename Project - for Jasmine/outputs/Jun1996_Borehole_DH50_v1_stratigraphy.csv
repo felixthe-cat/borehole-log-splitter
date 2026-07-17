@@ -1,6 +1,6 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH50_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH50_v1;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DH50_v1;1;2.00;22.77;Wash boring. (No recovery);No Recovery;High
-DH50_v1;3;22.77;27.98;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 60 degrees-70 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH50_v1;839929.11;816530.14;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH50_v1;839929.11;816530.14;1;0.20;2.00;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH50_v1;839929.11;816530.14;1;2.00;22.77;;Wash boring. (No recovery);No Recovery;1.00
+DH50_v1;839929.11;816530.14;3;22.77;27.98;II;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 60 degrees-70 degrees.;Granite;1.00

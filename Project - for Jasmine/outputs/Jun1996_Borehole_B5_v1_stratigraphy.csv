@@ -1,0 +1,10 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B5_v1;839906.13;816512.28;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+B5_v1;839906.13;816512.28;1;0.20;1.80;;Concrete with COBBLES and GRAVELS of moderately decomposed granite and some red bricks. (FILL);Fill;1.00
+B5_v1;839906.13;816512.28;1;1.80;19.30;;Wash boring. (No recovery);No Recovery;1.00
+B5_v1;839906.13;816512.28;2;19.30;20.30;IV/III;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed, medium to coarse grained GRANITE with closely spaced, narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees;Granite;0.95
+B5_v1;839906.13;816512.28;3;20.30;20.75;III;moderately decomposed, medium to coarse grained GRANITE;Granite;0.90
+B5_v1;839906.13;816512.28;3;20.75;22.48;II;Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow to very narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees & 40 degrees-50 degrees;Granite;0.95
+B5_v1;839906.13;816512.28;3;22.48;22.80;III;moderately decomposed, medium to coarse grained GRANITE;Granite;0.90
+B5_v1;839906.13;816512.28;3;22.80;29.96;II;Strong, pinkish grey spotted black and white, slightly decomposed, medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow to very narrow, rough planar, limonite, manganese stained joints, dipping 10 degrees-20 degrees & 40 degrees-50 degrees;Granite;0.95

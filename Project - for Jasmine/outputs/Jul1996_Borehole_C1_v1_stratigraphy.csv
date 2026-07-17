@@ -1,6 +1,6 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-C1_v1;1;0.00;0.20;Concrete Slab.;Concrete;High
-C1_v1;1;0.20;1.00;Brown, gravelly silty medium to coarse SAND. (FILL);Sand;High
-C1_v1;1;1.00;29.65;Wash boring.;No recovery;High
-C1_v1;4;29.65;35.61;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese stained chlorite and kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-40 degrees, 70 degrees-85 degrees and occasionally vertical joints.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C1_v1;839917.74;816553.98;1;0.00;0.20;;Concrete Slab.;Concrete;0.95
+C1_v1;839917.74;816553.98;1;0.20;1.00;;Yellowish brown, generally silty medium to coarse SAND. (FILL);Fill;0.95
+C1_v1;839917.74;816553.98;1;1.00;30.00;;Wash boring. (No recovery);No Recovery;0.95
+C1_v1;839917.74;816553.98;4;30.00;35.61;III;Moderately strong, brownish pink to grey fine to coarse GRAINITE, moderately decomposed medium to coarse GRAINED GRANITE becoming fresh to moderately decomposed, closely jointed, dipping at low angle to very narrow, rough planar. Biotite, chlorite and kaolin coated joints, dipping at 10-20 degrees to 60-70 degrees and occasionally vertical joints.;Granite;0.95

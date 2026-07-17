@@ -1,8 +1,6 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH16_v1;2;11.00;18.50;Wash Boring;No Recovery;High
-DH16_v1;2;18.50;19.50;Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM);Alluvium;High
-DH16_v1;2;19.50;20.00;Boulder;Boulder;High
-DH16_v1;3;20.00;21.00;Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND (ALLUVIUM);Alluvium;High
-DH16_v1;3;21.00;22.39;Boulder;Boulder;High
-DH16_v1;3;22.39;27.45;Moderately strong to strong, pinkish grey to grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10-20, 70-80;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH16_v1;839894.90;816533.57;1;0.00;2.00;;Angular COBBLES and GRAVELS of moderately decomposed granite and tuff with some grey, silty SAND and some red brick and concrete fragments and some domestic rubbish. (FILL);Fill;1.00
+DH16_v1;839894.90;816533.57;1;2.00;18.50;;Wash Boring. (No Recovery);No Recovery;1.00
+DH16_v1;839894.90;816533.57;2;18.50;22.00;;Sub-rounded to rounded BOULDERS, COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND. (ALLUVIUM);Alluvium;1.00
+DH16_v1;839894.90;816533.57;3;22.00;27.45;III/II;Moderately strong to strong, pinkish grey to grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 70 degrees-80 degrees.;Granite;1.00

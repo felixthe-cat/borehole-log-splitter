@@ -22,13 +22,15 @@ from borehole_extractor_lib import (
     check_depth_continuity,
     check_termination_depth,
     check_title_block_consistency,
+    check_coordinate_consistency,
     check_description_and_classification,
     request_gemini_correction,
-    resolve_as_sheet_descriptions,
-    merge_consecutive_identical_layers,
-    normalize_degree_symbols,
+    normalize_rows,
+    check_round_number_depths,
+    check_no_recovery_description_consistency,
     get_unique_report_short_names,
 )
+from borehole_extractor_lib.config import COL_START, COL_END
 
 
 def run_pipeline(
@@ -205,10 +207,8 @@ def run_pipeline(
                         title_blocks = extraction_data.get("title_blocks", [])
                         
                         rows = clean_and_parse_csv(csv_text)
-                        rows = resolve_as_sheet_descriptions(rows)
-                        rows = merge_consecutive_identical_layers(rows)
-                        rows = normalize_degree_symbols(rows)
-                        
+                        rows = normalize_rows(rows, title_blocks)
+
                         # Validation retry loop (up to 3 attempts)
                         validation_errors = []
                         validation_passed = False
@@ -223,21 +223,27 @@ def run_pipeline(
                             
                             # 2. Termination depth comparison
                             try:
-                                sorted_rows = sorted(rows, key=lambda x: float(x[2]))
-                                last_end_depth = float(sorted_rows[-1][3])
+                                sorted_rows = sorted(rows, key=lambda x: float(x[COL_START]))
+                                last_end_depth = float(sorted_rows[-1][COL_END])
                                 term_errors = check_termination_depth(term_depth, last_end_depth)
                                 errors.extend(term_errors)
                             except Exception as te:
                                 print(f"      [Warning] Termination depth comparison error: {te}")
-                                
+
                             # 3. Title block details match check
                             title_errors = check_title_block_consistency(title_blocks)
                             errors.extend(title_errors)
-                            
+
+                            # 3b. Coordinate consistency across sheets
+                            errors.extend(check_coordinate_consistency(title_blocks))
+
                             # 4. Description and classification consistency check
                             desc_errors = check_description_and_classification(rows)
                             errors.extend(desc_errors)
-                            
+
+                            # 5. No-recovery description-vs-depth-column consistency
+                            errors.extend(check_no_recovery_description_consistency(rows))
+
                             if not errors:
                                 print(" PASSED.")
                                 validation_passed = True
@@ -266,9 +272,7 @@ def run_pipeline(
                                     title_blocks = extraction_data.get("title_blocks", [])
                                     
                                     rows = clean_and_parse_csv(csv_text)
-                                    rows = resolve_as_sheet_descriptions(rows)
-                                    rows = merge_consecutive_identical_layers(rows)
-                                    rows = normalize_degree_symbols(rows)
+                                    rows = normalize_rows(rows, title_blocks)
                                 else:
                                     print(f"    [Warning] Max correction attempts reached. Proceeding with best-effort results.")
                                     
@@ -276,6 +280,10 @@ def run_pipeline(
                             all_validation_issues.append((hole, validation_errors))
                             
                         if rows:
+                            round_warnings = check_round_number_depths(rows)
+                            for w in round_warnings:
+                                print(f"    [Soft Warning] {w}")
+
                             append_rows_to_master_csv(rows, output_csv)
                             # Copy raw CSV/JSON outputs to outputs/ in the project root for raw tracing
                             project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

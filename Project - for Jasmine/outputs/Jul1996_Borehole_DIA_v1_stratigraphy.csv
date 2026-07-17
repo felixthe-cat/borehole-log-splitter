@@ -1,7 +1,0 @@
-sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DIA_v1;1;0.00;0.20;Concrete slab;Concrete;High
-DIA_v1;1;0.20;2.00;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;High
-DIA_v1;1;2.00;7.50;Angular Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragment. (FILL);Fill;High
-DIA_v1;1;7.50;27.50;Wash boring. No recovery at 7.50m-27.50m.;No recovery;High
-DIA_v1;3;27.50;38.30;Moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally extremely narrow, rough planar, limonite, manganese stained, chloride and kaolin coated joints, dipping 10 degrees-20 degrees and 30 degrees-50 degrees.;Granite;High

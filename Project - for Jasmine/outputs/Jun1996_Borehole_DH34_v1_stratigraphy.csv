@@ -1,10 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH34_v1;1;0.00;0.20;Concrete Slab.;Concrete;High
-DH34_v1;1;0.20;0.80;Brown, gravelly silty medium to coarse SAND. (FILL);Sand;High
-DH34_v1;1;0.80;6.30;Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL);Fill;High
-DH34_v1;1;6.30;9.00;Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragments. (FILL);Fill;High
-DH34_v1;1;9.00;21.00;Wash boring. (No recovery);No recovery;High
-DH34_v1;3;21.00;21.50;Sub-rounded Cobbles and Gravels of moderately decomposed tuff and granite with some brown, silty SAND. (ALLUVIUM);Alluvium;High
-DH34_v1;3;21.50;26.66;Wash boring. (No recovery);No recovery;High
-DH34_v1;3;26.66;32.53;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH34_v1;839909.29;816568.22;1;0.00;0.20;;Concrete Slab.;Concrete;1.00
+DH34_v1;839909.29;816568.22;1;0.20;0.80;;Brown, gravelly silty medium to coarse SAND. (FILL);Fill;1.00
+DH34_v1;839909.29;816568.22;1;0.80;6.30;;Concrete with Cobbles and Gravels of moderately decomposed granite. (FILL);Fill;1.00
+DH34_v1;839909.29;816568.22;1;6.30;9.00;;Angular Boulders, Cobbles and Gravels of moderately decomposed granite with some brown, silty SAND and some concrete fragments. (FILL) 6.74m-7.00m, 7.20m-7.50m, 7.50m-7.74m & 8.05m-8.45m: boulders.;Fill;1.00
+DH34_v1;839909.29;816568.22;1;9.00;21.00;;Wash boring. (No recovery);No Recovery;1.00
+DH34_v1;839909.29;816568.22;3;21.00;21.50;;Sub-rounded Cobbles and Gravels of moderately decomposed tuff and granite with some brown, silty SAND. (ALLUVIUM);Alluvium;1.00
+DH34_v1;839909.29;816568.22;3;21.50;26.66;;Wash boring. (No recovery);No Recovery;1.00
+DH34_v1;839909.29;816568.22;3;26.66;32.53;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained, kaolin coated joints, dipping 10 degrees-20 degrees, 30 degrees-50 degrees.;Granite;1.00

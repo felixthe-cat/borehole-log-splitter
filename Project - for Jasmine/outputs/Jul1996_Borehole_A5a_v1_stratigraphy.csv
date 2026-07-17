@@ -1,0 +1,7 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+A5a_v1;839897.28;816515.51;1;0.00;1.50;;Angular COBBLES and GRAVELS of moderately decomposed granite with sand and some silt, some and some concrete fragments. (FILL);Fill;0.98
+A5a_v1;839897.28;816515.51;1;1.50;18.70;;Wash Boring. (No Recovery);Wash Boring;0.98
+A5a_v1;839897.28;816515.51;2;18.70;19.30;;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some silt and sand. (ALLUVIUM);Alluvium;0.98
+A5a_v1;839897.28;816515.51;2;19.30;20.50;;Wash Boring. (No Recovery);Wash Boring;0.98
+A5a_v1;839897.28;816515.51;3;20.50;25.90;III;Moderately strong, brownish pink spotted black and white, moderately to slightly decomposed, fine to medium grained GRANITE with medium to widely spaced, extremely close to very narrow, rough planar, infinite, moderately stained and kaolin coated joints dipping 10 degrees-20 degrees and 70 degrees-80 degrees.;Granite;0.98

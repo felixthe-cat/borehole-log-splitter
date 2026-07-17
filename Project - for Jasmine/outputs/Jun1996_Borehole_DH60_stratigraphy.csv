@@ -1,0 +1,8 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH60;1;0.00;0.20;Concrete Slab.;Concrete;High
+DH60;1;0.20;7.50;Wash boring. (No recovery);No Recovery;High
+DH60;1;7.50;8.00;Concrete with COBBLES and GRAVELS of moderately decomposed granite. (FILL);Fill;High
+DH60;1;8.00;18.26;Wash boring. (No recovery);No Recovery;High
+DH60;2;18.26;18.32;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed GRANITE.;Granite;High
+DH60;3;18.32;23.63;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE.;Granite;High

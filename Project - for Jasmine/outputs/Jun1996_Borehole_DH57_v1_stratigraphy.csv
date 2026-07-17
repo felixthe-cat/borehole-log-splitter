@@ -1,0 +1,9 @@
+sep=;
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH57_v1;839928.64;816511.71;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH57_v1;839928.64;816511.71;1;0.20;13.96;;Wash boring. (No recovery);No Recovery;1.00
+DH57_v1;839928.64;816511.71;2;13.96;14.50;III/IV;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE (CORESTONE);Granite;0.95
+DH57_v1;839928.64;816511.71;2;14.50;17.70;;Wash boring. (no recovery);No Recovery;1.00
+DH57_v1;839928.64;816511.71;2;17.70;17.75;;No recovery;No Recovery;0.95
+DH57_v1;839928.64;816511.71;2;17.75;18.00;IV/III;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely spaced, extremely narrow, rough planar, limonite stained and clean joints, dipping 10 degrees-20 degrees, 80 degrees-85 degrees;Granite;0.95
+DH57_v1;839928.64;816511.71;3;18.00;23.38;II;weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE.;Granite;0.95

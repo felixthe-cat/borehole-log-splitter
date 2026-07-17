@@ -1,13 +1,11 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH47_v2;1;0.0;0.2;Concrete Slab;Concrete;High
-DH47_v2;1;0.2;2.5;Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND and red bricks. (FILL);Fill;High
-DH47_v2;1;2.5;2.9;Wash boring;No recovery;High
-DH47_v2;1;2.9;5.0;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL);Fill;High
-DH47_v2;1;5.0;18.72;Wash boring;No recovery;High
-DH47_v2;2;18.72;19.91;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees & 40 degrees-50 degrees.;Granite;High
-DH47_v2;3;19.91;20.55;No recovery;No recovery;High
-DH47_v2;3;20.55;23.14;Moderately weak to moderately strong, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE;Granite;High
-DH47_v2;3;23.14;23.35;No recovery;No recovery;High
-DH47_v2;3;23.35;25.88;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees.;Granite;High
-DH47_v2;3;25.88;28.85;Moderately strong to strong, brownish pink, moderately to slightly decomposed, medium grained GRANITE with medium spaced rough planar joints.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH47_v2;839929.28;816537.84;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH47_v2;839929.28;816537.84;1;0.20;2.50;;Concrete with GRAVELS and COBBLES of moderately decomposed granite with some brown silty SAND and red bricks. (FILL);Fill;1.00
+DH47_v2;839929.28;816537.84;1;2.50;2.90;;Wash boring. (No recovery);No Recovery;1.00
+DH47_v2;839929.28;816537.84;1;2.90;5.00;;Angular GRAVEL, COBBLES and BOULDERS of moderately decomposed granite with some brown, silty SAND. (FILL);Fill;1.00
+DH47_v2;839929.28;816537.84;1;5.00;18.72;;Wash boring. (No recovery);No Recovery;1.00
+DH47_v2;839929.28;816537.84;2;18.72;20.55;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees & 40 degrees-50 degrees;Granite;1.00
+DH47_v2;839929.28;816537.84;3;20.55;23.14;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE No recovery 21.45-23.14m.;Granite;0.95
+DH47_v2;839929.28;816537.84;3;23.14;26.12;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10 degrees-20 degrees, 40 degrees-60 degrees & 70 degrees-80 degrees;Granite;1.00
+DH47_v2;839929.28;816537.84;3;26.12;28.85;III/II;Moderately strong to strong, brownish pink, moderately to slightly decomposed, medium grained GRANITE with medium spaced rough planar joints;Granite;1.00

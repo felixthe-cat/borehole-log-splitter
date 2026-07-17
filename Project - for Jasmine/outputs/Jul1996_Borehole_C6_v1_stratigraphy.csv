@@ -1,5 +1,5 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-C6_v1;1;0.00;0.60;Concrete with red brick fragments. (FILL);Fill;High
-C6_v1;1;0.60;17.25;Wash Boring. (No Recovery);No Recovery;High
-C6_v1;2;17.25;26.19;Strong, greyish pink spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-60 degrees and 70 degrees-80 degrees.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C6_v1;839916.27;816498.47;1;0.00;0.60;;Concrete with red brick fragments. (FILL);Fill;1.00
+C6_v1;839916.27;816498.47;1;0.60;17.25;;Wash Boring. (No Recovery);No Recovery;1.00
+C6_v1;839916.27;816498.47;2;17.25;26.19;II;Strong, greyish pink spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite and manganese stained joints, dipping 10 degrees-20 degrees, 50 degrees-60 degrees and 70 degrees-80 degrees.;Granite;1.00

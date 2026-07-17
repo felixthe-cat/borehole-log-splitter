@@ -1,9 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH19_v1;1;0.00;2.00;Angular red brick and concrete fragments with some grey, silty SAND.(FILL);Fill;High
-DH19_v1;1;2.00;18.50;Wash Boring.(No Recovery);No Recovery;High
-DH19_v1;2;18.50;19.30;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM);Alluvium;High
-DH19_v1;2;19.30;24.30;Wash Boring.(No Recovery);No Recovery;High
-DH19_v1;3;24.30;24.60;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
-DH19_v1;3;24.60;24.64;No Recovery;No Recovery;High
-DH19_v1;3;24.64;30.37;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH19_v1;839894.96;816541.61;1;0.00;2.00;;Angular red brick and concrete fragments with some grey, silty SAND.(FILL);Fill;1.00
+DH19_v1;839894.96;816541.61;1;2.00;18.50;;Wash Boring.(No Recovery);No Recovery;1.00
+DH19_v1;839894.96;816541.61;2;18.50;19.30;;Sub-rounded COBBLES and GRAVELS of moderately decomposed granite and tuff with some brown, silty SAND.(ALLUVIUM);Alluvium;1.00
+DH19_v1;839894.96;816541.61;2;19.30;24.30;;Wash Boring.(No Recovery);No Recovery;1.00
+DH19_v1;839894.96;816541.61;3;24.30;24.60;IV/III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow, rough planar, limonite, manganese stained and kaolin coated joints, dipping 10-20, 30-40 and vertical joints.;Granite;1.00
+DH19_v1;839894.96;816541.61;3;24.60;30.37;III;Weak to moderately weak, brownish pink spotted black and white, highly to moderately decomposed medium to coarse grained GRANITE. No Recovery at 24.60m-24.64m.;Granite;1.00

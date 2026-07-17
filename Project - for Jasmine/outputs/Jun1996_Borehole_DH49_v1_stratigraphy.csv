@@ -1,9 +1,10 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH49_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH49_v1;1;0.20;18.60;Wash boring;No recovery;High
-DH49_v1;2;18.60;18.70;Cobbles and GRAVELS of moderately decomposed GRANITE;Granite;High
-DH49_v1;2;18.70;20.78;Wash boring;No recovery;High
-DH49_v1;3;20.78;22.58;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
-DH49_v1;3;22.58;23.21;No recovery;No recovery;High
-DH49_v1;3;23.21;28.45;Strong, pinkish grey spotted black and white, slightly decomposed to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH49_v1;839929.14;816532.63;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH49_v1;839929.14;816532.63;1;0.20;18.60;;Wash boring. (No recovery);No Recovery;1.00
+DH49_v1;839929.14;816532.63;2;18.60;18.70;III;Cobbles and GRAVELS of moderately decomposed GRANITE. (CORESTONE);Granite;0.95
+DH49_v1;839929.14;816532.63;2;18.70;20.78;;Wash boring. (No recovery);No Recovery;1.00
+DH49_v1;839929.14;816532.63;3;20.78;22.58;III;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE with medium to closely spaced, moderately narrow to very narrow, rough planar, limonite, manganese, chlorite and kaolin stained joints, dipping 10 degrees-20 degrees, 55 degrees-70 degrees.;Granite;1.00
+DH49_v1;839929.14;816532.63;3;22.58;23.21;IV;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE;Granite;0.95
+DH49_v1;839929.14;816532.63;3;23.21;23.35;III;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, extremely narrow, rough planar, limonite, kaolin stained and clean joints, dipping 10 degrees-20 degrees, 70 degrees-80 degrees.;Granite;1.00
+DH49_v1;839929.14;816532.63;3;23.35;28.45;II;Moderately weak to moderately strong, brownish pink spotted black and white, moderately decomposed medium to coarse grained GRANITE.;Granite;1.00

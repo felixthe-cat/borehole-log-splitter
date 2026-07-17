@@ -1,0 +1,7 @@
+sep=;
+Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
+C5;1;0.00;0.30;Concrete Slab.;Concrete;High
+C5;1;0.30;1.94;Decomposed Granite with some fractured Cobbles and Gravels. (FILL);Fill;High
+C5;1;1.94;16.45;Wash boring. (No recovery);No Recovery;High
+C5;2;16.45;19.01;Moderately strong to strong, pinkish grey spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE.;Granite;High
+C5;2;19.01;28.07;Strong, pinkish grey spotted black and white, slightly decomposed medium to coarse grained GRANITE.;Granite;High

@@ -1,8 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-DH31_v1;1;0.00;0.20;Concrete Slab;Concrete;High
-DH31_v1;1;0.20;2.10;Wash boring;No recovery;High
-DH31_v1;1;2.10;8.50;Concrete with Boulder, Cobbles and Gravels of moderately decomposed granite with some red bricks (FILL);Fill;High
-DH31_v1;1;8.50;24.58;Wash boring;No recovery;High
-DH31_v1;3;24.58;29.00;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, chlorite, kaolin and manganese stained joints, dipping 10-20, 40-50, 60-70;Granite;High
-DH31_v1;3;29.00;30.12;Moderately strong, moderately decomposed zone;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+DH31_v1;839900.83;816572.58;1;0.00;0.20;;Concrete Slab;Concrete;1.00
+DH31_v1;839900.83;816572.58;1;0.20;2.10;;Wash boring. (No recovery);No Recovery;1.00
+DH31_v1;839900.83;816572.58;1;2.10;8.50;;Concrete with Boulder, Cobbles and Gravels of moderately decomposed granite with some red bricks. (FILL);Fill;1.00
+DH31_v1;839900.83;816572.58;1;8.50;24.58;;Wash boring. (No recovery);No Recovery;1.00
+DH31_v1;839900.83;816572.58;3;24.58;29.00;III/II;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced and occasionally closely spaced, very narrow to extremely narrow, rough planar, limonite, chlorite, kaolin and manganese stained joints, dipping 10 degrees-20 degrees, 40 degrees-50 degrees, 60 degrees-70 degrees.;Granite;1.00
+DH31_v1;839900.83;816572.58;3;29.00;30.12;III;Moderately strong, moderately decomposed zone.;Granite;1.00

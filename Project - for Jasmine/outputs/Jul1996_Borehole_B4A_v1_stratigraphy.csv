@@ -1,7 +1,8 @@
 sep=;
-Hole No;Sheet No;Start Depth;End Depth;Soil/Rock Description;Soil/Rock Type;Confidence Level
-B4A_v1;1;0.00;0.30;Concrete Slab.;Concrete;High
-B4A_v1;1;0.30;0.80;Concrete with cobbles and gravels of moderately decomposed granite. (FILL);Fill;High
-B4A_v1;1;0.80;3.00;Wash boring. (No recovery);No Recovery;High
-B4A_v1;1;3.00;16.98;Angular Cobbles and Gravels of moderately decomposed granite with some concrete fragment and steel fragment. (FILL);Fill;High
-B4A_v1;2;16.98;27.52;Moderately strong to strong, brownish pink spotted black and white, moderately to slightly decomposed medium to coarse grained GRANITE with widely to medium spaced, very narrow to extremely narrow, rough planar, limonite, manganese stained and kaolin stained joints, dipping 10-20, 40-65, 75-85.;Granite;High
+Hole No;Easting;Northing;Sheet No;Start Depth;End Depth;Grade;Soil/Rock Description;Soil/Rock Type;Confidence Level
+B4A_v1;839911.66;816522.44;1;0.00;0.30;;Concrete Slab;Concrete;0.95
+B4A_v1;839911.66;816522.44;1;0.30;0.60;;Brownish green cobbles and gravels of moderately decomposed granite. (FILL);Fill;0.95
+B4A_v1;839911.66;816522.44;1;0.60;3.70;;Wash boring. (No recovery);No Recovery;0.90
+B4A_v1;839911.66;816522.44;1;3.70;7.00;;Angular Cobbles and Gravels of moderately decomposed granite with traces of steel fragment and steel fragment. (FILL) Wash boring. (No recovery);Fill;0.85
+B4A_v1;839911.66;816522.44;1;7.00;16.98;;Wash boring. (No recovery);No Recovery;0.90
+B4A_v1;839911.66;816522.44;2;16.98;27.52;III/II;Moderately strong to strong, brownish pink spotted black and white, FINE GRAIN, moderately to slightly decomposed GRANITE. With closely spaced to medium spaced, very narrow to narrow, black and yellow quartz, limonite, manganese stained and kaolin filled joints dipping 10 degrees, 20 degrees, 40 degrees, 65 degrees, 75 degrees, 85 degrees;Granite;0.98
